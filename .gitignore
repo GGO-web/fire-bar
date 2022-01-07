@@ -1,0 +1,6 @@
+src/
+node_modules/
+config/
+gulpfile.js
+package*.json
+design/
