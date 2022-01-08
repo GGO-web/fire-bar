@@ -93,35 +93,35 @@
             E = function (t, e) {
               return t.getAttribute(_ + e);
             },
-            L = function (t) {
+            y = function (t) {
               return E(t, w);
             },
-            y = function (t, e) {
+            L = function (t, e) {
               return (function (t, e, n) {
                 var o = "data-ll-status";
                 null !== n ? t.setAttribute(o, n) : t.removeAttribute(o);
               })(t, 0, e);
             },
             A = function (t) {
-              return y(t, null);
+              return L(t, null);
             },
             I = function (t) {
-              return null === L(t);
+              return null === y(t);
             },
-            x = function (t) {
-              return L(t) === b;
+            k = function (t) {
+              return y(t) === b;
             },
-            k = [h, v, g, p],
-            C = function (t, e, n, o) {
+            x = [h, v, g, p],
+            O = function (t, e, n, o) {
               t &&
                 (void 0 === o ? (void 0 === n ? t(e) : t(e, n)) : t(e, n, o));
             },
-            W = function (t, e) {
+            C = function (t, e) {
               i
                 ? t.classList.add(e)
                 : (t.className += (t.className ? " " : "") + e);
             },
-            O = function (t, e) {
+            W = function (t, e) {
               i
                 ? t.classList.remove(e)
                 : (t.className = t.className
@@ -129,16 +129,16 @@
                     .replace(/^\s+/, "")
                     .replace(/\s+$/, ""));
             },
-            N = function (t) {
+            S = function (t) {
               return t.llTempImage;
             },
-            R = function (t, e) {
+            N = function (t, e) {
               if (e) {
                 var n = e._observer;
                 n && n.unobserve(t);
               }
             },
-            S = function (t, e) {
+            R = function (t, e) {
               t && (t.loadingCount += e);
             },
             T = function (t, e) {
@@ -149,27 +149,27 @@
                 "SOURCE" === e.tagName && n.push(e);
               return n;
             },
-            z = function (t, e) {
+            P = function (t, e) {
               var n = t.parentNode;
               n && "PICTURE" === n.tagName && M(n).forEach(e);
             },
-            P = function (t, e) {
+            z = function (t, e) {
               M(t).forEach(e);
             },
             $ = [l],
             q = [l, f],
-            D = [l, u, d],
-            V = function (t) {
+            B = [l, u, d],
+            D = function (t) {
               return !!t[m];
             },
-            j = function (t) {
+            V = function (t) {
               return t[m];
             },
-            F = function (t) {
+            j = function (t) {
               return delete t[m];
             },
-            G = function (t, e) {
-              if (!V(t)) {
+            F = function (t, e) {
+              if (!D(t)) {
                 var n = {};
                 e.forEach(function (e) {
                   n[e] = t.getAttribute(e);
@@ -177,9 +177,9 @@
                   (t[m] = n);
               }
             },
-            U = function (t, e) {
-              if (V(t)) {
-                var n = j(t);
+            G = function (t, e) {
+              if (D(t)) {
+                var n = V(t);
                 e.forEach(function (e) {
                   !(function (t, e, n) {
                     n ? t.setAttribute(e, n) : t.removeAttribute(e);
@@ -187,41 +187,41 @@
                 });
               }
             },
-            B = function (t, e, n) {
-              W(t, e.class_loading),
-                y(t, h),
-                n && (S(n, 1), C(e.callback_loading, t, n));
+            U = function (t, e, n) {
+              C(t, e.class_loading),
+                L(t, h),
+                n && (R(n, 1), O(e.callback_loading, t, n));
             },
-            K = function (t, e, n) {
+            H = function (t, e, n) {
               n && t.setAttribute(e, n);
             },
-            X = function (t, e) {
-              K(t, d, E(t, e.data_sizes)),
-                K(t, u, E(t, e.data_srcset)),
-                K(t, l, E(t, e.data_src));
+            K = function (t, e) {
+              H(t, d, E(t, e.data_sizes)),
+                H(t, u, E(t, e.data_srcset)),
+                H(t, l, E(t, e.data_src));
             },
-            Z = {
+            X = {
               IMG: function (t, e) {
-                z(t, function (t) {
-                  G(t, D), X(t, e);
+                P(t, function (t) {
+                  F(t, B), K(t, e);
                 }),
-                  G(t, D),
-                  X(t, e);
+                  F(t, B),
+                  K(t, e);
               },
               IFRAME: function (t, e) {
-                G(t, $), K(t, l, E(t, e.data_src));
+                F(t, $), H(t, l, E(t, e.data_src));
               },
               VIDEO: function (t, e) {
-                P(t, function (t) {
-                  G(t, $), K(t, l, E(t, e.data_src));
+                z(t, function (t) {
+                  F(t, $), H(t, l, E(t, e.data_src));
                 }),
-                  G(t, q),
-                  K(t, f, E(t, e.data_poster)),
-                  K(t, l, E(t, e.data_src)),
+                  F(t, q),
+                  H(t, f, E(t, e.data_poster)),
+                  H(t, l, E(t, e.data_src)),
                   t.load();
               },
             },
-            H = ["IMG", "IFRAME", "VIDEO"],
+            Z = ["IMG", "IFRAME", "VIDEO"],
             Y = function (t, e) {
               !e ||
                 (function (t) {
@@ -230,7 +230,7 @@
                 (function (t) {
                   return t.toLoadCount > 0;
                 })(e) ||
-                C(t.callback_finish, e);
+                O(t.callback_finish, e);
             },
             J = function (t, e, n) {
               t.addEventListener(e, n), (t.llEvLisnrs[e] = n);
@@ -255,15 +255,15 @@
               !(function (t) {
                 delete t.llTempImage;
               })(t),
-                S(n, -1),
+                R(n, -1),
                 (function (t) {
                   t && (t.toLoadCount -= 1);
                 })(n),
-                O(t, e.class_loading),
-                e.unobserve_completed && R(t, n);
+                W(t, e.class_loading),
+                e.unobserve_completed && N(t, n);
             },
             ot = function (t, e, n) {
-              var o = N(t) || t;
+              var o = S(t) || t;
               tt(o) ||
                 (function (t, e, n) {
                   tt(t) || (t.llEvLisnrs = {});
@@ -273,22 +273,22 @@
                   o,
                   function (i) {
                     !(function (t, e, n, o) {
-                      var i = x(e);
+                      var i = k(e);
                       nt(e, n, o),
-                        W(e, n.class_loaded),
-                        y(e, v),
-                        C(n.callback_loaded, e, o),
+                        C(e, n.class_loaded),
+                        L(e, v),
+                        O(n.callback_loaded, e, o),
                         i || Y(n, o);
                     })(0, t, e, n),
                       et(o);
                   },
                   function (i) {
                     !(function (t, e, n, o) {
-                      var i = x(e);
+                      var i = k(e);
                       nt(e, n, o),
-                        W(e, n.class_error),
-                        y(e, p),
-                        C(n.callback_error, e, o),
+                        C(e, n.class_error),
+                        L(e, p),
+                        O(n.callback_error, e, o),
                         i || Y(n, o);
                     })(0, t, e, n),
                       et(o);
@@ -301,7 +301,7 @@
               })(t),
                 ot(t, e, n),
                 (function (t) {
-                  V(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
+                  D(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
                 })(t),
                 (function (t, e, n) {
                   var o = E(t, e.data_bg),
@@ -309,8 +309,8 @@
                     a = r && i ? i : o;
                   a &&
                     ((t.style.backgroundImage = 'url("'.concat(a, '")')),
-                    N(t).setAttribute(l, a),
-                    B(t, e, n));
+                    S(t).setAttribute(l, a),
+                    U(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
                   var o = E(t, e.data_bg_multi),
@@ -319,24 +319,24 @@
                   a &&
                     ((t.style.backgroundImage = a),
                     (function (t, e, n) {
-                      W(t, e.class_applied),
-                        y(t, g),
+                      C(t, e.class_applied),
+                        L(t, g),
                         n &&
-                          (e.unobserve_completed && R(t, e),
-                          C(e.callback_applied, t, n));
+                          (e.unobserve_completed && N(t, e),
+                          O(e.callback_applied, t, n));
                     })(t, e, n));
                 })(t, e, n);
             },
             rt = function (t, e, n) {
               !(function (t) {
-                return H.indexOf(t.tagName) > -1;
+                return Z.indexOf(t.tagName) > -1;
               })(t)
                 ? it(t, e, n)
                 : (function (t, e, n) {
                     ot(t, e, n),
                       (function (t, e, n) {
-                        var o = Z[t.tagName];
-                        o && (o(t, e), B(t, e, n));
+                        var o = X[t.tagName];
+                        o && (o(t, e), U(t, e, n));
                       })(t, e, n);
                   })(t, e, n);
             },
@@ -344,21 +344,21 @@
               t.removeAttribute(l), t.removeAttribute(u), t.removeAttribute(d);
             },
             ct = function (t) {
-              z(t, function (t) {
-                U(t, D);
+              P(t, function (t) {
+                G(t, B);
               }),
-                U(t, D);
+                G(t, B);
             },
             st = {
               IMG: ct,
               IFRAME: function (t) {
-                U(t, $);
+                G(t, $);
               },
               VIDEO: function (t) {
-                P(t, function (t) {
-                  U(t, $);
+                z(t, function (t) {
+                  G(t, $);
                 }),
-                  U(t, q),
+                  G(t, q),
                   t.load();
               },
             },
@@ -368,24 +368,24 @@
                 e
                   ? e(t)
                   : (function (t) {
-                      if (V(t)) {
-                        var e = j(t);
+                      if (D(t)) {
+                        var e = V(t);
                         t.style.backgroundImage = e.backgroundImage;
                       }
                     })(t);
               })(t),
                 (function (t, e) {
                   I(t) ||
-                    x(t) ||
-                    (O(t, e.class_entered),
-                    O(t, e.class_exited),
-                    O(t, e.class_applied),
-                    O(t, e.class_loading),
-                    O(t, e.class_loaded),
-                    O(t, e.class_error));
+                    k(t) ||
+                    (W(t, e.class_entered),
+                    W(t, e.class_exited),
+                    W(t, e.class_applied),
+                    W(t, e.class_loading),
+                    W(t, e.class_loaded),
+                    W(t, e.class_error));
                 })(t, e),
                 A(t),
-                F(t);
+                j(t);
             },
             ut = ["IMG", "IFRAME", "VIDEO"],
             dt = function (t) {
@@ -398,40 +398,40 @@
                 })(t)
                   ? (function (t, e, n, o) {
                       var i = (function (t) {
-                        return k.indexOf(L(t)) >= 0;
+                        return x.indexOf(y(t)) >= 0;
                       })(t);
-                      y(t, "entered"),
-                        W(t, n.class_entered),
-                        O(t, n.class_exited),
+                      L(t, "entered"),
+                        C(t, n.class_entered),
+                        W(t, n.class_exited),
                         (function (t, e, n) {
-                          e.unobserve_entered && R(t, n);
+                          e.unobserve_entered && N(t, n);
                         })(t, n, o),
-                        C(n.callback_enter, t, e, o),
+                        O(n.callback_enter, t, e, o),
                         i || rt(t, n, o);
                     })(t.target, t, e, n)
                   : (function (t, e, n, o) {
                       I(t) ||
-                        (W(t, n.class_exited),
+                        (C(t, n.class_exited),
                         (function (t, e, n, o) {
                           n.cancel_on_exit &&
                             (function (t) {
-                              return L(t) === h;
+                              return y(t) === h;
                             })(t) &&
                             "IMG" === t.tagName &&
                             (et(t),
                             (function (t) {
-                              z(t, function (t) {
+                              P(t, function (t) {
                                 at(t);
                               }),
                                 at(t);
                             })(t),
                             ct(t),
-                            O(t, n.class_loading),
-                            S(o, -1),
+                            W(t, n.class_loading),
+                            R(o, -1),
                             A(t),
-                            C(n.callback_cancel, t, e, o));
+                            O(n.callback_cancel, t, e, o));
                         })(t, e, n, o),
-                        C(n.callback_exit, t, e, o));
+                        O(n.callback_exit, t, e, o));
                     })(t.target, t, e, n);
               });
             },
@@ -443,7 +443,7 @@
             },
             vt = function (t) {
               return (function (t) {
-                return L(t) === p;
+                return y(t) === p;
               })(t);
             },
             gt = function (t, e) {
@@ -476,7 +476,7 @@
                       !(function (t, e) {
                         var n;
                         ((n = ht(t)), mt(n).filter(vt)).forEach(function (e) {
-                          O(e, t.class_error), A(e);
+                          W(e, t.class_error), A(e);
                         }),
                           e.update();
                       })(t, n);
@@ -501,10 +501,10 @@
                                 t.setAttribute("loading", "lazy"),
                                   ot(t, e, n),
                                   (function (t, e) {
-                                    var n = Z[t.tagName];
+                                    var n = X[t.tagName];
                                     n && n(t, e);
                                   })(t, e),
-                                  y(t, b);
+                                  L(t, b);
                               })(t, e, n);
                           }),
                             T(n, 0);
@@ -523,7 +523,7 @@
               destroy: function () {
                 this._observer && this._observer.disconnect(),
                   ht(this._settings).forEach(function (t) {
-                    F(t);
+                    j(t);
                   }),
                   delete this._observer,
                   delete this._settings,
@@ -534,7 +534,7 @@
                 var e = this,
                   n = this._settings;
                 gt(t, n).forEach(function (t) {
-                  R(t, e), rt(t, n, e);
+                  N(t, e), rt(t, n, e);
                 });
               },
               restoreAll: function () {
@@ -572,47 +572,69 @@
   (() => {
     "use strict";
     const t = {};
-    let e = !0,
-      o = (t = 500) => {
-        let n = document.querySelector("body");
-        if (e) {
-          let o = document.querySelectorAll("[data-lp]");
+    let e = {
+      Android: function () {
+        return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function () {
+        return (
+          e.Android() || e.BlackBerry() || e.iOS() || e.Opera() || e.Windows()
+        );
+      },
+    };
+    let o = !0,
+      i = (t = 500) => {
+        let e = document.querySelector("body");
+        if (o) {
+          let n = document.querySelectorAll("[data-lp]");
           setTimeout(() => {
-            for (let t = 0; t < o.length; t++) {
-              o[t].style.paddingRight = "0px";
+            for (let t = 0; t < n.length; t++) {
+              n[t].style.paddingRight = "0px";
             }
-            (n.style.paddingRight = "0px"),
+            (e.style.paddingRight = "0px"),
               document.documentElement.classList.remove("lock");
           }, t),
-            (e = !1),
+            (o = !1),
             setTimeout(function () {
-              e = !0;
+              o = !0;
             }, t);
         }
       },
-      i = (t = 500) => {
-        let n = document.querySelector("body");
-        if (e) {
-          let o = document.querySelectorAll("[data-lp]");
-          for (let t = 0; t < o.length; t++) {
-            o[t].style.paddingRight =
+      r = (t = 500) => {
+        let e = document.querySelector("body");
+        if (o) {
+          let n = document.querySelectorAll("[data-lp]");
+          for (let t = 0; t < n.length; t++) {
+            n[t].style.paddingRight =
               window.innerWidth -
               document.querySelector(".site-wrapper").offsetWidth +
               "px";
           }
-          (n.style.paddingRight =
+          (e.style.paddingRight =
             window.innerWidth -
             document.querySelector(".site-wrapper").offsetWidth +
             "px"),
             document.documentElement.classList.add("lock"),
-            (e = !1),
+            (o = !1),
             setTimeout(function () {
-              e = !0;
+              o = !0;
             }, t);
         }
       };
-    let r = document.querySelector(".icon-menu");
-    function a(t) {
+    let a = document.querySelector(".icon-menu");
+    function c(t) {
       return t.filter(function (t, e, n) {
         return n.indexOf(t) === e;
       });
@@ -643,7 +665,7 @@
           this.scrollWatcherLogging(
             `Проснулся, слежу за объектами (${t.length})...`
           ),
-            a(
+            c(
               Array.from(t).map(function (t) {
                 return `${
                   t.dataset.watchRoot ? t.dataset.watchRoot : null
@@ -737,17 +759,17 @@
           );
       }
     })({});
-    let c = !1;
-    var s;
+    let s = !1;
+    var l;
     setTimeout(() => {
-      if (c) {
+      if (s) {
         let t = new Event("windowScroll");
         window.addEventListener("scroll", function (e) {
           document.dispatchEvent(t);
         });
       }
     }, 0),
-      (s = function () {
+      (l = function () {
         function t(t) {
           var e = !0,
             n = !1,
@@ -889,23 +911,23 @@
         "undefined" != typeof document && t(document);
       }),
       "object" == typeof exports && "undefined" != typeof module
-        ? s()
+        ? l()
         : "function" == typeof define && define.amd
-        ? define(s)
-        : s();
-    const l = getComputedStyle(document.documentElement),
-      u = l.getPropertyValue("--menu-breakpoint"),
-      d = l.getPropertyValue("--transition-duration"),
-      f = l.getPropertyValue("--transition-function");
+        ? define(l)
+        : l();
+    const u = getComputedStyle(document.documentElement),
+      d = u.getPropertyValue("--menu-breakpoint"),
+      f = u.getPropertyValue("--transition-duration"),
+      m = u.getPropertyValue("--transition-function");
     new ResizeObserver((t) => {
       const e = Math.floor(t[0].contentRect.width),
         n = document.querySelector(".menu__body");
       n.style.removeProperty("transition"),
-        e <= u &&
+        e <= d &&
           (n.style.removeProperty("transition"),
           setTimeout(() => {
-            n.style.setProperty("transition", `transform ${d}ms ${f}`);
-          }, d));
+            n.style.setProperty("transition", `transform ${f}ms ${m}`);
+          }, f));
     }).observe(document.body),
       (window.FLS = !0),
       (function (t) {
@@ -920,15 +942,24 @@
         let e = !0 === t ? "webp" : "no-webp";
         document.documentElement.classList.add(e);
       }),
-      r &&
-        r.addEventListener("click", function (t) {
-          e &&
+      a &&
+        a.addEventListener("click", function (t) {
+          o &&
             (((t = 500) => {
               document.documentElement.classList.contains("lock")
-                ? (o(t), r.setAttribute("aria-expanded", "false"))
-                : (i(t), r.setAttribute("aria-expanded", "true"));
+                ? (i(t), a.setAttribute("aria-expanded", "false"))
+                : (r(t), a.setAttribute("aria-expanded", "true"));
             })(),
             document.documentElement.classList.toggle("menu-open"));
-        });
+        }),
+      (function () {
+        if (document.querySelectorAll("[data-fullscreen]").length && e.any()) {
+          function t() {
+            let t = 0.01 * window.innerHeight;
+            document.documentElement.style.setProperty("--vh", `${t}px`);
+          }
+          window.addEventListener("resize", t), t();
+        }
+      })();
   })();
 })();
