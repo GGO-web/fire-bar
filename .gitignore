@@ -5,3 +5,4 @@ gulpfile.js
 package*.json
 design/
 dist/resources/sendmail
+.vscode/
