@@ -25,8 +25,8 @@
               ("undefined" != typeof navigator &&
                 /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)),
             o = e && "IntersectionObserver" in window,
-            i = e && "classList" in document.createElement("p"),
-            r = e && window.devicePixelRatio > 1,
+            r = e && "classList" in document.createElement("p"),
+            i = e && window.devicePixelRatio > 1,
             a = {
               elements_selector: ".lazy",
               container: n || e ? document : null,
@@ -65,15 +65,15 @@
             s = function (t, e) {
               var n,
                 o = "LazyLoad::Initialized",
-                i = new t(e);
+                r = new t(e);
               try {
-                n = new CustomEvent(o, { detail: { instance: i } });
+                n = new CustomEvent(o, { detail: { instance: r } });
               } catch (t) {
                 (n = document.createEvent("CustomEvent")).initCustomEvent(
                   o,
                   !1,
                   !1,
-                  { instance: i }
+                  { instance: r }
                 );
               }
               window.dispatchEvent(n);
@@ -89,12 +89,12 @@
             p = "error",
             b = "native",
             _ = "data-",
-            w = "ll-status",
-            E = function (t, e) {
+            E = "ll-status",
+            w = function (t, e) {
               return t.getAttribute(_ + e);
             },
             y = function (t) {
-              return E(t, w);
+              return w(t, E);
             },
             L = function (t, e) {
               return (function (t, e, n) {
@@ -117,28 +117,28 @@
                 (void 0 === o ? (void 0 === n ? t(e) : t(e, n)) : t(e, n, o));
             },
             C = function (t, e) {
-              i
+              r
                 ? t.classList.add(e)
                 : (t.className += (t.className ? " " : "") + e);
             },
-            W = function (t, e) {
-              i
+            S = function (t, e) {
+              r
                 ? t.classList.remove(e)
                 : (t.className = t.className
                     .replace(new RegExp("(^|\\s+)" + e + "(\\s+|$)"), " ")
                     .replace(/^\s+/, "")
                     .replace(/\s+$/, ""));
             },
-            S = function (t) {
+            N = function (t) {
               return t.llTempImage;
             },
-            N = function (t, e) {
+            R = function (t, e) {
               if (e) {
                 var n = e._observer;
                 n && n.unobserve(t);
               }
             },
-            R = function (t, e) {
+            W = function (t, e) {
               t && (t.loadingCount += e);
             },
             T = function (t, e) {
@@ -153,23 +153,23 @@
               var n = t.parentNode;
               n && "PICTURE" === n.tagName && M(n).forEach(e);
             },
-            z = function (t, e) {
+            q = function (t, e) {
               M(t).forEach(e);
             },
-            $ = [l],
-            q = [l, f],
-            B = [l, u, d],
-            D = function (t) {
+            z = [l],
+            B = [l, f],
+            D = [l, u, d],
+            V = function (t) {
               return !!t[m];
             },
-            V = function (t) {
+            j = function (t) {
               return t[m];
             },
-            j = function (t) {
+            G = function (t) {
               return delete t[m];
             },
-            F = function (t, e) {
-              if (!D(t)) {
+            U = function (t, e) {
+              if (!V(t)) {
                 var n = {};
                 e.forEach(function (e) {
                   n[e] = t.getAttribute(e);
@@ -177,9 +177,9 @@
                   (t[m] = n);
               }
             },
-            G = function (t, e) {
-              if (D(t)) {
-                var n = V(t);
+            $ = function (t, e) {
+              if (V(t)) {
+                var n = j(t);
                 e.forEach(function (e) {
                   !(function (t, e, n) {
                     n ? t.setAttribute(e, n) : t.removeAttribute(e);
@@ -187,42 +187,42 @@
                 });
               }
             },
-            U = function (t, e, n) {
+            F = function (t, e, n) {
               C(t, e.class_loading),
                 L(t, h),
-                n && (R(n, 1), O(e.callback_loading, t, n));
+                n && (W(n, 1), O(e.callback_loading, t, n));
             },
             H = function (t, e, n) {
               n && t.setAttribute(e, n);
             },
             K = function (t, e) {
-              H(t, d, E(t, e.data_sizes)),
-                H(t, u, E(t, e.data_srcset)),
-                H(t, l, E(t, e.data_src));
+              H(t, d, w(t, e.data_sizes)),
+                H(t, u, w(t, e.data_srcset)),
+                H(t, l, w(t, e.data_src));
             },
             X = {
               IMG: function (t, e) {
                 P(t, function (t) {
-                  F(t, B), K(t, e);
+                  U(t, D), K(t, e);
                 }),
-                  F(t, B),
+                  U(t, D),
                   K(t, e);
               },
               IFRAME: function (t, e) {
-                F(t, $), H(t, l, E(t, e.data_src));
+                U(t, z), H(t, l, w(t, e.data_src));
               },
               VIDEO: function (t, e) {
-                z(t, function (t) {
-                  F(t, $), H(t, l, E(t, e.data_src));
+                q(t, function (t) {
+                  U(t, z), H(t, l, w(t, e.data_src));
                 }),
-                  F(t, q),
-                  H(t, f, E(t, e.data_poster)),
-                  H(t, l, E(t, e.data_src)),
+                  U(t, B),
+                  H(t, f, w(t, e.data_poster)),
+                  H(t, l, w(t, e.data_src)),
                   t.load();
               },
             },
-            Z = ["IMG", "IFRAME", "VIDEO"],
-            Y = function (t, e) {
+            Y = ["IMG", "IFRAME", "VIDEO"],
+            J = function (t, e) {
               !e ||
                 (function (t) {
                   return t.loadingCount > 0;
@@ -232,10 +232,10 @@
                 })(e) ||
                 O(t.callback_finish, e);
             },
-            J = function (t, e, n) {
+            Q = function (t, e, n) {
               t.addEventListener(e, n), (t.llEvLisnrs[e] = n);
             },
-            Q = function (t, e, n) {
+            Z = function (t, e, n) {
               t.removeEventListener(e, n);
             },
             tt = function (t) {
@@ -246,7 +246,7 @@
                 var e = t.llEvLisnrs;
                 for (var n in e) {
                   var o = e[n];
-                  Q(t, n, o);
+                  Z(t, n, o);
                 }
                 delete t.llEvLisnrs;
               }
@@ -255,88 +255,88 @@
               !(function (t) {
                 delete t.llTempImage;
               })(t),
-                R(n, -1),
+                W(n, -1),
                 (function (t) {
                   t && (t.toLoadCount -= 1);
                 })(n),
-                W(t, e.class_loading),
-                e.unobserve_completed && N(t, n);
+                S(t, e.class_loading),
+                e.unobserve_completed && R(t, n);
             },
             ot = function (t, e, n) {
-              var o = S(t) || t;
+              var o = N(t) || t;
               tt(o) ||
                 (function (t, e, n) {
                   tt(t) || (t.llEvLisnrs = {});
                   var o = "VIDEO" === t.tagName ? "loadeddata" : "load";
-                  J(t, o, e), J(t, "error", n);
+                  Q(t, o, e), Q(t, "error", n);
                 })(
                   o,
-                  function (i) {
+                  function (r) {
                     !(function (t, e, n, o) {
-                      var i = k(e);
+                      var r = k(e);
                       nt(e, n, o),
                         C(e, n.class_loaded),
                         L(e, v),
                         O(n.callback_loaded, e, o),
-                        i || Y(n, o);
+                        r || J(n, o);
                     })(0, t, e, n),
                       et(o);
                   },
-                  function (i) {
+                  function (r) {
                     !(function (t, e, n, o) {
-                      var i = k(e);
+                      var r = k(e);
                       nt(e, n, o),
                         C(e, n.class_error),
                         L(e, p),
                         O(n.callback_error, e, o),
-                        i || Y(n, o);
+                        r || J(n, o);
                     })(0, t, e, n),
                       et(o);
                   }
                 );
             },
-            it = function (t, e, n) {
+            rt = function (t, e, n) {
               !(function (t) {
                 t.llTempImage = document.createElement("IMG");
               })(t),
                 ot(t, e, n),
                 (function (t) {
-                  D(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
+                  V(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
                 })(t),
                 (function (t, e, n) {
-                  var o = E(t, e.data_bg),
-                    i = E(t, e.data_bg_hidpi),
-                    a = r && i ? i : o;
+                  var o = w(t, e.data_bg),
+                    r = w(t, e.data_bg_hidpi),
+                    a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = 'url("'.concat(a, '")')),
-                    S(t).setAttribute(l, a),
-                    U(t, e, n));
+                    N(t).setAttribute(l, a),
+                    F(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
-                  var o = E(t, e.data_bg_multi),
-                    i = E(t, e.data_bg_multi_hidpi),
-                    a = r && i ? i : o;
+                  var o = w(t, e.data_bg_multi),
+                    r = w(t, e.data_bg_multi_hidpi),
+                    a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = a),
                     (function (t, e, n) {
                       C(t, e.class_applied),
                         L(t, g),
                         n &&
-                          (e.unobserve_completed && N(t, e),
+                          (e.unobserve_completed && R(t, e),
                           O(e.callback_applied, t, n));
                     })(t, e, n));
                 })(t, e, n);
             },
-            rt = function (t, e, n) {
+            it = function (t, e, n) {
               !(function (t) {
-                return Z.indexOf(t.tagName) > -1;
+                return Y.indexOf(t.tagName) > -1;
               })(t)
-                ? it(t, e, n)
+                ? rt(t, e, n)
                 : (function (t, e, n) {
                     ot(t, e, n),
                       (function (t, e, n) {
                         var o = X[t.tagName];
-                        o && (o(t, e), U(t, e, n));
+                        o && (o(t, e), F(t, e, n));
                       })(t, e, n);
                   })(t, e, n);
             },
@@ -345,20 +345,20 @@
             },
             ct = function (t) {
               P(t, function (t) {
-                G(t, B);
+                $(t, D);
               }),
-                G(t, B);
+                $(t, D);
             },
             st = {
               IMG: ct,
               IFRAME: function (t) {
-                G(t, $);
+                $(t, z);
               },
               VIDEO: function (t) {
-                z(t, function (t) {
-                  G(t, $);
+                q(t, function (t) {
+                  $(t, z);
                 }),
-                  G(t, q),
+                  $(t, B),
                   t.load();
               },
             },
@@ -368,8 +368,8 @@
                 e
                   ? e(t)
                   : (function (t) {
-                      if (D(t)) {
-                        var e = V(t);
+                      if (V(t)) {
+                        var e = j(t);
                         t.style.backgroundImage = e.backgroundImage;
                       }
                     })(t);
@@ -377,15 +377,15 @@
                 (function (t, e) {
                   I(t) ||
                     k(t) ||
-                    (W(t, e.class_entered),
-                    W(t, e.class_exited),
-                    W(t, e.class_applied),
-                    W(t, e.class_loading),
-                    W(t, e.class_loaded),
-                    W(t, e.class_error));
+                    (S(t, e.class_entered),
+                    S(t, e.class_exited),
+                    S(t, e.class_applied),
+                    S(t, e.class_loading),
+                    S(t, e.class_loaded),
+                    S(t, e.class_error));
                 })(t, e),
                 A(t),
-                j(t);
+                G(t);
             },
             ut = ["IMG", "IFRAME", "VIDEO"],
             dt = function (t) {
@@ -397,17 +397,17 @@
                   return t.isIntersecting || t.intersectionRatio > 0;
                 })(t)
                   ? (function (t, e, n, o) {
-                      var i = (function (t) {
+                      var r = (function (t) {
                         return x.indexOf(y(t)) >= 0;
                       })(t);
                       L(t, "entered"),
                         C(t, n.class_entered),
-                        W(t, n.class_exited),
+                        S(t, n.class_exited),
                         (function (t, e, n) {
-                          e.unobserve_entered && N(t, n);
+                          e.unobserve_entered && R(t, n);
                         })(t, n, o),
                         O(n.callback_enter, t, e, o),
-                        i || rt(t, n, o);
+                        r || it(t, n, o);
                     })(t.target, t, e, n)
                   : (function (t, e, n, o) {
                       I(t) ||
@@ -426,8 +426,8 @@
                                 at(t);
                             })(t),
                             ct(t),
-                            W(t, n.class_loading),
-                            R(o, -1),
+                            S(t, n.class_loading),
+                            W(o, -1),
                             A(t),
                             O(n.callback_cancel, t, e, o));
                         })(t, e, n, o),
@@ -452,8 +452,8 @@
               })(t || ht(e));
             },
             pt = function (t, n) {
-              var i = c(t);
-              (this._settings = i),
+              var r = c(t);
+              (this._settings = r),
                 (this.loadingCount = 0),
                 (function (t, e) {
                   o &&
@@ -469,31 +469,31 @@
                         };
                       })(t)
                     ));
-                })(i, this),
+                })(r, this),
                 (function (t, n) {
                   e &&
                     window.addEventListener("online", function () {
                       !(function (t, e) {
                         var n;
                         ((n = ht(t)), mt(n).filter(vt)).forEach(function (e) {
-                          W(e, t.class_error), A(e);
+                          S(e, t.class_error), A(e);
                         }),
                           e.update();
                       })(t, n);
                     });
-                })(i, this),
+                })(r, this),
                 this.update(n);
             };
           return (
             (pt.prototype = {
               update: function (t) {
                 var e,
-                  i,
-                  r = this._settings,
-                  a = gt(t, r);
+                  r,
+                  i = this._settings,
+                  a = gt(t, i);
                 T(this, a.length),
                   !n && o
-                    ? dt(r)
+                    ? dt(i)
                       ? (function (t, e, n) {
                           t.forEach(function (t) {
                             -1 !== ut.indexOf(t.tagName) &&
@@ -508,8 +508,8 @@
                               })(t, e, n);
                           }),
                             T(n, 0);
-                        })(a, r, this)
-                      : ((i = a),
+                        })(a, i, this)
+                      : ((r = a),
                         (function (t) {
                           t.disconnect();
                         })((e = this._observer)),
@@ -517,13 +517,13 @@
                           e.forEach(function (e) {
                             t.observe(e);
                           });
-                        })(e, i))
+                        })(e, r))
                     : this.loadAll(a);
               },
               destroy: function () {
                 this._observer && this._observer.disconnect(),
                   ht(this._settings).forEach(function (t) {
-                    j(t);
+                    G(t);
                   }),
                   delete this._observer,
                   delete this._settings,
@@ -534,7 +534,7 @@
                 var e = this,
                   n = this._settings;
                 gt(t, n).forEach(function (t) {
-                  N(t, e), rt(t, n, e);
+                  R(t, e), it(t, n, e);
                 });
               },
               restoreAll: function () {
@@ -546,7 +546,7 @@
             }),
             (pt.load = function (t, e) {
               var n = c(e);
-              rt(t, n);
+              it(t, n);
             }),
             (pt.resetStatus = function (t) {
               A(t);
@@ -564,10 +564,10 @@
     },
     e = {};
   function n(o) {
-    var i = e[o];
-    if (void 0 !== i) return i.exports;
-    var r = (e[o] = { exports: {} });
-    return t[o].call(r.exports, r, r.exports, n), r.exports;
+    var r = e[o];
+    if (void 0 !== r) return r.exports;
+    var i = (e[o] = { exports: {} });
+    return t[o].call(i.exports, i, i.exports, n), i.exports;
   }
   (() => {
     "use strict";
@@ -595,7 +595,7 @@
       },
     };
     let o = !0,
-      i = (t = 500) => {
+      r = (t = 500) => {
         let e = document.querySelector("body");
         if (o) {
           let n = document.querySelectorAll("[data-lp]");
@@ -612,7 +612,7 @@
             }, t);
         }
       },
-      r = (t = 500) => {
+      i = (t = 500) => {
         let e = document.querySelector("body");
         if (o) {
           let n = document.querySelectorAll("[data-lp]");
@@ -662,44 +662,36 @@
       }
       scrollWatcherConstructor(t) {
         if (t.length) {
-          this.scrollWatcherLogging(
-            `Проснулся, слежу за объектами (${t.length})...`
-          ),
-            c(
-              Array.from(t).map(function (t) {
-                return `${
-                  t.dataset.watchRoot ? t.dataset.watchRoot : null
-                }|${t.dataset.watchMargin ? t.dataset.watchMargin : "0px"}|${t.dataset.watchThreshold ? t.dataset.watchThreshold : 0}`;
-              })
-            ).forEach((e) => {
-              let n = e.split("|"),
-                o = { root: n[0], margin: n[1], threshold: n[2] },
-                i = Array.from(t).filter(function (t) {
-                  let e = t.dataset.watchRoot ? t.dataset.watchRoot : null,
-                    n = t.dataset.watchMargin ? t.dataset.watchMargin : "0px",
-                    i = t.dataset.watchThreshold ? t.dataset.watchThreshold : 0;
-                  if (
-                    String(e) === o.root &&
-                    String(n) === o.margin &&
-                    String(i) === o.threshold
-                  )
-                    return t;
-                }),
-                r = this.getScrollWatcherConfig(o);
-              this.scrollWatcherInit(i, r);
-            });
-        } else
-          this.scrollWatcherLogging("Сплю, нет объектов для слежения. ZzzZZzz");
+          c(
+            Array.from(t).map(function (t) {
+              return `${
+                t.dataset.watchRoot ? t.dataset.watchRoot : null
+              }|${t.dataset.watchMargin ? t.dataset.watchMargin : "0px"}|${t.dataset.watchThreshold ? t.dataset.watchThreshold : 0}`;
+            })
+          ).forEach((e) => {
+            let n = e.split("|"),
+              o = { root: n[0], margin: n[1], threshold: n[2] },
+              r = Array.from(t).filter(function (t) {
+                let e = t.dataset.watchRoot ? t.dataset.watchRoot : null,
+                  n = t.dataset.watchMargin ? t.dataset.watchMargin : "0px",
+                  r = t.dataset.watchThreshold ? t.dataset.watchThreshold : 0;
+                if (
+                  String(e) === o.root &&
+                  String(n) === o.margin &&
+                  String(r) === o.threshold
+                )
+                  return t;
+              }),
+              i = this.getScrollWatcherConfig(o);
+            this.scrollWatcherInit(r, i);
+          });
+        }
       }
       getScrollWatcherConfig(t) {
         let e = {};
         if (
-          (document.querySelector(t.root)
-            ? (e.root = document.querySelector(t.root))
-            : "null" !== t.root &&
-              this.scrollWatcherLogging(
-                `Эмм... родительского объекта ${t.root} нет на странице`
-              ),
+          (document.querySelector(t.root) &&
+            (e.root = document.querySelector(t.root)),
           (e.rootMargin = t.margin),
           !(t.margin.indexOf("px") < 0 && t.margin.indexOf("%") < 0))
         ) {
@@ -709,9 +701,6 @@
           } else t.threshold = t.threshold.split(",");
           return (e.threshold = t.threshold), e;
         }
-        this.scrollWatcherLogging(
-          "Ой ой, настройку data-watch-margin нужно задавать в PX или %"
-        );
       }
       scrollWatcherCreate(t) {
         this.observer = new IntersectionObserver((t, e) => {
@@ -725,28 +714,13 @@
       }
       scrollWatcherIntersecting(t, e) {
         t.isIntersecting
-          ? (!e.classList.contains("_watcher-view") &&
-              e.classList.add("_watcher-view"),
-            this.scrollWatcherLogging(
-              `Я вижу ${e.classList}, добавил класс _watcher-view`
-            ))
-          : (e.classList.contains("_watcher-view") &&
-              e.classList.remove("_watcher-view"),
-            this.scrollWatcherLogging(
-              `Я не вижу ${e.classList}, убрал класс _watcher-view`
-            ));
+          ? !e.classList.contains("_watcher-view") &&
+            e.classList.add("_watcher-view")
+          : e.classList.contains("_watcher-view") &&
+            e.classList.remove("_watcher-view");
       }
       scrollWatcherOff(t, e) {
-        e.unobserve(t),
-          this.scrollWatcherLogging(`Я перестал следить за ${t.classList}`);
-      }
-      scrollWatcherLogging(t) {
-        this.config.logging &&
-          (function (t) {
-            setTimeout(() => {
-              window.FLS && console.log(t);
-            }, 0);
-          })(`[Наблюдатель]: ${t}`);
+        e.unobserve(t);
       }
       scrollWatcherCallback(t, e) {
         const n = t.target;
@@ -774,7 +748,7 @@
           var e = !0,
             n = !1,
             o = null,
-            i = {
+            r = {
               text: !0,
               search: !0,
               url: !0,
@@ -789,7 +763,7 @@
               datetime: !0,
               "datetime-local": !0,
             };
-          function r(t) {
+          function i(t) {
             return !!(
               t &&
               t !== document &&
@@ -837,7 +811,7 @@
               n.metaKey ||
                 n.altKey ||
                 n.ctrlKey ||
-                (r(t.activeElement) && a(t.activeElement), (e = !0));
+                (i(t.activeElement) && a(t.activeElement), (e = !0));
             },
             !0
           ),
@@ -856,10 +830,10 @@
               "focus",
               function (t) {
                 var n, o, c;
-                r(t.target) &&
+                i(t.target) &&
                   (e ||
                     ((o = (n = t.target).type),
-                    ("INPUT" === (c = n.tagName) && i[o] && !n.readOnly) ||
+                    ("INPUT" === (c = n.tagName) && r[o] && !n.readOnly) ||
                       ("TEXTAREA" === c && !n.readOnly) ||
                       n.isContentEditable)) &&
                   a(t.target);
@@ -870,7 +844,7 @@
               "blur",
               function (t) {
                 var e;
-                r(t.target) &&
+                i(t.target) &&
                   (t.target.classList.contains("focus-visible") ||
                     t.target.hasAttribute("data-focus-visible-added")) &&
                   ((n = !0),
@@ -947,8 +921,8 @@
           o &&
             (((t = 500) => {
               document.documentElement.classList.contains("lock")
-                ? (i(t), a.setAttribute("aria-expanded", "false"))
-                : (r(t), a.setAttribute("aria-expanded", "true"));
+                ? (r(t), a.setAttribute("aria-expanded", "false"))
+                : (i(t), a.setAttribute("aria-expanded", "true"));
             })(),
             document.documentElement.classList.toggle("menu-open"));
         }),
