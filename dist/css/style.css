@@ -562,6 +562,13 @@ h6 {
   margin-top: 0.3125rem;
 }
 
+html.webp .hero {
+  background-image: url(../img/hero-bg.webp);
+}
+
+.no-webp html:not(.webp) .hero{
+  background-image: url(../img/hero-bg.jpg); }
+
 .preview__items {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
@@ -2274,6 +2281,8 @@ h6 {
     text-decoration: underline;
   }
 }
+
+.webp html:not(.webp) .hero{ background-image: url(../img/hero-bg.webp); }
 
 .webp .preview__item_kits::before{ background-image: url(../img/preview/kits-preview.webp); }
 
