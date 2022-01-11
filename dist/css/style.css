@@ -5,6 +5,7 @@
   --color-black: #000;
   --overlay-transparency: rgba(36 36 36 / 80%);
   --color-overlay: #242424;
+  --color-gray: #969696;
   --border-radius: 20px;
   --transition-scale: cubic-bezier(0.43, 0.15, 0.19, 0.84);
   --menu-breakpoint: 992;
@@ -125,7 +126,6 @@ textarea {
 
 input {
   vertical-align: middle;
-  border: none;
   font: inherit;
   line-height: inherit;
 }
@@ -186,6 +186,10 @@ h6 {
   font-size: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 .is-hidden {
   display: none !important;
   /* stylelint-disable-line declaration-no-important */
@@ -202,6 +206,10 @@ h6 {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.input-reset {
+  border: none;
 }
 
 .visually-hidden {
@@ -362,6 +370,9 @@ h6 {
 
 .button-style {
   display: inline-block;
+  border: none;
+  width: 100%;
+  max-width: 300px;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.15;
@@ -407,6 +418,14 @@ h6 {
 
 .list li:last-child {
   margin-bottom: 0;
+}
+
+.list_type-dash {
+  text-transform: lowercase;
+}
+
+.list_type-dash li::marker {
+  content: "— ";
 }
 
 .preview__items {
@@ -834,6 +853,106 @@ html.webp .hero {
   height: 100%;
 }
 
+.company__text span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.company__text span:last-child {
+  margin-bottom: 0;
+}
+
+.company__image {
+  max-height: 37.5rem;
+}
+
+.company__list {
+  margin-top: 1.5625rem;
+  padding-left: 30px;
+}
+
+.contacts__text {
+  line-height: inherit;
+}
+
+.contacts__content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.25rem;
+}
+
+.contacts__form {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.25rem;
+  margin-top: 5px;
+}
+
+.contacts__form-text {
+  font-size: 0.875rem;
+}
+
+.contacts__input {
+  border: 1px solid var(--color-black);
+  padding: 0.6875rem 0.9375rem;
+  font-size: 1.125rem;
+}
+
+.contacts__input::-webkit-input-placeholder {
+  color: var(--color-gray);
+}
+
+.contacts__input::-moz-placeholder {
+  color: var(--color-gray);
+}
+
+.contacts__input:-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.contacts__input::-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.contacts__input::placeholder {
+  color: var(--color-gray);
+}
+
+.contacts__input.focus-visible {
+  outline: 1px solid var(--color-black);
+}
+
+.contacts__message {
+  min-height: 162px;
+  max-height: 400px;
+  resize: vertical;
+}
+
+.contacts__info-item {
+  margin-bottom: 20px;
+}
+
+.contacts__info-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.contacts__info-link {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.contacts__info-address {
+  margin-top: 1.625rem;
+  font-style: normal;
+  line-height: 1.15;
+}
+
+.contacts__info-address span {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
 @media (min-width: 23.4375em) {
   .icon-menu {
     margin-left: 5.0625rem;
@@ -996,6 +1115,25 @@ html.webp .hero {
     padding-bottom: 1.9375rem !important;
     padding-left: 3.125rem !important;
   }
+
+  .contacts__content {
+    grid-gap: 1.875rem;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1.25rem;
+  }
+
+  .contacts__form {
+    max-width: 32.5rem;
+  }
+
+  .contacts__title {
+    max-width: 50%;
+  }
+
+  .contacts__text {
+    padding-right: 40px;
+  }
 }
 
 @media (min-width: 80.625em) {
@@ -1082,6 +1220,14 @@ html.webp .hero {
   .footer__overlay:not(.overlay_transparency) {
     padding-right: 2.78125rem;
   }
+
+  .contacts__title {
+    padding-top: 3.625rem;
+  }
+
+  .contacts__title {
+    padding-bottom: 3.4375rem;
+  }
 }
 
 @media (min-width: 82.5em) {
@@ -1110,11 +1256,11 @@ html.webp .hero {
   }
 
   .button-style {
-    padding-left: 4.375rem;
+    padding-left: 3rem;
   }
 
   .button-style {
-    padding-right: 4.375rem;
+    padding-right: 3rem;
   }
 
   .button-style {
@@ -1316,6 +1462,30 @@ html.webp .hero {
   .boxes {
     --gap: 1.875rem;
   }
+
+  .company__text {
+    font-size: 1.5rem;
+  }
+
+  .contacts__button {
+    padding-top: 1rem;
+  }
+
+  .contacts__button {
+    padding-bottom: 1rem;
+  }
+
+  .contacts__button {
+    font-size: 1.25rem;
+  }
+
+  .contacts__info-link {
+    font-size: 3rem;
+  }
+
+  .contacts__info-address {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -1330,7 +1500,7 @@ html.webp .hero {
 @media (max-width: 1320px) {
   .overlay:not([data-reverse=true])::before {
     left: -15px;
-    right: -15px;
+    right: 0;
     width: auto;
   }
 
@@ -1422,6 +1592,14 @@ html.webp .hero {
 
   .footer__overlay:not(.overlay_transparency) {
     padding-right: 0.00000625rem;
+  }
+
+  .contacts__title {
+    padding-top: 1.25rem;
+  }
+
+  .contacts__title {
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -1596,10 +1774,22 @@ html.webp .hero {
             transform: translateY(0);
   }
 
+  .overlay:not([data-reverse=true])::before {
+    right: -15px;
+  }
+
+  .overlay[data-reverse=true]::before {
+    left: -15px;
+  }
+
   .overlay.heading__title {
     padding-right: 0 !important;
     padding-left: 0 !important;
     max-width: 100%;
+  }
+
+  .contacts__info {
+    text-align: center;
   }
 }
 
@@ -1623,10 +1813,6 @@ html.webp .hero {
     text-align: center;
   }
 
-  .overlay[data-reverse=true]::before {
-    left: -15px;
-  }
-
   .outer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1635,7 +1821,7 @@ html.webp .hero {
   }
 
   .outer__body {
-    margin-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
   }
 
   .outer_reverse {
@@ -1675,6 +1861,26 @@ html.webp .hero {
     -webkit-transform: unset;
         -ms-transform: unset;
             transform: unset;
+  }
+
+  .company__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .company__body {
+    margin-top: 1.25rem;
+    margin-bottom: 0 !important;
+  }
+
+  .company__text {
+    text-align: center;
+  }
+
+  .contacts__button {
+    max-width: 100%;
   }
 }
 
@@ -1902,6 +2108,30 @@ html.webp .hero {
   .boxes {
     --gap: 0.625rem;
   }
+
+  .company__text {
+    font-size: 1.25rem;
+  }
+
+  .contacts__button {
+    padding-top: 1rem;
+  }
+
+  .contacts__button {
+    padding-bottom: 1rem;
+  }
+
+  .contacts__button {
+    font-size: 1.125rem;
+  }
+
+  .contacts__info-link {
+    font-size: 1.5rem;
+  }
+
+  .contacts__info-address {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 20em) and (max-width: 23.4375em) {
@@ -1944,11 +2174,11 @@ html.webp .hero {
   }
 
   .button-style {
-    padding-left: clamp( 1.5rem , 0.3591269841rem  +  4.8677248677vw , 4.375rem );
+    padding-left: clamp( 1.5rem , 0.9047619048rem  +  2.5396825397vw , 3rem );
   }
 
   .button-style {
-    padding-right: clamp( 1.5rem , 0.3591269841rem  +  4.8677248677vw , 4.375rem );
+    padding-right: clamp( 1.5rem , 0.9047619048rem  +  2.5396825397vw , 3rem );
   }
 
   .button-style {
@@ -2150,6 +2380,30 @@ html.webp .hero {
   .boxes {
     --gap: clamp( 0.625rem , 0.128968254rem  +  2.1164021164vw , 1.875rem );
   }
+
+  .company__text {
+    font-size: clamp( 1.25rem , 1.1507936508rem  +  0.4232804233vw , 1.5rem );
+  }
+
+  .contacts__button {
+    padding-top: clamp( 1rem , 1rem  +  0vw , 1rem );
+  }
+
+  .contacts__button {
+    padding-bottom: clamp( 1rem , 1rem  +  0vw , 1rem );
+  }
+
+  .contacts__button {
+    font-size: clamp( 1.125rem , 1.0753968254rem  +  0.2116402116vw , 1.25rem );
+  }
+
+  .contacts__info-link {
+    font-size: clamp( 1.5rem , 0.9047619048rem  +  2.5396825397vw , 3rem );
+  }
+
+  .contacts__info-address {
+    font-size: clamp( 1.25rem , 1.1507936508rem  +  0.4232804233vw , 1.5rem );
+  }
 }
 
 @media (min-width: 48em) and (max-width: 80.625em) {
@@ -2236,6 +2490,14 @@ html.webp .hero {
   .footer__overlay:not(.overlay_transparency) {
     padding-right: clamp( 0rem , -4.091954023rem  +  8.5249042146vw , 2.78125rem );
   }
+
+  .contacts__title {
+    padding-top: clamp( 1.25rem , -2.2442528736rem  +  7.2796934866vw , 3.625rem );
+  }
+
+  .contacts__title {
+    padding-bottom: clamp( 1.25rem , -1.9683908046rem  +  6.7049808429vw , 3.4375rem );
+  }
 }
 
 @media (min-width: 48.0625em) and (min-width: 48em) and (max-width: 82.5em) {
@@ -2278,6 +2540,10 @@ html.webp .hero {
   }
 
   .breadcrumbs__link:hover {
+    text-decoration: underline;
+  }
+
+  .contacts__info-link:hover {
     text-decoration: underline;
   }
 }
