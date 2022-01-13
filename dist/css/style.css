@@ -1103,7 +1103,7 @@ html.webp .hero {
   transition: border-radius 0.2s;
 }
 
-.inventory__tag[aria-checked=true] {
+.inventory__tag[data-selected=true] {
   color: var(--color-white);
   background-color: var(--color-overlay);
 }

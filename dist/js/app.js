@@ -26,8 +26,8 @@
                 /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)),
             o = e && "IntersectionObserver" in window,
             r = e && "classList" in document.createElement("p"),
-            i = e && window.devicePixelRatio > 1,
-            a = {
+            a = e && window.devicePixelRatio > 1,
+            i = {
               elements_selector: ".lazy",
               container: n || e ? document : null,
               threshold: 300,
@@ -60,7 +60,7 @@
               use_native: !1,
             },
             c = function (e) {
-              return t({}, a, e);
+              return t({}, i, e);
             },
             s = function (t, e) {
               var n,
@@ -306,18 +306,18 @@
                 (function (t, e, n) {
                   var o = y(t, e.data_bg),
                     r = y(t, e.data_bg_hidpi),
-                    a = i && r ? r : o;
-                  a &&
-                    ((t.style.backgroundImage = 'url("'.concat(a, '")')),
-                    N(t).setAttribute(l, a),
+                    i = a && r ? r : o;
+                  i &&
+                    ((t.style.backgroundImage = 'url("'.concat(i, '")')),
+                    N(t).setAttribute(l, i),
                     H(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
                   var o = y(t, e.data_bg_multi),
                     r = y(t, e.data_bg_multi_hidpi),
-                    a = i && r ? r : o;
-                  a &&
-                    ((t.style.backgroundImage = a),
+                    i = a && r ? r : o;
+                  i &&
+                    ((t.style.backgroundImage = i),
                     (function (t, e, n) {
                       O(t, e.class_applied),
                         L(t, g),
@@ -327,7 +327,7 @@
                     })(t, e, n));
                 })(t, e, n);
             },
-            it = function (t, e, n) {
+            at = function (t, e, n) {
               !(function (t) {
                 return Y.indexOf(t.tagName) > -1;
               })(t)
@@ -340,7 +340,7 @@
                       })(t, e, n);
                   })(t, e, n);
             },
-            at = function (t) {
+            it = function (t) {
               t.removeAttribute(l), t.removeAttribute(d), t.removeAttribute(u);
             },
             ct = function (t) {
@@ -407,7 +407,7 @@
                           e.unobserve_entered && T(t, n);
                         })(t, n, o),
                         C(n.callback_enter, t, e, o),
-                        r || it(t, n, o);
+                        r || at(t, n, o);
                     })(t.target, t, e, n)
                   : (function (t, e, n, o) {
                       I(t) ||
@@ -421,9 +421,9 @@
                             (et(t),
                             (function (t) {
                               q(t, function (t) {
-                                at(t);
+                                it(t);
                               }),
-                                at(t);
+                                it(t);
                             })(t),
                             ct(t),
                             S(t, n.class_loading),
@@ -489,11 +489,11 @@
               update: function (t) {
                 var e,
                   r,
-                  i = this._settings,
-                  a = gt(t, i);
-                M(this, a.length),
+                  a = this._settings,
+                  i = gt(t, a);
+                M(this, i.length),
                   !n && o
-                    ? ut(i)
+                    ? ut(a)
                       ? (function (t, e, n) {
                           t.forEach(function (t) {
                             -1 !== dt.indexOf(t.tagName) &&
@@ -508,8 +508,8 @@
                               })(t, e, n);
                           }),
                             M(n, 0);
-                        })(a, i, this)
-                      : ((r = a),
+                        })(i, a, this)
+                      : ((r = i),
                         (function (t) {
                           t.disconnect();
                         })((e = this._observer)),
@@ -518,7 +518,7 @@
                             t.observe(e);
                           });
                         })(e, r))
-                    : this.loadAll(a);
+                    : this.loadAll(i);
               },
               destroy: function () {
                 this._observer && this._observer.disconnect(),
@@ -534,7 +534,7 @@
                 var e = this,
                   n = this._settings;
                 gt(t, n).forEach(function (t) {
-                  T(t, e), it(t, n, e);
+                  T(t, e), at(t, n, e);
                 });
               },
               restoreAll: function () {
@@ -546,7 +546,7 @@
             }),
             (pt.load = function (t, e) {
               var n = c(e);
-              it(t, n);
+              at(t, n);
             }),
             (pt.resetStatus = function (t) {
               A(t);
@@ -566,8 +566,8 @@
   function n(o) {
     var r = e[o];
     if (void 0 !== r) return r.exports;
-    var i = (e[o] = { exports: {} });
-    return t[o].call(i.exports, i, i.exports, n), i.exports;
+    var a = (e[o] = { exports: {} });
+    return t[o].call(a.exports, a, a.exports, n), a.exports;
   }
   (() => {
     "use strict";
@@ -611,8 +611,8 @@
             }, t);
         }
       };
-    let i = document.querySelector(".icon-menu");
-    function a(t) {
+    let a = document.querySelector(".icon-menu");
+    function i(t) {
       return t.filter(function (t, e, n) {
         return n.indexOf(t) === e;
       });
@@ -640,7 +640,7 @@
       }
       scrollWatcherConstructor(t) {
         if (t.length) {
-          a(
+          i(
             Array.from(t).map(function (t) {
               return `${
                 t.dataset.watchRoot ? t.dataset.watchRoot : null
@@ -660,8 +660,8 @@
                 )
                   return t;
               }),
-              i = this.getScrollWatcherConfig(o);
-            this.scrollWatcherInit(r, i);
+              a = this.getScrollWatcherConfig(o);
+            this.scrollWatcherInit(r, a);
           });
         }
       }
@@ -741,7 +741,7 @@
               datetime: !0,
               "datetime-local": !0,
             };
-          function i(t) {
+          function a(t) {
             return !!(
               t &&
               t !== document &&
@@ -751,7 +751,7 @@
               "contains" in t.classList
             );
           }
-          function a(t) {
+          function i(t) {
             t.classList.contains("focus-visible") ||
               (t.classList.add("focus-visible"),
               t.setAttribute("data-focus-visible-added", ""));
@@ -789,7 +789,7 @@
               n.metaKey ||
                 n.altKey ||
                 n.ctrlKey ||
-                (i(t.activeElement) && a(t.activeElement), (e = !0));
+                (a(t.activeElement) && i(t.activeElement), (e = !0));
             },
             !0
           ),
@@ -808,13 +808,13 @@
               "focus",
               function (t) {
                 var n, o, c;
-                i(t.target) &&
+                a(t.target) &&
                   (e ||
                     ((o = (n = t.target).type),
                     ("INPUT" === (c = n.tagName) && r[o] && !n.readOnly) ||
                       ("TEXTAREA" === c && !n.readOnly) ||
                       n.isContentEditable)) &&
-                  a(t.target);
+                  i(t.target);
               },
               !0
             ),
@@ -822,7 +822,7 @@
               "blur",
               function (t) {
                 var e;
-                i(t.target) &&
+                a(t.target) &&
                   (t.target.classList.contains("focus-visible") ||
                     t.target.hasAttribute("data-focus-visible-added")) &&
                   ((n = !0),
@@ -887,38 +887,38 @@
         (n.classList = "inventory__cards container"),
           n.setAttribute("data-category", t);
         const o = (t, e) => {
-            const { id: n, img: o, title: r, price: i } = e;
-            let a = `\n         <article class="inventory__card card">\n            <header class="card__header">\n               <a class="card__link" href="#">\n                  <picture>\n                     <source class="card__img" srcset="${o}.webp" type="image/webp">\n                     <img class="card__img" src="${o}.jpg" alt="${r}">\n                  </picture>\n               </a>\n               <a class="card__shopping" href="cart.html">\n                  <img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">\n               </a>\n               <button class="card__button btn-reset button-style">\n                  В корзину\n               </button>\n            </header>\n            <div class="card__body">\n               <h3 class="card__title m-0">\n                  ${r}\n               </h3>\n            </div>\n            <footer class="card__footer">\n               <strong class="card__price">\n                  ${i}\n               </strong>\n      `;
+            const { id: n, img: o, title: r, price: a } = e;
+            let i = `\n         <article class="inventory__card card">\n            <header class="card__header">\n               <a class="card__link" href="#">\n                  <picture>\n                     <source class="card__img" srcset="${o}.webp" type="image/webp">\n                     <img class="card__img" src="${o}.jpg" alt="${r}">\n                  </picture>\n               </a>\n               <a class="card__shopping" href="cart.html">\n                  <img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">\n               </a>\n               <button class="card__button btn-reset button-style">\n                  В корзину\n               </button>\n            </header>\n            <div class="card__body">\n               <h3 class="card__title m-0">\n                  ${r}\n               </h3>\n            </div>\n            <footer class="card__footer">\n               <strong class="card__price">\n                  ${a}\n               </strong>\n      `;
             e.hasOwnProperty("discount")
-              ? (a += `\n                  <s class="card__discount">\n                     ${e.discount}\n                  </s>\n               </footer>\n            </article>\n         `)
-              : (a +=
+              ? (i += `\n                  <s class="card__discount">\n                     ${e.discount}\n                  </s>\n               </footer>\n            </article>\n         `)
+              : (i +=
                   "\n               </footer>\n            </article>\n         "),
-              t.insertAdjacentHTML("beforeend", a);
+              t.insertAdjacentHTML("beforeend", i);
           },
           r = (r) => {
-            const i = r[t],
-              a = i.limit,
-              c = i.cards,
+            const a = r[t],
+              i = a.limit,
+              c = a.cards,
               s = c.length;
-            for (let t = 0; t < Math.min(s, a); ++t) o(n, c[t]);
+            for (let t = 0; t < Math.min(s, i); ++t) o(n, c[t]);
             ((e, o) => {
               e > o &&
                 n.insertAdjacentHTML(
                   "beforeend",
                   `\n               <button class="inventory__load-more btn-reset" data-load="${t}">\n                  загрузить ещё\n               </button>\n               `
                 );
-            })(s, a),
+            })(s, i),
               e.append(n),
               ((t, e, r) => {
-                const i = n.querySelector(".inventory__load-more");
-                if (i) {
-                  const n = i.parentElement;
-                  i.addEventListener("click", (a) => {
-                    for (let i = e; i < r; ++i) o(n, t[i]);
-                    n.removeChild(i);
+                const a = n.querySelector(".inventory__load-more");
+                if (a) {
+                  const n = a.parentElement;
+                  a.addEventListener("click", (i) => {
+                    for (let a = e; a < r; ++a) o(n, t[a]);
+                    n.removeChild(a);
                   });
                 }
-              })(c, a, s);
+              })(c, i, s);
           };
         fetch("resources/inventory.json")
           .then((t) => t.json())
@@ -935,19 +935,19 @@
       const e = t.target;
       if (e && e.classList.contains("inventory__tag")) {
         const t = e.getAttribute("data-tagname");
-        e.hasAttribute("aria-checked")
-          ? (e.removeAttribute("aria-checked"),
+        e.hasAttribute("data-selected")
+          ? (e.removeAttribute("data-selected"),
             ((t) => {
               const e = document.querySelector(".inventory__cards-wrapper"),
                 n = e.querySelector(`[data-category="${t}"]`);
               n && e.removeChild(n);
             })(t))
-          : (e.setAttribute("aria-checked", "true"), m(t));
+          : (e.setAttribute("data-selected", "true"), m(t));
       }
     }),
       v?.forEach((t) => {
         const e = t.getAttribute("data-tagname");
-        t.hasAttribute("aria-checked") && e && m(e);
+        t.hasAttribute("data-selected") && e && m(e);
       }),
       (window.FLS = !0),
       (function (t) {
@@ -962,13 +962,13 @@
         let e = !0 === t ? "webp" : "no-webp";
         document.documentElement.classList.add(e);
       }),
-      i &&
-        i.addEventListener("click", function (t) {
+      a &&
+        a.addEventListener("click", function (t) {
           e &&
             (((t = 500) => {
               document.documentElement.classList.contains("lock")
-                ? (o(t), i.setAttribute("aria-expanded", "false"))
-                : (r(t), i.setAttribute("aria-expanded", "true"));
+                ? (o(t), a.setAttribute("aria-expanded", "false"))
+                : (r(t), a.setAttribute("aria-expanded", "true"));
             })(),
             document.documentElement.classList.toggle("menu-open"));
         }),
