@@ -535,7 +535,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 300px;
+  max-width: 18.75rem;
 }
 
 .card__header {
@@ -597,11 +597,11 @@ button {
 
 .card__shopping {
   position: absolute;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-filter 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-filter 0.3s;
+  -o-transition: transform 0.3s, filter 0.3s;
+  transition: transform 0.3s, filter 0.3s;
+  transition: transform 0.3s, filter 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
 }
 
 .card__button {
@@ -612,11 +612,11 @@ button {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   max-width: 100%;
-  -webkit-transition: border-radius 0.2s, -webkit-transform 0.3s;
-  transition: border-radius 0.2s, -webkit-transform 0.3s;
-  -o-transition: transform 0.3s, border-radius 0.2s;
-  transition: transform 0.3s, border-radius 0.2s;
-  transition: transform 0.3s, border-radius 0.2s, -webkit-transform 0.3s;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
 }
 
 .card__body {
@@ -626,7 +626,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 .card__title {
@@ -1087,18 +1087,16 @@ html.webp .hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: -10px;
-  margin-bottom: 50px;
-  padding: 10px 0;
+  margin: -0.625rem;
+  padding: 0.625rem 0;
 }
 
 .inventory__tag {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  margin: 10px;
+  margin: 0.625rem;
   border: 1px solid var(--color-overlay);
-  padding: 20px 28px;
   text-transform: uppercase;
   -webkit-transition: border-radius 0.2s;
   -o-transition: border-radius 0.2s;
@@ -1111,14 +1109,32 @@ html.webp .hero {
 }
 
 .inventory__cards {
-  --value: 300px;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--value), 1fr));
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 0.375rem;
 }
 
 .inventory__card {
   max-width: 100%;
+}
+
+.inventory__load-more {
+  grid-column: 1/-1;
+  margin: -1.0625rem auto 1.875rem;
+}
+
+.inventory__load-more::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.9375rem;
+  height: 0.46875rem;
+  background-image: url(../img/icons/arrow-bottom.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 23.4375em) {
@@ -1279,15 +1295,15 @@ html.webp .hero {
   }
 
   .card__link::before {
-    -webkit-transform: translateY(200%);
-        -ms-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
   }
 
   .card__shopping {
-    -webkit-transform: scale(0) translate(50px, 50px);
-        -ms-transform: scale(0) translate(50px, 50px);
-            transform: scale(0) translate(50px, 50px);
+    -webkit-transform: scale(0) translate(100%, 100%);
+        -ms-transform: scale(0) translate(100%, 100%);
+            transform: scale(0) translate(100%, 100%);
   }
 
   .card__button {
@@ -1498,7 +1514,7 @@ html.webp .hero {
   }
 
   .card {
-    padding-bottom: 2.375rem;
+    padding-bottom: 2.1875rem;
   }
 
   .card__header {
@@ -1725,6 +1741,10 @@ html.webp .hero {
     font-size: 1.5rem;
   }
 
+  .inventory__taglist {
+    margin-bottom: 3.125rem;
+  }
+
   .inventory__tag {
     padding-top: 1.25rem;
   }
@@ -1746,7 +1766,7 @@ html.webp .hero {
   }
 
   .inventory__cards {
-    --value: 18.75rem;
+    margin-bottom: 3.75rem;
   }
 
   .inventory__cards {
@@ -1772,6 +1792,13 @@ html.webp .hero {
 
   .overlay[data-reverse=true]::before {
     width: initial;
+  }
+}
+
+@media (max-width: 1300px) {
+  .inventory__cards {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -2066,6 +2093,11 @@ html.webp .hero {
 
   .contacts__info {
     text-align: center;
+  }
+
+  .inventory__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2461,6 +2493,10 @@ html.webp .hero {
     font-size: 1.25rem;
   }
 
+  .inventory__taglist {
+    margin-bottom: 1.25rem;
+  }
+
   .inventory__tag {
     padding-top: 0.3125rem;
   }
@@ -2482,11 +2518,16 @@ html.webp .hero {
   }
 
   .inventory__cards {
-    --value: 10rem;
+    margin-bottom: 0.75rem;
   }
 
   .inventory__cards {
     grid-gap: 0.625rem;
+  }
+
+  .inventory__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2586,7 +2627,7 @@ html.webp .hero {
   }
 
   .card {
-    padding-bottom: clamp( 0.625rem , -0.0694444444rem  +  2.962962963vw , 2.375rem );
+    padding-bottom: clamp( 0.625rem , 0.0049603175rem  +  2.6455026455vw , 2.1875rem );
   }
 
   .card__header {
@@ -2813,6 +2854,10 @@ html.webp .hero {
     font-size: clamp( 1.25rem , 1.1507936508rem  +  0.4232804233vw , 1.5rem );
   }
 
+  .inventory__taglist {
+    margin-bottom: clamp( 1.25rem , 0.505952381rem  +  3.1746031746vw , 3.125rem );
+  }
+
   .inventory__tag {
     padding-top: clamp( 0.3125rem , -0.0595238095rem  +  1.5873015873vw , 1.25rem );
   }
@@ -2834,7 +2879,7 @@ html.webp .hero {
   }
 
   .inventory__cards {
-    --value: clamp( 10rem , 6.5277777778rem  +  14.8148148148vw , 18.75rem );
+    margin-bottom: clamp( 0.75rem , -0.4404761905rem  +  5.0793650794vw , 3.75rem );
   }
 
   .inventory__cards {
@@ -2979,8 +3024,14 @@ html.webp .hero {
     text-decoration: underline;
   }
 
+  .card__shopping:hover {
+    -webkit-filter: drop-shadow(0 0 10px var(--color-gray));
+            filter: drop-shadow(0 0 10px var(--color-gray));
+  }
+
   .card__button:hover {
-    border-radius: 25px 25px 0 0;
+    border-radius: 0;
+    background-color: var(--overlay-transparency);
   }
 
   .contacts__info-link:hover {
@@ -2989,6 +3040,10 @@ html.webp .hero {
 
   .inventory__tag:hover {
     border-radius: 15px 0;
+  }
+
+  .inventory__load-more:hover {
+    text-decoration: underline;
   }
 }
 

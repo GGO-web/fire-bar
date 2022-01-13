@@ -12,8 +12,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
 	<meta name="theme-color" content="#f3f3f3">
 	<title>Инвентарь</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220112174014">
-	<script src="js/app.min.js?_v=20220112174014" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220113150925">
+	<script src="js/app.min.js?_v=20220113150925" defer></script>
 </head>
 
 <body>
@@ -63,144 +63,45 @@
 			</nav>
 
 			<div class="inventory container-fluid">
-				<div class="inventory__inner section-offsets container">
-					<div class="inventory__taglist">
-						<button class="inventory__tag btn-reset" aria-checked="true">
-							Шейкеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							Джигеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							стрейнеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							Мадлеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							гейзеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							сквизеры
-						</button>
-						<button class="inventory__tag btn-reset">
-							трубочки
-						</button>
-						<button class="inventory__tag btn-reset">
-							для работы со льдом
-						</button>
-						<button class="inventory__tag btn-reset">
-							формы для льда
-						</button>
-						<button class="inventory__tag btn-reset">
-							барные ложки
-						</button>
-						<button class="inventory__tag btn-reset">
-							другое
-						</button>
+				<div class="inventory__inner section-offsets">
+					<div class="inventory__filter container">
+						<div class="inventory__taglist">
+							<button class="inventory__tag btn-reset" aria-checked="true" data-tagname="shakers">
+								Шейкеры
+							</button>
+							<button class="inventory__tag btn-reset" aria-checked="true" data-tagname="jiggers">
+								Джигеры
+							</button>
+							<button class="inventory__tag btn-reset" aria-checked="true" data-tagname="streiners">
+								стрейнеры
+							</button>
+							<button class="inventory__tag btn-reset">
+								Мадлеры
+							</button>
+							<button class="inventory__tag btn-reset">
+								гейзеры
+							</button>
+							<button class="inventory__tag btn-reset">
+								сквизеры
+							</button>
+							<button class="inventory__tag btn-reset">
+								трубочки
+							</button>
+							<button class="inventory__tag btn-reset">
+								для работы со льдом
+							</button>
+							<button class="inventory__tag btn-reset">
+								формы для льда
+							</button>
+							<button class="inventory__tag btn-reset">
+								барные ложки
+							</button>
+							<button class="inventory__tag btn-reset">
+								другое
+							</button>
+						</div>
 					</div>
-					<div class="inventory__cards">
-						<article class="inventory__card card">
-							<header class="card__header">
-								<a class="card__link" href="#">
-									<picture><source srcset="img/shakers/shaker-1.webp"type="image/webp"><img class="card__img" src="img/shakers/shaker-1.jpg" alt="Шейкер 1"></picture>
-								</a>
-								<a class="card__shopping" href="cart.html">
-									<img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">
-								</a>
-								<button class="card__button btn-reset button-style">
-									В корзину
-								</button>
-							</header>
-							<div class="card__body">
-								<h3 class="card__title m-0">
-									Шейкер Бостон 750 мл
-								</h3>
-							</div>
-							<footer class="card__footer">
-								<strong class="card__price">
-									659 грн
-								</strong>
-								<s class="card__discount">
-									795 грн
-								</s>
-							</footer>
-						</article>
-						<article class="inventory__card card">
-							<header class="card__header">
-								<a class="card__link" href="#">
-									<picture><source srcset="img/shakers/shaker-2.webp"type="image/webp"><img class="card__img" src="img/shakers/shaker-2.jpg" alt="Шейкер 2"></picture>
-								</a>
-								<a class="card__shopping" href="cart.html">
-									<img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">
-								</a>
-								<button class="card__button btn-reset button-style">
-									В корзину
-								</button>
-							</header>
-							<div class="card__body">
-								<h3 class="card__title m-0">
-									Шейкер Бостон бронза 750 мл
-								</h3>
-							</div>
-							<footer class="card__footer">
-								<strong class="card__price">
-									699 грн
-								</strong>
-								<s class="card__discount">
-									825 грн
-								</s>
-							</footer>
-						</article>
-						<article class="inventory__card card">
-							<header class="card__header">
-								<a class="card__link" href="#">
-									<picture><source srcset="img/shakers/shaker-3.webp"type="image/webp"><img class="card__img" src="img/shakers/shaker-3.jpg" alt="Шейкер 3"></picture>
-								</a>
-								<a class="card__shopping" href="cart.html">
-									<img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">
-								</a>
-								<button class="card__button btn-reset button-style">
-									В корзину
-								</button>
-							</header>
-							<div class="card__body">
-								<h3 class="card__title m-0">
-									Шейкер Бостон золото 750 мл
-								</h3>
-							</div>
-							<footer class="card__footer">
-								<strong class="card__price">
-									719 грн
-								</strong>
-								<s class="card__discount">
-									845 грн
-								</s>
-							</footer>
-						</article>
-						<article class="inventory__card card">
-							<header class="card__header">
-								<a class="card__link" href="#">
-									<picture><source srcset="img/shakers/shaker-4.webp"type="image/webp"><img class="card__img" src="img/shakers/shaker-4.jpg" alt="Шейкер 4"></picture>
-								</a>
-								<a class="card__shopping" href="cart.html">
-									<img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">
-								</a>
-								<button class="card__button btn-reset button-style">
-									В корзину
-								</button>
-							</header>
-							<div class="card__body">
-								<h3 class="card__title m-0">
-									Шейкер Бостон с утяжелителем 750 мл
-								</h3>
-							</div>
-							<footer class="card__footer">
-								<strong class="card__price">
-									659 грн
-								</strong>
-							</footer>
-						</article>
+					<div class="inventory__cards-wrapper">
 					</div>
 				</div>
 			</div>
