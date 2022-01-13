@@ -89,12 +89,12 @@
             p = "error",
             _ = "native",
             b = "data-",
-            E = "ll-status",
-            y = function (t, e) {
+            y = "ll-status",
+            E = function (t, e) {
               return t.getAttribute(b + e);
             },
             w = function (t) {
-              return y(t, E);
+              return E(t, y);
             },
             L = function (t, e) {
               return (function (t, e, n) {
@@ -196,9 +196,9 @@
               n && t.setAttribute(e, n);
             },
             K = function (t, e) {
-              B(t, u, y(t, e.data_sizes)),
-                B(t, d, y(t, e.data_srcset)),
-                B(t, l, y(t, e.data_src));
+              B(t, u, E(t, e.data_sizes)),
+                B(t, d, E(t, e.data_srcset)),
+                B(t, l, E(t, e.data_src));
             },
             X = {
               IMG: function (t, e) {
@@ -209,15 +209,15 @@
                   K(t, e);
               },
               IFRAME: function (t, e) {
-                U(t, P), B(t, l, y(t, e.data_src));
+                U(t, P), B(t, l, E(t, e.data_src));
               },
               VIDEO: function (t, e) {
                 $(t, function (t) {
-                  U(t, P), B(t, l, y(t, e.data_src));
+                  U(t, P), B(t, l, E(t, e.data_src));
                 }),
                   U(t, j),
-                  B(t, f, y(t, e.data_poster)),
-                  B(t, l, y(t, e.data_src)),
+                  B(t, f, E(t, e.data_poster)),
+                  B(t, l, E(t, e.data_src)),
                   t.load();
               },
             },
@@ -304,8 +304,8 @@
                   D(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
                 })(t),
                 (function (t, e, n) {
-                  var o = y(t, e.data_bg),
-                    r = y(t, e.data_bg_hidpi),
+                  var o = E(t, e.data_bg),
+                    r = E(t, e.data_bg_hidpi),
                     i = a && r ? r : o;
                   i &&
                     ((t.style.backgroundImage = 'url("'.concat(i, '")')),
@@ -313,8 +313,8 @@
                     H(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
-                  var o = y(t, e.data_bg_multi),
-                    r = y(t, e.data_bg_multi_hidpi),
+                  var o = E(t, e.data_bg_multi),
+                    r = E(t, e.data_bg_multi_hidpi),
                     i = a && r ? r : o;
                   i &&
                     ((t.style.backgroundImage = i),
@@ -926,7 +926,7 @@
             r(t);
           })
           .catch((t) => {
-            console.log(t);
+            console.log("No data for this category was found");
           });
       },
       h = document.querySelector(".inventory__taglist"),

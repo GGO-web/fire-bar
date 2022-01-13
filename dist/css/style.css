@@ -1078,6 +1078,10 @@ html.webp .hero {
   margin-bottom: 1.25rem;
 }
 
+.inventory {
+  position: relative;
+}
+
 .inventory__taglist {
   display: -webkit-box;
   display: -ms-flexbox;
