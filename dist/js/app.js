@@ -90,11 +90,11 @@
             _ = "native",
             b = "data-",
             E = "ll-status",
-            w = function (t, e) {
+            y = function (t, e) {
               return t.getAttribute(b + e);
             },
-            y = function (t) {
-              return w(t, E);
+            w = function (t) {
+              return y(t, E);
             },
             L = function (t, e) {
               return (function (t, e, n) {
@@ -106,10 +106,10 @@
               return L(t, null);
             },
             I = function (t) {
-              return null === y(t);
+              return null === w(t);
             },
             k = function (t) {
-              return y(t) === _;
+              return w(t) === _;
             },
             x = [h, v, g, p],
             C = function (t, e, n, o) {
@@ -153,10 +153,10 @@
               var n = t.parentNode;
               n && "PICTURE" === n.tagName && W(n).forEach(e);
             },
-            P = function (t, e) {
+            $ = function (t, e) {
               W(t).forEach(e);
             },
-            $ = [l],
+            P = [l],
             j = [l, f],
             z = [l, d, u],
             D = function (t) {
@@ -196,9 +196,9 @@
               n && t.setAttribute(e, n);
             },
             K = function (t, e) {
-              B(t, u, w(t, e.data_sizes)),
-                B(t, d, w(t, e.data_srcset)),
-                B(t, l, w(t, e.data_src));
+              B(t, u, y(t, e.data_sizes)),
+                B(t, d, y(t, e.data_srcset)),
+                B(t, l, y(t, e.data_src));
             },
             X = {
               IMG: function (t, e) {
@@ -209,15 +209,15 @@
                   K(t, e);
               },
               IFRAME: function (t, e) {
-                U(t, $), B(t, l, w(t, e.data_src));
+                U(t, P), B(t, l, y(t, e.data_src));
               },
               VIDEO: function (t, e) {
-                P(t, function (t) {
-                  U(t, $), B(t, l, w(t, e.data_src));
+                $(t, function (t) {
+                  U(t, P), B(t, l, y(t, e.data_src));
                 }),
                   U(t, j),
-                  B(t, f, w(t, e.data_poster)),
-                  B(t, l, w(t, e.data_src)),
+                  B(t, f, y(t, e.data_poster)),
+                  B(t, l, y(t, e.data_src)),
                   t.load();
               },
             },
@@ -304,8 +304,8 @@
                   D(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
                 })(t),
                 (function (t, e, n) {
-                  var o = w(t, e.data_bg),
-                    r = w(t, e.data_bg_hidpi),
+                  var o = y(t, e.data_bg),
+                    r = y(t, e.data_bg_hidpi),
                     a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = 'url("'.concat(a, '")')),
@@ -313,8 +313,8 @@
                     H(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
-                  var o = w(t, e.data_bg_multi),
-                    r = w(t, e.data_bg_multi_hidpi),
+                  var o = y(t, e.data_bg_multi),
+                    r = y(t, e.data_bg_multi_hidpi),
                     a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = a),
@@ -352,11 +352,11 @@
             st = {
               IMG: ct,
               IFRAME: function (t) {
-                F(t, $);
+                F(t, P);
               },
               VIDEO: function (t) {
-                P(t, function (t) {
-                  F(t, $);
+                $(t, function (t) {
+                  F(t, P);
                 }),
                   F(t, j),
                   t.load();
@@ -398,7 +398,7 @@
                 })(t)
                   ? (function (t, e, n, o) {
                       var r = (function (t) {
-                        return x.indexOf(y(t)) >= 0;
+                        return x.indexOf(w(t)) >= 0;
                       })(t);
                       L(t, "entered"),
                         O(t, n.class_entered),
@@ -415,7 +415,7 @@
                         (function (t, e, n, o) {
                           n.cancel_on_exit &&
                             (function (t) {
-                              return y(t) === h;
+                              return w(t) === h;
                             })(t) &&
                             "IMG" === t.tagName &&
                             (et(t),
@@ -443,7 +443,7 @@
             },
             vt = function (t) {
               return (function (t) {
-                return y(t) === p;
+                return w(t) === p;
               })(t);
             },
             gt = function (t, e) {
@@ -884,7 +884,8 @@
     const m = (t) => {
         const e = document.querySelector(".inventory__cards-wrapper"),
           n = document.createElement("div");
-        n.classList = "inventory__cards container";
+        (n.classList = "inventory__cards container"),
+          n.setAttribute("data-category", t);
         const o = (t, e) => {
             const { id: n, img: o, title: r, price: i } = e;
             let a = `\n         <article class="inventory__card card">\n            <header class="card__header">\n               <a class="card__link" href="#">\n                  <picture>\n                     <source class="card__img" srcset="${o}.webp" type="image/webp">\n                     <img class="card__img" src="${o}.jpg" alt="${r}">\n                  </picture>\n               </a>\n               <a class="card__shopping" href="cart.html">\n                  <img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">\n               </a>\n               <button class="card__button btn-reset button-style">\n                  В корзину\n               </button>\n            </header>\n            <div class="card__body">\n               <h3 class="card__title m-0">\n                  ${r}\n               </h3>\n            </div>\n            <footer class="card__footer">\n               <strong class="card__price">\n                  ${i}\n               </strong>\n      `;
@@ -932,15 +933,21 @@
       v = document.querySelectorAll(".inventory__tag");
     h?.addEventListener("click", (t) => {
       const e = t.target;
-      e &&
-        e.classList.contains("inventory__tag") &&
-        (e.hasAttribute("aria-checked")
-          ? e.removeAttribute("aria-checked")
-          : e.setAttribute("aria-checked", "true"));
+      if (e && e.classList.contains("inventory__tag")) {
+        const t = e.getAttribute("data-tagname");
+        e.hasAttribute("aria-checked")
+          ? (e.removeAttribute("aria-checked"),
+            ((t) => {
+              const e = document.querySelector(".inventory__cards-wrapper"),
+                n = e.querySelector(`[data-category="${t}"]`);
+              n && e.removeChild(n);
+            })(t))
+          : (e.setAttribute("aria-checked", "true"), m(t));
+      }
     }),
       v?.forEach((t) => {
         const e = t.getAttribute("data-tagname");
-        !!t.getAttribute("aria-checked") && e && m(e);
+        t.hasAttribute("aria-checked") && e && m(e);
       }),
       (window.FLS = !0),
       (function (t) {
