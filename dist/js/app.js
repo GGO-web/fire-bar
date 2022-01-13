@@ -90,11 +90,11 @@
             _ = "native",
             b = "data-",
             E = "ll-status",
-            y = function (t, e) {
+            w = function (t, e) {
               return t.getAttribute(b + e);
             },
-            w = function (t) {
-              return y(t, E);
+            y = function (t) {
+              return w(t, E);
             },
             L = function (t, e) {
               return (function (t, e, n) {
@@ -106,10 +106,10 @@
               return L(t, null);
             },
             I = function (t) {
-              return null === w(t);
+              return null === y(t);
             },
             k = function (t) {
-              return w(t) === _;
+              return y(t) === _;
             },
             x = [h, v, g, p],
             C = function (t, e, n, o) {
@@ -196,9 +196,9 @@
               n && t.setAttribute(e, n);
             },
             K = function (t, e) {
-              B(t, u, y(t, e.data_sizes)),
-                B(t, d, y(t, e.data_srcset)),
-                B(t, l, y(t, e.data_src));
+              B(t, u, w(t, e.data_sizes)),
+                B(t, d, w(t, e.data_srcset)),
+                B(t, l, w(t, e.data_src));
             },
             X = {
               IMG: function (t, e) {
@@ -209,15 +209,15 @@
                   K(t, e);
               },
               IFRAME: function (t, e) {
-                U(t, $), B(t, l, y(t, e.data_src));
+                U(t, $), B(t, l, w(t, e.data_src));
               },
               VIDEO: function (t, e) {
                 P(t, function (t) {
-                  U(t, $), B(t, l, y(t, e.data_src));
+                  U(t, $), B(t, l, w(t, e.data_src));
                 }),
                   U(t, j),
-                  B(t, f, y(t, e.data_poster)),
-                  B(t, l, y(t, e.data_src)),
+                  B(t, f, w(t, e.data_poster)),
+                  B(t, l, w(t, e.data_src)),
                   t.load();
               },
             },
@@ -304,8 +304,8 @@
                   D(t) || (t[m] = { backgroundImage: t.style.backgroundImage });
                 })(t),
                 (function (t, e, n) {
-                  var o = y(t, e.data_bg),
-                    r = y(t, e.data_bg_hidpi),
+                  var o = w(t, e.data_bg),
+                    r = w(t, e.data_bg_hidpi),
                     a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = 'url("'.concat(a, '")')),
@@ -313,8 +313,8 @@
                     H(t, e, n));
                 })(t, e, n),
                 (function (t, e, n) {
-                  var o = y(t, e.data_bg_multi),
-                    r = y(t, e.data_bg_multi_hidpi),
+                  var o = w(t, e.data_bg_multi),
+                    r = w(t, e.data_bg_multi_hidpi),
                     a = i && r ? r : o;
                   a &&
                     ((t.style.backgroundImage = a),
@@ -398,7 +398,7 @@
                 })(t)
                   ? (function (t, e, n, o) {
                       var r = (function (t) {
-                        return x.indexOf(w(t)) >= 0;
+                        return x.indexOf(y(t)) >= 0;
                       })(t);
                       L(t, "entered"),
                         O(t, n.class_entered),
@@ -415,7 +415,7 @@
                         (function (t, e, n, o) {
                           n.cancel_on_exit &&
                             (function (t) {
-                              return w(t) === h;
+                              return y(t) === h;
                             })(t) &&
                             "IMG" === t.tagName &&
                             (et(t),
@@ -443,7 +443,7 @@
             },
             vt = function (t) {
               return (function (t) {
-                return w(t) === p;
+                return y(t) === p;
               })(t);
             },
             gt = function (t, e) {
@@ -887,7 +887,7 @@
         n.classList = "inventory__cards container";
         const o = (t, e) => {
             const { id: n, img: o, title: r, price: i } = e;
-            let a = `\n         <article class="inventory__card card">\n            <header class="card__header">\n               <a class="card__link" href="#">\n                  <img class="card__img" src="${o}" alt="${r}">\n               </a>\n               <a class="card__shopping" href="cart.html">\n                  <img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">\n               </a>\n               <button class="card__button btn-reset button-style">\n                  В корзину\n               </button>\n            </header>\n            <div class="card__body">\n               <h3 class="card__title m-0">\n                  ${r}\n               </h3>\n            </div>\n            <footer class="card__footer">\n               <strong class="card__price">\n                  ${i}\n               </strong>\n      `;
+            let a = `\n         <article class="inventory__card card">\n            <header class="card__header">\n               <a class="card__link" href="#">\n                  <picture>\n                     <source class="card__img" srcset="${o}.webp" type="image/webp">\n                     <img class="card__img" src="${o}.jpg" alt="${r}">\n                  </picture>\n               </a>\n               <a class="card__shopping" href="cart.html">\n                  <img aria-hidden="true" src="img/icons/cart.svg" alt="Перейти в корзину">\n               </a>\n               <button class="card__button btn-reset button-style">\n                  В корзину\n               </button>\n            </header>\n            <div class="card__body">\n               <h3 class="card__title m-0">\n                  ${r}\n               </h3>\n            </div>\n            <footer class="card__footer">\n               <strong class="card__price">\n                  ${i}\n               </strong>\n      `;
             e.hasOwnProperty("discount")
               ? (a += `\n                  <s class="card__discount">\n                     ${e.discount}\n                  </s>\n               </footer>\n            </article>\n         `)
               : (a +=

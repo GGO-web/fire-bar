@@ -4,78 +4,78 @@
       "cards": [
          {
             "id": "shaker1",
-            "img": "img/shakers/shaker-1.jpg",
+            "img": "img/shakers/shaker-1",
             "title": "Шейкер Бостон 750 мл",
             "price": "659 грн",
             "discount": "795 грн"
          },
          {
             "id": "shaker2",
-            "img": "img/shakers/shaker-2.jpg",
+            "img": "img/shakers/shaker-2",
             "title": "Шейкер Бостон бронза 750 мл",
             "price": "699 грн",
             "discount": "825 грн"
          },
          {
             "id": "shaker3",
-            "img": "img/shakers/shaker-3.jpg",
+            "img": "img/shakers/shaker-3",
             "title": "Шейкер Бостон золото 750 мл",
             "price": "719 грн",
             "discount": "845 грн"
          },
          {
             "id": "shaker4",
-            "img": "img/shakers/shaker-4.jpg",
+            "img": "img/shakers/shaker-4",
             "title": "Шейкер Бостон с утяжелителем 750 мл",
             "price": "659 грн"
          },
          {
             "id": "shaker5",
-            "img": "img/shakers/shaker-5.jpg",
+            "img": "img/shakers/shaker-5",
             "title": "Шейкер Бостон бронза 750 мл",
             "price": "659 грн",
             "discount": "795 грн"
          },
          {
             "id": "shaker6",
-            "img": "img/shakers/shaker-6.jpg",
+            "img": "img/shakers/shaker-6",
             "title": "Шейкер коблер рифленый",
             "price": "499 грн"
          },
          {
             "id": "shaker7",
-            "img": "img/shakers/shaker-7.jpg",
+            "img": "img/shakers/shaker-7",
             "title": "Шейкер париж 550мл",
             "price": "719 грн"
          },
          {
             "id": "shaker8",
-            "img": "img/shakers/shaker-8.jpg",
+            "img": "img/shakers/shaker-8",
             "title": "Шейкер париж бронза 550мл",
             "price": "739 грн"
          },
          {
             "id": "shaker9",
-            "img": "img/shakers/shaker-9.jpg",
+            "img": "img/shakers/shaker-9",
             "title": "Шейкер французкий black 770 мл",
             "price": "719 грн",
             "discount": "795 грн"
          },
          {
             "id": "shaker10",
-            "img": "img/shakers/shaker-10.jpg",
+            "img": "img/shakers/shaker-10",
             "title": "Шейкер французкий copper 770 мл",
             "price": "699 грн"
          },
          {
             "id": "shaker11",
-            "img": "img/shakers/shaker-11.jpg",
+            "img": "img/shakers/shaker-11",
             "title": "Шейкер французкий gold 770 мл",
             "price": "699 грн"
          },
          {
             "id": "shaker12",
-            "img": "img/shakers/shaker-12.jpg",
+            "img": "img/shakers/shaker-12",
             "title": "Шейкер французкий silver 770 мл",
             "price": "659 грн"
          }
@@ -86,55 +86,55 @@
       "cards": [
          {
             "id": "jigger1",
-            "img": "img/jiggers/jigger-1.jpg",
+            "img": "img/jiggers/jigger-1",
             "title": "Джиггер V образный бронза 50/25",
             "price": "265 грн"
          },
          {
             "id": "jigger2",
-            "img": "img/jiggers/jigger-2.jpg",
+            "img": "img/jiggers/jigger-2",
             "title": "Джиггер V образный золотой 50/25",
             "price": "265 грн"
          },
          {
             "id": "jigger3",
-            "img": "img/jiggers/jigger-3.jpg",
+            "img": "img/jiggers/jigger-3",
             "title": "Джиггер V образный серебро 50/25",
             "price": "199 грн"
          },
          {
             "id": "jigger4",
-            "img": "img/jiggers/jigger-4.jpg",
+            "img": "img/jiggers/jigger-4",
             "title": "Джиггер Леопольд бронза 60/30",
             "price": "299 грн"
          },
          {
             "id": "jigger5",
-            "img": "img/jiggers/jigger-5.jpg",
+            "img": "img/jiggers/jigger-5",
             "title": "Джиггер Леопольд золотой 60/30",
             "price": "299 грн"
          },
          {
             "id": "jigger6",
-            "img": "img/jiggers/jigger-6.jpg",
+            "img": "img/jiggers/jigger-6",
             "title": "Джиггер Леопольд серебро 60/30",
             "price": "265 грн"
          },
          {
             "id": "jigger7",
-            "img": "img/jiggers/jigger-7.jpg",
+            "img": "img/jiggers/jigger-7",
             "title": "Джиггер Мистер Слим 30/45",
             "price": "199 грн"
          },
          {
             "id": "jigger8",
-            "img": "img/jiggers/jigger-8.jpg",
+            "img": "img/jiggers/jigger-8",
             "title": "Джиггер Мистер Слим 60/90",
             "price": "299 грн"
          },
          {
             "id": "jigger9",
-            "img": "img/jiggers/jigger-9.jpg",
+            "img": "img/jiggers/jigger-9",
             "title": "Джиггер Юкива 30/45",
             "price": "249 грн"
          }
@@ -145,43 +145,43 @@
       "cards": [
          {
             "id": "strainer1",
-            "img": "img/strainers/strainer-1.jpg",
+            "img": "img/strainers/strainer-1",
             "title": "Стрейнер Либерти Темное золото",
             "price": "299 грн"
          },
          {
             "id": "strainer2",
-            "img": "img/strainers/strainer-2.jpg",
+            "img": "img/strainers/strainer-2",
             "title": "Стрейнер с ушками 16 см",
             "price": "165 грн"
          },
          {
             "id": "strainer3",
-            "img": "img/strainers/strainer-3.jpg",
+            "img": "img/strainers/strainer-3",
             "title": "Стрейнер с ушками 17 см",
             "price": "199 грн"
          },
          {
             "id": "strainer4",
-            "img": "img/strainers/strainer-4.jpg",
+            "img": "img/strainers/strainer-4",
             "title": "Стрейнер француз",
             "price": "219 грн"
          },
          {
             "id": "strainer5",
-            "img": "img/strainers/strainer-5.jpg",
+            "img": "img/strainers/strainer-5",
             "title": "Стрейнер французкий",
             "price": "229 грн"
          },
          {
             "id": "strainer6",
-            "img": "img/strainers/strainer-6.jpg",
+            "img": "img/strainers/strainer-6",
             "title": "Стрейнер французский бронза",
             "price": "299 грн"
          },
          {
             "id": "strainer7",
-            "img": "img/strainers/strainer-7.jpg",
+            "img": "img/strainers/strainer-7",
             "title": "Стрейнер треугольный",
             "price": "219 грн"
          }
