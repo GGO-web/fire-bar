@@ -12,8 +12,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
 	<meta name="theme-color" content="#f3f3f3">
 	<title>О нас</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220116142238">
-	<script src="js/app.min.js?_v=20220116142238" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220116234244">
+	<script src="js/app.min.js?_v=20220116234244" defer></script>
 </head>
 
 <body>
@@ -129,14 +129,14 @@
 						</p>
 					</div>
 					<div class="contacts__content">
-						<form class="contacts__form" action="#">
+						<form class="contacts__form" action="#" method="get" data-dev data-goto-error data-popup-message=".contacts__form-popup">
 							<label class="visually-hidden" for="contacts-phone">Введите свой номер телефона</label>
-							<input id="contacts-phone" class="contacts__input contacts__input_required input-reset" name="phone" type="tel" placeholder="Телефон*" required>
+							<input id="contacts-phone" class="contacts__input input-reset" name="phone" type="tel" placeholder="Телефон*" data-required="tel">
 
 							<label class="visually-hidden" for="contacts-name">Введите своё имя</label>
-							<input id="contacts-name" class="contacts__input contacts__input_required input-reset" name="name" type="text" placeholder="Имя*" required>
+							<input id="contacts-name" class="contacts__input input-reset" name="name" type="text" placeholder="Имя*" data-required="name">
 
-							<textarea class="contacts__input contacts__message input-reset" name="message" placeholder="Ваше сообщение"></textarea>
+							<textarea class="contacts__input contacts__message input-reset" name="message" placeholder="Ваше сообщение" data-required="message"></textarea>
 
 							<button class="contacts__button button-style" type="submit">Оставить отзыв</button>
 							<p class="contacts__form-text m-0">
@@ -164,6 +164,9 @@
 								<span>ул. Джека Воробья 4</span>
 							</address>
 						</div>
+					</div>
+					<div class="contacts__form-popup">
+						Ваш отзыв успешно отправлен
 					</div>
 				</div>
 			</section>

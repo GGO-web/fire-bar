@@ -4,14 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Описание страницы инвентаря магазина барного инвентаря">
+	<meta name="description" content="Описание страницы корзины магазина барного инвентаря">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
 	<meta name="theme-color" content="#f3f3f3">
-	<title>Инвентарь</title>
+	<title>Корзина</title>
 	<link rel="stylesheet" href="css/style.min.css?_v=20220116234244">
 	<script src="js/app.min.js?_v=20220116234244" defer></script>
 </head>
@@ -57,53 +57,28 @@
 						<a class="breadcrumbs__link" href="index.html">Главная</a>
 					</li>
 					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Инвентарь</a>
+						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Корзина</a>
 					</li>
 				</ol>
 			</nav>
-			<div class="inventory container-fluid">
-				<div class="inventory__inner section-offsets">
-					<div class="inventory__filter container">
-						<div class="inventory__taglist">
-							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="shakers">
-								Шейкеры
-							</button>
-							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="jiggers">
-								Джигеры
-							</button>
-							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="streiners">
-								стрейнеры
-							</button>
-							<button class="inventory__tag btn-reset">
-								Мадлеры
-							</button>
-							<button class="inventory__tag btn-reset">
-								гейзеры
-							</button>
-							<button class="inventory__tag btn-reset">
-								сквизеры
-							</button>
-							<button class="inventory__tag btn-reset">
-								трубочки
-							</button>
-							<button class="inventory__tag btn-reset">
-								для работы со льдом
-							</button>
-							<button class="inventory__tag btn-reset">
-								формы для льда
-							</button>
-							<button class="inventory__tag btn-reset">
-								барные ложки
-							</button>
-							<button class="inventory__tag btn-reset">
-								другое
-							</button>
-						</div>
-					</div>
-					<div class="inventory__cards-wrapper">
+			<section class="cart-plug">
+				<div class="cart-plug__inner section-offsets container">
+					<h1 class="cart-plug__title title">
+						Ваша корзина пуста!
+					</h1>
+					<p class="cart-plug__text m-0">
+						Вы можете вернуться в каталог и&nbsp;наполнить&nbsp;её
+					</p>
+					<div class="cart-plug__links links-group">
+						<a class="links-group__link button-style button-style_stroke" href="index.html">
+							Главная
+						</a>
+						<a class="links-group__link button-style" href="inventory.html">
+							Инвентарь
+						</a>
 					</div>
 				</div>
-			</div>
+			</section>
 
 		</main>
 		<footer class="footer container-fluid">
