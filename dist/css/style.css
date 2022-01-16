@@ -932,6 +932,9 @@ button {
   text-decoration: underline;
 }
 
+.no-webp .hero{
+  background-image: url(../img/hero-bg.jpg); }
+
 .hero {
   background-size: cover;
   background-repeat: no-repeat;
@@ -951,13 +954,6 @@ button {
   display: block;
   margin-top: 0.3125rem;
 }
-
-html.webp .hero {
-  background-image: url(../img/hero-bg.webp);
-}
-
-.no-webp html:not(.webp) .hero{
-  background-image: url(../img/hero-bg.jpg); }
 
 .preview__items {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -2403,6 +2399,12 @@ html.webp .hero {
 }
 
 @media (max-width: 30em) {
+  .breadcrumbs__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .audience__item .audience__item-text {
     text-align: center;
   }
@@ -3790,7 +3792,7 @@ html.webp .hero {
   }
 }
 
-.webp html:not(.webp) .hero{ background-image: url(../img/hero-bg.webp); }
+.webp .hero{ background-image: url(../img/hero-bg.webp); }
 
 .webp .preview__item_kits::before{ background-image: url(../img/preview/kits-preview.webp); }
 
