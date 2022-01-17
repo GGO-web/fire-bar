@@ -12,8 +12,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
 	<meta name="theme-color" content="#f3f3f3">
 	<title>О нас</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220116234244">
-	<script src="js/app.min.js?_v=20220116234244" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220117121116">
+	<script src="js/app.min.js?_v=20220117121116" defer></script>
 </head>
 
 <body>
@@ -131,12 +131,12 @@
 					<div class="contacts__content">
 						<form class="contacts__form" action="#" method="get" data-dev data-goto-error data-popup-message=".contacts__form-popup">
 							<label class="visually-hidden" for="contacts-phone">Введите свой номер телефона</label>
-							<input id="contacts-phone" class="contacts__input input-reset" name="phone" type="tel" placeholder="Телефон*" data-required="tel">
+							<input id="contacts-phone" class="contacts__input input-reset" name="phone" type="tel" placeholder="Телефон*" data-required="tel" data-validate="true">
 
 							<label class="visually-hidden" for="contacts-name">Введите своё имя</label>
-							<input id="contacts-name" class="contacts__input input-reset" name="name" type="text" placeholder="Имя*" data-required="name">
+							<input id="contacts-name" class="contacts__input input-reset" name="name" type="text" placeholder="Имя*" data-required="name" data-validate="true">
 
-							<textarea class="contacts__input contacts__message input-reset" name="message" placeholder="Ваше сообщение" data-required="message"></textarea>
+							<textarea class="contacts__input contacts__message input-reset" name="message" placeholder="Ваше сообщение" data-required="message" data-validate="true"></textarea>
 
 							<button class="contacts__button button-style" type="submit">Оставить отзыв</button>
 							<p class="contacts__form-text m-0">
@@ -165,8 +165,20 @@
 							</address>
 						</div>
 					</div>
-					<div class="contacts__form-popup">
-						Ваш отзыв успешно отправлен
+					<div aria-hidden="true" class="contacts__form-popup popup">
+						<div class="popup__wrapper">
+							<div class="popup__content">
+								<button data-close type="button" class="btn-reset popup__close">
+									<img class="popup__close-icon" src="img/icons/cross.svg" alt="Закрыть модальное окно">
+								</button>
+								<div class="popup__content-wrapper">
+									<h2 class="popup__title m-0">
+										<strong class="popup__title-greeting">Спасибо ˘▾˘</strong>
+										Ваш отзыв был успешно записан.
+									</h2>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
