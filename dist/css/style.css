@@ -829,6 +829,11 @@ body.popup-show::after {
   line-height: 1.15;
 }
 
+.breadcrumbs {
+  position: relative;
+  z-index: 3;
+}
+
 .breadcrumbs__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1608,6 +1613,10 @@ body.popup-show::after {
   position: relative;
 }
 
+.inventory__inner {
+  padding-bottom: 0 !important;
+}
+
 .inventory__taglist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1636,6 +1645,11 @@ body.popup-show::after {
 .inventory__tag[data-selected=true] {
   color: var(--color-white);
   background-color: var(--color-overlay);
+}
+
+.inventory__tag[disabled] {
+  color: var(--color-gray);
+  cursor: not-allowed;
 }
 
 .inventory__cards {
@@ -4770,6 +4784,10 @@ body.popup-show::after {
 
   .contacts__info-link:hover {
     text-decoration: underline;
+  }
+
+  .inventory__tag[disabled]:hover {
+    border-radius: unset;
   }
 
   .inventory__tag:hover {
