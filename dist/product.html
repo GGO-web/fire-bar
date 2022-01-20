@@ -1,324 +1,340 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Описание страницы карточки набора магазина барного инвентаря">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-	<meta name="theme-color" content="#f3f3f3">
-	<title>Карточка набора</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220119205801">
-	<script src="js/app.min.js?_v=20220119205801" defer></script>
-</head>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Описание страницы карточки набора магазина барного инвентаря">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+      <meta name="theme-color" content="#f3f3f3">
+      <title>Карточка набора</title>
+      <link rel="stylesheet" href="css/style.min.css?_v=20220120160843">
+      <script src="js/app.min.js?_v=20220120160843" defer></script>
+   </head>
 
-<body>
-	<div class="site-wrapper">
-		<header class="header">
-			<div class="header__inner container">
-				<a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
-					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-				</a>
-				<div class="header__menu menu">
-					<button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
-						<span></span>
-					</button>
+   <body>
+      <div class="site-wrapper">
+         <header class="header">
+            <div class="header__inner container">
+               <a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
+                  <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+               </a>
+               <div class="header__menu menu">
+                  <button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+                     <span></span>
+                  </button>
 
-					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+                  <a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
 
-					<nav id="menu" class="menu__body" data-fullscreen>
-						<ul class="menu__list list-reset">
-							<li class="menu__item">
-								<a href="kits.html" class="menu__link">наборы</a>
-							</li>
-							<li class="menu__item">
-								<a href="inventory.html" class="menu__link">инвентарь</a>
-							</li>
-							<li class="menu__item">
-								<a href="about.html" class="menu__link">о нас</a>
-							</li>
-							<li class="menu__item">
-								<a href="delivery.html" class="menu__link">оплата и доставка</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+                  <nav id="menu" class="menu__body" data-fullscreen>
+                     <ul class="menu__list list-reset">
+                        <li class="menu__item">
+                           <a href="kits.html" class="menu__link">наборы</a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="inventory.html" class="menu__link">инвентарь</a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="about.html" class="menu__link">о нас</a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="delivery.html" class="menu__link">оплата и доставка</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
 
-		<main class="main">
-			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
-				<ol class="breadcrumbs__list list-reset">
-					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="index.html">Главная</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="kits.html">Наборы</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Набор PROFESSIONAL</a>
-					</li>
-				</ol>
-			</nav>
-			<section class="product container-fluid">
-				<div class="product__inner section-offsets container">
-					<div class="product__top">
-						<div class="product__gallery product-gallery">
-							<div class="swiper product-gallery__preview">
-								<div class="swiper-wrapper product-gallery__preview-wrapper">
-									<div class="swiper-slide product-gallery__preview-slide">
-										<picture><source srcset="img/product/professional/professional-1.webp"type="image/webp"><img src="img/product/professional/professional-1.jpg" alt="Серебряный профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__preview-slide">
-										<picture><source srcset="img/product/professional/professional-2.webp"type="image/webp"><img src="img/product/professional/professional-2.jpg" alt="Бронзовый профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__preview-slide">
-										<picture><source srcset="img/product/professional/professional-3.webp"type="image/webp"><img src="img/product/professional/professional-3.jpg" alt="Золотой профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__preview-slide">
-										<picture><source srcset="img/product/professional/professional-4.webp"type="image/webp"><img src="img/product/professional/professional-4.jpg" alt="Чёрный профессиональный набор" /></picture>
-									</div>
-								</div>
-							</div>
-							<div class="swiper product-gallery__thumbs">
-								<div class="swiper-wrapper product-gallery__thumbs-wrapper">
-									<div class="swiper-slide product-gallery__thumbs-slide">
-										<picture><source srcset="img/product/professional/professional-1.webp"type="image/webp"><img src="img/product/professional/professional-1.jpg" alt="Серебряный профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__thumbs-slide">
-										<picture><source srcset="img/product/professional/professional-2.webp"type="image/webp"><img src="img/product/professional/professional-2.jpg" alt="Бронзовый профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__thumbs-slide">
-										<picture><source srcset="img/product/professional/professional-3.webp"type="image/webp"><img src="img/product/professional/professional-3.jpg" alt="Золотой профессиональный набор" /></picture>
-									</div>
-									<div class="swiper-slide product-gallery__thumbs-slide">
-										<picture><source srcset="img/product/professional/professional-4.webp"type="image/webp"><img src="img/product/professional/professional-4.jpg" alt="Чёрный профессиональный набор" /></picture>
-									</div>
-								</div>
-								<div class="swiper-pagination product-gallery__thumbs-pagination"></div>
-							</div>
-						</div>
-						<div class="product__content">
-							<div data-da=".product__gallery,768,0" class="product__heading">
-								<h1 class="product__title title">
-									Набор PROFESSIONAL
-								</h1>
-								<span class="product__vendor">
-									Артикул 53г784
-								</span>
-							</div>
-							<div class="product__prices">
-								<strong class="product__price">
-									1699 грн.
-								</strong>
-								<s class="product__discount">
-									2375 грн.
-								</s>
-							</div>
-							<form class="product__form" action="#">
-								<fieldset class="product__form-group">
-									<legend class="product__form-legend">цвет</legend>
-									<select class="product__form-select" name="product">
-										<option value="1" selected>серебряный 1699 грн.</option>
-										<option value="2">бронзовый 1800 грн.</option>
-										<option value="3">золотой 1954 грн.</option>
-										<option value="4">чёрный 1599 грн.</option>
-									</select>
-								</fieldset>
-								<fieldset class="product__form-group">
-									<legend class="product__form-legend">Добавить карточки с рецептами</legend>
-									<select class="product__form-select" name="recipes">
-										<option value="1" selected>нет</option>
-										<option value="2">да</option>
-									</select>
-								</fieldset>
-								<p class="product__form-text m-0">
-									Стартовый набор барного инвентаря состоит только из необходимых инструментов бармена, без которых создание коктейлей вызывало бы затруднения.
-								</p>
-								<button class="product__form-button btn-reset button-style" type="submit">
-									купить
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="product__description">
-						<dl class="product__description-features">
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Шейкер
-								</dt>
-								<dd class="product__description-definition">
-									— смешивает и охлаждает.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Джиггер 50/25
-								</dt>
-								<dd class="product__description-definition">
-									— отмеряет количество жидкости, сохраняет правильную пропорцию ингредиентов.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Смесительный стакан
-								</dt>
-								<dd class="product__description-definition">
-									— в нём смешивается, охлаждается и при необходимости обводняется содержимое перед подачей в бокал.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Стрейнер
-								</dt>
-								<dd class="product__description-definition">
-									— отфильтровывает лёд.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Файн стрейнер
-								</dt>
-								<dd class="product__description-definition">
-									— мелкое ситечко.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Гейзер 4 шт.
-								</dt>
-								<dd class="product__description-definition">
-									— делает поток жидкости из бутылки управляемым.
-								</dd>
-							</div>
-							<div class="product__description-feature">
-								<dt class="product__description-term">
-									Барная ложка
-								</dt>
-								<dd class="product__description-definition">
-									— смешивает содержимое в глубоком стакане + используется как мерник 5 мл. Её длина 30 см, а с другого конца форма капли — специально для того, что бы ей быстро пробраться через лёд ко дну бокала.
-								</dd>
-							</div>
-						</dl>
+         <main class="main">
+            <nav aria-label="Breadcrumbs" class="breadcrumbs container">
+               <ol class="breadcrumbs__list list-reset">
+                  <li class="breadcrumbs__item">
+                     <a class="breadcrumbs__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                     <a class="breadcrumbs__link" href="kits.html">Наборы</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                     <a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Набор PROFESSIONAL</a>
+                  </li>
+               </ol>
+            </nav>
+            <section class="product container-fluid">
+               <div class="product__inner section-offsets container">
+                  <div class="product__top">
+                     <div class="product__gallery product-gallery">
+                        <div class="swiper product-gallery__preview">
+                           <div class="swiper-wrapper product-gallery__preview-wrapper">
+                              <div class="swiper-slide product-gallery__preview-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-1.webp" type="image/webp"><img src="img/product/professional/professional-1.jpg" alt="Серебряный профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__preview-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-2.webp" type="image/webp"><img src="img/product/professional/professional-2.jpg" alt="Бронзовый профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__preview-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-3.webp" type="image/webp"><img src="img/product/professional/professional-3.jpg" alt="Золотой профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__preview-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-4.webp" type="image/webp"><img src="img/product/professional/professional-4.jpg" alt="Чёрный профессиональный набор" />
+                                 </picture>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper product-gallery__thumbs">
+                           <div class="swiper-wrapper product-gallery__thumbs-wrapper">
+                              <div class="swiper-slide product-gallery__thumbs-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-1.webp" type="image/webp"><img src="img/product/professional/professional-1.jpg" alt="Серебряный профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__thumbs-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-2.webp" type="image/webp"><img src="img/product/professional/professional-2.jpg" alt="Бронзовый профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__thumbs-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-3.webp" type="image/webp"><img src="img/product/professional/professional-3.jpg" alt="Золотой профессиональный набор" />
+                                 </picture>
+                              </div>
+                              <div class="swiper-slide product-gallery__thumbs-slide">
+                                 <picture>
+                                    <source srcset="img/product/professional/professional-4.webp" type="image/webp"><img src="img/product/professional/professional-4.jpg" alt="Чёрный профессиональный набор" />
+                                 </picture>
+                              </div>
+                           </div>
+                           <div class="swiper-pagination product-gallery__thumbs-pagination"></div>
+                        </div>
+                     </div>
+                     <div class="product__content">
+                        <div data-da=".product__gallery,768,0" class="product__heading">
+                           <h1 class="product__title title">
+                              Набор PROFESSIONAL
+                           </h1>
+                           <span class="product__vendor">
+                              Артикул 53г784
+                           </span>
+                        </div>
+                        <div class="product__prices">
+                           <strong class="product__price">
+                              1699 грн.
+                           </strong>
+                           <s class="product__discount">
+                              2375 грн.
+                           </s>
+                        </div>
+                        <form class="product__form" action="#" data-one-select>
+                           <fieldset class="product__form-group">
+                              <legend class="product__form-legend">цвет</legend>
+                              <select class="product__form-select" name="product">
+                                 <option value="1" selected>серебряный 1699 грн.</option>
+                                 <option value="2">бронзовый 1800 грн.</option>
+                                 <option value="3">золотой 1954 грн.</option>
+                                 <option value="4">чёрный 1599 грн.</option>
+                              </select>
+                           </fieldset>
+                           <fieldset class="product__form-group">
+                              <legend class="product__form-legend">Добавить карточки с рецептами</legend>
+                              <select class="product__form-select" name="recipes">
+                                 <option value="1" selected>нет</option>
+                                 <option value="2">да</option>
+                              </select>
+                           </fieldset>
+                           <p class="product__form-text m-0">
+                              Стартовый набор барного инвентаря состоит только из необходимых инструментов бармена, без которых создание коктейлей вызывало бы затруднения.
+                           </p>
+                           <button class="product__form-button btn-reset button-style" type="submit">
+                              купить
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="product__description">
+                     <dl class="product__description-features">
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Шейкер
+                           </dt>
+                           <dd class="product__description-definition">
+                              — смешивает и охлаждает.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Джиггер 50/25
+                           </dt>
+                           <dd class="product__description-definition">
+                              — отмеряет количество жидкости, сохраняет правильную пропорцию ингредиентов.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Смесительный стакан
+                           </dt>
+                           <dd class="product__description-definition">
+                              — в нём смешивается, охлаждается и при необходимости обводняется содержимое перед подачей в бокал.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Стрейнер
+                           </dt>
+                           <dd class="product__description-definition">
+                              — отфильтровывает лёд.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Файн стрейнер
+                           </dt>
+                           <dd class="product__description-definition">
+                              — мелкое ситечко.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Гейзер 4 шт.
+                           </dt>
+                           <dd class="product__description-definition">
+                              — делает поток жидкости из бутылки управляемым.
+                           </dd>
+                        </div>
+                        <div class="product__description-feature">
+                           <dt class="product__description-term">
+                              Барная ложка
+                           </dt>
+                           <dd class="product__description-definition">
+                              — смешивает содержимое в глубоком стакане + используется как мерник 5 мл. Её длина 30 см, а с другого конца форма капли — специально для того, что бы ей быстро пробраться через лёд ко дну бокала.
+                           </dd>
+                        </div>
+                     </dl>
 
-						<ul class="product__description-list list list-reset list_type-plus">
-							<li class="product__description-item">
-								2 больших листа с меню на 40 коктейлей для домашнего бара
-							</li>
-							<li class="product__description-item">
-								2 больших листа с инструкцией по уходу и описанием инвентаря
-							</li>
-							<li class="product__description-item">
-								Подарочная упаковка
-							</li>
-						</ul>
-					</div>
+                     <ul class="product__description-list list list-reset list_type-plus">
+                        <li class="product__description-item">
+                           2 больших листа с меню на 40 коктейлей для домашнего бара
+                        </li>
+                        <li class="product__description-item">
+                           2 больших листа с инструкцией по уходу и описанием инвентаря
+                        </li>
+                        <li class="product__description-item">
+                           Подарочная упаковка
+                        </li>
+                     </ul>
+                  </div>
 
-					<div class="popup-cart">
-						<div class="popup-cart__wrapper">
-							<a class="popup-cart__link" href="cart.html">
-								<img class="popup-cart__img" src="img/icons/cart.svg" alt="Перейти в корзину">
-							</a>
-							<span class="popup-cart__quantity">1</span>
-						</div>
-					</div>
-				</div>
-			</section>
+                  <div class="popup-cart">
+                     <div class="popup-cart__wrapper">
+                        <a class="popup-cart__link" href="cart.html">
+                           <img class="popup-cart__img" src="img/icons/cart.svg" alt="Перейти в корзину">
+                        </a>
+                        <span class="popup-cart__quantity">1</span>
+                     </div>
+                  </div>
+               </div>
+            </section>
 
-		</main>
-		<footer class="footer container-fluid">
-			<div class="footer__inner container">
-				<div class="footer__overlay overlay">
-					<a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
-						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-					</a>
-				</div>
-				<div class="footer__items">
-					<div class="footer__item">
-						<h3 class="footer__item-title title">
-							НАБОРЫ
-						</h3>
-						<ul class="footer__list list-reset">
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Start
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="product.html">
-									Professional
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Fiery blow
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__item">
-						<h3 class="footer__item-title title">
-							ИНВЕНТАРЬ
-						</h3>
-						<ul class="footer__list list-reset">
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Шейкеры
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Стрейнеры
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Джиггеры
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Барные ложки
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__item">
-						<h3 class="footer__item-title title">
-							Информация
-						</h3>
-						<ul class="footer__list list-reset">
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Контакты
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Доставка
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									Оплата
-								</a>
-							</li>
-							<li class="footer__list-item">
-								<a class="footer__list-link" href="#">
-									О нас
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+         </main>
+         <footer class="footer container-fluid">
+            <div class="footer__inner container">
+               <div class="footer__overlay overlay">
+                  <a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
+                     <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+                  </a>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item">
+                     <h3 class="footer__item-title title">
+                        НАБОРЫ
+                     </h3>
+                     <ul class="footer__list list-reset">
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Start
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="product.html">
+                              Professional
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Fiery blow
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footer__item">
+                     <h3 class="footer__item-title title">
+                        ИНВЕНТАРЬ
+                     </h3>
+                     <ul class="footer__list list-reset">
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Шейкеры
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Стрейнеры
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Джиггеры
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Барные ложки
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footer__item">
+                     <h3 class="footer__item-title title">
+                        Информация
+                     </h3>
+                     <ul class="footer__list list-reset">
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Контакты
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Доставка
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              Оплата
+                           </a>
+                        </li>
+                        <li class="footer__list-item">
+                           <a class="footer__list-link" href="#">
+                              О нас
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </footer>
 
-	</div>
-</body>
+      </div>
+   </body>
 
 </html>
