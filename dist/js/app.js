@@ -2687,7 +2687,7 @@
             return !/^([+]?(?:38)?)(0\d{9})$/.test(formRequiredItem.value);
         },
         nameTest(formRequiredItem) {
-            return !/^[a-zA-zа-яА-Яё]{4,}/.test(formRequiredItem.value);
+            return !/^[a-zA-Zа-яёіА-ЯЁІ]{3,}$/u.test(formRequiredItem.value);
         },
         messageTest(formRequiredItem) {
             return !/^\s*\S+(?:\s+\S+){2,}\s*$/.test(formRequiredItem.value);
