@@ -6713,6 +6713,9 @@
         const items = getCartItems();
         setCartItems(items.filter((item => !productsId.includes(item.id))));
     };
+    const cleanCart = () => {
+        setCartItems([]);
+    };
     const inventoryCardsWrapper = document.querySelector(".inventory__cards-wrapper");
     const productContentButton = document.querySelector(".product__form-button");
     inventoryCardsWrapper?.addEventListener("click", (event => {
@@ -6880,6 +6883,7 @@
         cartItemsRemoveButton();
     } else renderCartPlug(document.querySelector(".main"));
     const orderCartItems = document.querySelectorAll(".order__cart .cart__item");
+    const orderForm = document.querySelector(".order__details");
     const moveToInventoryPage = () => {
         location.href = "inventory.html";
     };
@@ -6890,6 +6894,18 @@
         }));
         DynamicAdaptUpdate();
     }
+    if (orderForm) document.addEventListener("formSent", (() => {
+        cleanCart();
+        const html = document.querySelector("html");
+        const observer = new MutationObserver((function(mutationRecords) {
+            const html = mutationRecords[0].target;
+            if (!html.classList.contains("popup-show")) setTimeout(moveToCartPage, 100);
+        }));
+        observer.observe(html, {
+            attributes: true
+        });
+        observer;
+    }));
     if (cartIsEmpty() && location.href.includes("order.html")) moveToInventoryPage();
     window["FLS"] = false;
     isWebp();
