@@ -6769,7 +6769,7 @@
                 const alternativeText = previewSlidesImage.alt.toLowerCase();
                 if (alternativeText.includes(productColor)) productImage = previewSlidesImage.getAttribute("src").split(".")[0];
             }));
-            const productId = `${productTitle}(${productColor})`;
+            const productId = `${productTitle} (${productColor})`;
             return {
                 productId,
                 productImage,

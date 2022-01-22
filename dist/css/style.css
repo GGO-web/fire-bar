@@ -2598,13 +2598,6 @@ html.popup-show body::after {
     max-width: 50%;
   }
 
-  .order__cart .cart__item-title {
-    overflow: hidden;
-    max-width: 15vw;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-  }
-
   .order__cart {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
