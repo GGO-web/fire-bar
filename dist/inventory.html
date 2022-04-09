@@ -1,200 +1,205 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="description" content="Описание страницы инвентаря магазина барного инвентаря">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-      <meta name="theme-color" content="#f3f3f3">
-      <title>Инвентарь</title>
-      <link rel="stylesheet" href="css/style.min.css?_v=20220122233911">
-      <script src="js/app.min.js?_v=20220122233911" defer></script>
-   </head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+	<meta name="theme-color" content="#f3f3f3">
+	<title>Інвентар</title>
 
-   <body>
-      <div class="site-wrapper">
-         <header class="header">
-            <div class="header__inner container">
-               <a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
-                  <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-               </a>
-               <div class="header__menu menu">
-                  <button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
-                     <span></span>
-                  </button>
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220409224859">
+	<noscript>
+		<link href="styles/styles.min.css?_v=20220409224859" rel="stylesheet">
+	</noscript>
 
-                  <a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+	<script src="js/app.min.js?_v=20220409224859" defer></script>
+</head>
 
-                  <nav id="menu" class="menu__body" data-fullscreen>
-                     <ul class="menu__list list-reset">
-                        <li class="menu__item">
-                           <a href="kits.html" class="menu__link">наборы</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="inventory.html" class="menu__link">инвентарь</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="about.html" class="menu__link">о нас</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="delivery.html" class="menu__link">оплата и доставка</a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-            </div>
-         </header>
+<body>
+	<div class="site-wrapper">
+		<header class="header">
+			<div class="header__inner container">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+				</a>
+				<div class="header__menu menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+						<span></span>
+					</button>
 
-         <main class="main">
-            <nav aria-label="Breadcrumbs" class="breadcrumbs container">
-               <ol class="breadcrumbs__list list-reset">
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="index.html">Главная</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Инвентарь</a>
-                  </li>
-               </ol>
-            </nav>
-            <div class="inventory container-fluid">
-               <div class="inventory__inner section-offsets">
-                  <div class="inventory__filter container">
-                     <div class="inventory__taglist">
-                        <button class="inventory__tag btn-reset" data-selected="true" data-tagname="shakers">
-                           Шейкеры
-                        </button>
-                        <button class="inventory__tag btn-reset" data-selected="true" data-tagname="jiggers">
-                           Джигеры
-                        </button>
-                        <button class="inventory__tag btn-reset" data-selected="true" data-tagname="streiners">
-                           стрейнеры
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           Мадлеры
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           гейзеры
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           сквизеры
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           трубочки
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           для работы со льдом
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           формы для льда
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           барные ложки
-                        </button>
-                        <button class="inventory__tag btn-reset" disabled>
-                           другое
-                        </button>
-                     </div>
-                  </div>
-                  <div class="inventory__cards-wrapper">
-                  </div>
-               </div>
-            </div>
+					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
 
-         </main>
-         <footer class="footer container-fluid">
-            <div class="footer__inner container">
-               <div class="footer__overlay overlay">
-                  <a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
-                     <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-                  </a>
-               </div>
-               <div class="footer__items">
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        НАБОРЫ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Start
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="product.html">
-                              Professional
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Fiery blow
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        ИНВЕНТАРЬ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Шейкеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Стрейнеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Джиггеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Барные ложки
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        Информация
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Контакты
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Доставка
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Оплата
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              О нас
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </footer>
+					<nav id="menu" class="menu__body" data-fullscreen>
+						<ul class="menu__list list-reset">
+							<li class="menu__item">
+								<a href="kits.html" class="menu__link">набори</a>
+							</li>
+							<li class="menu__item">
+								<a href="inventory.html" class="menu__link">інвентар</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">про нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="delivery.html" class="menu__link">оплата та доставка</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-      </div>
-   </body>
+		<main class="main">
+			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
+				<ol class="breadcrumbs__list list-reset">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Головна</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Інвентар</a>
+					</li>
+				</ol>
+			</nav>
+			<div class="inventory container-fluid">
+				<div class="inventory__inner section-offsets">
+					<div class="inventory__filter container">
+						<div class="inventory__taglist">
+							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="shakers">
+								Шейкери
+							</button>
+							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="jiggers">
+								Джигери
+							</button>
+							<button class="inventory__tag btn-reset" data-selected="true" data-tagname="streiners">
+								стрейнери
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								Мадлери
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								гейзери
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								сквізери
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								трубочки
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								для работи з льдом
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								форми для льоду
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								барні ложки
+							</button>
+							<button class="inventory__tag btn-reset" disabled>
+								інше
+							</button>
+						</div>
+					</div>
+					<div class="inventory__cards-wrapper">
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer container-fluid">
+			<div class="footer__inner container">
+				<div class="footer__overlay overlay">
+					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
+						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+					</a>
+				</div>
+				<div class="footer__items">
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							набори
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Start
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="product.html">
+									Professional
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Fiery blow
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							інвентар
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Шейкери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Стрейнери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Джигери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Ложки барні
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							Інформація
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Контакти
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Доставка
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Оплата
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Про нас
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+</body>
 
 </html>

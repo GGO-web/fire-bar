@@ -2611,26 +2611,26 @@
                 } else this.removeError(formRequiredItem);
             } else if ("tel" === formRequiredItem.dataset.required) {
                 formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-                this.fieldTipTrigger(formRequiredItem, "Это поле обязательное к заполнению");
+                this.fieldTipTrigger(formRequiredItem, "Це поле є обов'язковим для заповнення");
                 if (this.telTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
             } else if ("name" === formRequiredItem.dataset.required) {
                 formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-                this.fieldTipTrigger(formRequiredItem, "Это поле обязательное к заполнению");
+                this.fieldTipTrigger(formRequiredItem, "Це поле є обов'язковим для заповнення");
                 if (this.nameTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
             } else if ("message" === formRequiredItem.dataset.required) {
-                this.fieldTipTrigger(formRequiredItem, "Напиши нам пару слов ◠ᴥ◠");
+                this.fieldTipTrigger(formRequiredItem, "Напиши нам декілька слів ◠ᴥ◠");
                 if (this.messageTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
             } else if ("text" === formRequiredItem.dataset.required) {
-                this.fieldTipTrigger(formRequiredItem, "Это поле обязательное к заполнению");
+                this.fieldTipTrigger(formRequiredItem, "Це поле є обов'язковим для заповнення");
                 if (this.textTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
@@ -2728,7 +2728,7 @@
                         form.classList.remove("_sending");
                         formSent(form);
                     } else {
-                        alert("Ошибка");
+                        alert("Помилка");
                         form.classList.remove("_sending");
                     }
                 } else if (form.hasAttribute("data-dev")) {
@@ -6676,7 +6676,7 @@
     };
     const showInventoryPlug = () => {
         const inventoryCardsWrapper = document.querySelector(".inventory__cards-wrapper");
-        if (!inventoryCardsWrapper.innerHTML.trim()) inventoryCardsWrapper.insertAdjacentHTML("afterbegin", `\n            <div class="inventory__cards-heading container">\n               <h1 class="title title_center overlay overlay_center" style="margin-bottom: 0;">\n                  Похоже что инвентарь пуст, выберите интересуемые предметы выше.\n               </h1>\n            </div>\n         `);
+        if (!inventoryCardsWrapper.innerHTML.trim()) inventoryCardsWrapper.insertAdjacentHTML("afterbegin", `\n            <div class="inventory__cards-heading container">\n               <h1 class="title title_center overlay overlay_center" style="margin-bottom: 0;">\n                  Схоже, що інвентар пустий, виберіть речі, які вас цівлять вище.\n               </h1>\n            </div>\n         `);
     };
     tagList?.addEventListener("click", (event => {
         const tag = event.target;
@@ -6718,6 +6718,24 @@
     };
     const inventoryCardsWrapper = document.querySelector(".inventory__cards-wrapper");
     const productContentButton = document.querySelector(".product__form-button");
+    const showFlyingItem = cardButton => {
+        const card = cardButton.closest(".card");
+        const shoppingCart = card.querySelector(".card__shopping");
+        const cardImage = card.querySelector(".card__img");
+        const flyCardImage = cardImage.cloneNode(true);
+        const cardImageWidth = cardImage.closest(".card__link").offsetWidth;
+        const cardImageFlyTop = cardImage.getBoundingClientRect().top;
+        const cardImageFlyLeft = cardImage.getBoundingClientRect().left;
+        flyCardImage.setAttribute("class", "card__img_fly");
+        flyCardImage.style.cssText = `\n      left: ${cardImageFlyLeft}px;\n      top: ${cardImageFlyTop}px;\n      width: ${cardImageWidth}px;\n      height: ${cardImageWidth}px;\n   `;
+        document.body.append(flyCardImage);
+        const cartFlyTop = shoppingCart.getBoundingClientRect().x;
+        const cartFlyLeft = shoppingCart.getBoundingClientRect().y;
+        flyCardImage.style.cssText = `\n      left: ${cartFlyTop + 32}px;\n      top: ${cartFlyLeft + 32}px;\n      filter: blur(4px);\n      transform: rotate(10deg);\n      width: 0;\n      height: 0;\n   `;
+        flyCardImage.addEventListener("transitionend", (() => {
+            flyCardImage.remove();
+        }));
+    };
     inventoryCardsWrapper?.addEventListener("click", (event => {
         const getCardData = card => {
             const cardImg = card.querySelector(".card__img").getAttribute("src").split(".")[0];
@@ -6754,6 +6772,7 @@
                 }
             }));
             setCartItems(items);
+            showFlyingItem(target);
         }
     }));
     productContentButton?.addEventListener("click", (event => {
@@ -6807,11 +6826,11 @@
         if (cartIsEmpty()) {
             const cartItem = element.querySelector(".cart");
             if (cartItem) element.removeChild(cartItem);
-            element.insertAdjacentHTML("beforeend", `\n         <section class="cart-plug">\n            <div class="cart-plug__inner section-offsets container">\n               <h1 class="cart-plug__title title">\n                  Ваша корзина пуста!\n               </h1>\n               <p class="cart-plug__text m-0">\n                  Вы можете вернуться в каталог и&nbsp;наполнить&nbsp;её\n               </p>\n               <div class="cart-plug__links links-group">\n                  <a class="links-group__link button-style button-style_stroke" href="index.html">\n                     Главная\n                  </a>\n                  <a class="links-group__link button-style" href="inventory.html">\n                     Инвентарь\n                  </a>\n               </div>\n            </div>\n         </section>\n      `);
+            element.insertAdjacentHTML("beforeend", `\n         <section class="cart-plug">\n            <div class="cart-plug__inner section-offsets container">\n               <h1 class="cart-plug__title title">\n                  Ваша корзина пуста!\n               </h1>\n               <p class="cart-plug__text m-0">\n                  Ви можете повернутися в каталог і&nbsp;заповнити&nbsp;її\n               </p>\n               <div class="cart-plug__links links-group">\n                  <a class="links-group__link button-style button-style_stroke" href="index.html">\n                     Головна\n                  </a>\n                  <a class="links-group__link button-style" href="inventory.html">\n                     Інвентар\n                  </a>\n               </div>\n            </div>\n         </section>\n      `);
         }
     };
     const appendCartItem = ({id, amount, img, title, price}) => {
-        cartItems.insertAdjacentHTML("beforeend", `\n         <li class="cart__item" data-product="${id}">\n            <button class="cart__item-remove btn-reset">\n               <img class="cart__item-cross" src="img/icons/cross.svg" alt="Удалить предмет из корзины">\n            </button>\n            <div class="cart__item-wrapper cart-products__template">\n               <header class="cart__item-header cart-products__template-item">\n                  <picture class="cart__item-img">\n                     \x3c!--<source srcset="${img}.webp" type="image/webp">--\x3e\n                     <img src="${img}.jpg" alt="${title}">\n                  </picture>\n                  <div class="cart__item-group">\n                     <h2 class="cart__item-title m-0">\n                        ${title}\n                     </h2>\n                     <strong class="cart__item-price price">\n                        ${price}\n                     </strong>\n                  </div>\n               </header>\n               <div class="cart__item-body cart-products__template-item" data-da=".cart__item-group,768,last">\n                  <div class="cart__item-quantity quantity">\n                     <button type="button" class="quantity__button quantity__button_minus btn-reset">-</button>\n                     <input class="input-reset quantity__input" autocomplete="off" type="number" min="1" max="50" name="quantity" value="${amount}">\n                     <button type="button" class="quantity__button quantity__button_plus btn-reset">+</button>\n                  </div>\n               </div>\n               <footer class="cart__item-footer cart-products__template-item">\n                  <span class="cart__fullprice-text">Всего</span>\n                  <span class="cart__fullprice price">\n                     ${price}\n                  </span>\n               </footer>\n            </div>\n         </li>\n      `);
+        cartItems.insertAdjacentHTML("beforeend", `\n         <li class="cart__item" data-product="${id}">\n            <button class="cart__item-remove btn-reset">\n               <img class="cart__item-cross" src="img/icons/cross.svg" alt="Видалити предмет з корзини">\n            </button>\n            <div class="cart__item-wrapper cart-products__template">\n               <header class="cart__item-header cart-products__template-item">\n                  <picture class="cart__item-img">\n                     \x3c!--<source srcset="${img}.webp" type="image/webp">--\x3e\n                     <img src="${img}.jpg" alt="${title}">\n                  </picture>\n                  <div class="cart__item-group">\n                     <h2 class="cart__item-title m-0">\n                        ${title}\n                     </h2>\n                     <strong class="cart__item-price price">\n                        ${price}\n                     </strong>\n                  </div>\n               </header>\n               <div class="cart__item-body cart-products__template-item" data-da=".cart__item-group,768,last">\n                  <div class="cart__item-quantity quantity">\n                     <button type="button" class="quantity__button quantity__button_minus btn-reset">-</button>\n                     <input class="input-reset quantity__input" autocomplete="off" type="number" min="1" max="50" name="quantity" value="${amount}">\n                     <button type="button" class="quantity__button quantity__button_plus btn-reset">+</button>\n                  </div>\n               </div>\n               <footer class="cart__item-footer cart-products__template-item">\n                  <span class="cart__fullprice-text">Усього</span>\n                  <span class="cart__fullprice price">\n                     ${price}\n                  </span>\n               </footer>\n            </div>\n         </li>\n      `);
     };
     const renderCartItems = () => {
         const items = getCartItems();
