@@ -1,187 +1,192 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="description" content="Описание страницы доставки и оплаты магазина барного инвентаря">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-      <meta name="theme-color" content="#f3f3f3">
-      <title>Оплата и доставка</title>
-      <link rel="stylesheet" href="css/style.min.css?_v=20220122233911">
-      <script src="js/app.min.js?_v=20220122233911" defer></script>
-   </head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+	<meta name="theme-color" content="#f3f3f3">
+	<title>Оплата та доставка</title>
 
-   <body>
-      <div class="site-wrapper">
-         <header class="header">
-            <div class="header__inner container">
-               <a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
-                  <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-               </a>
-               <div class="header__menu menu">
-                  <button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
-                     <span></span>
-                  </button>
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220409153339">
+	<noscript>
+		<link href="styles/styles.min.css?_v=20220409153339" rel="stylesheet">
+	</noscript>
 
-                  <a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+	<script src="js/app.min.js?_v=20220409153339" defer></script>
+</head>
 
-                  <nav id="menu" class="menu__body" data-fullscreen>
-                     <ul class="menu__list list-reset">
-                        <li class="menu__item">
-                           <a href="kits.html" class="menu__link">наборы</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="inventory.html" class="menu__link">инвентарь</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="about.html" class="menu__link">о нас</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="delivery.html" class="menu__link">оплата и доставка</a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-            </div>
-         </header>
+<body>
+	<div class="site-wrapper">
+		<header class="header">
+			<div class="header__inner container">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+				</a>
+				<div class="header__menu menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+						<span></span>
+					</button>
 
-         <main class="main">
-            <nav aria-label="Breadcrumbs" class="breadcrumbs container">
-               <ol class="breadcrumbs__list list-reset">
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="index.html">Главная</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Доставка и оплата</a>
-                  </li>
-               </ol>
-            </nav>
-            <section class="payment container-fluid">
-               <div class="payment__inner section-offsets container">
-                  <div class="payment__heading heading">
-                     <h2 class="payment__title heading__title title overlay">
-                        Куда платить?
-                     </h2>
-                     <p class="payment__text heading__text">
-                        <span>
-                           Хотите удостовериться в качестве и оплатить на почте при получении? - без проблем, мы только за. У нас еще не было отказов из-за качества :) И никаких предоплат.
-                        </span>
-                        <span>
-                           Желаете оплатить на карту? - пожалуйста, вот реквизиты нашего расчетного счета. Приват и Моно.
-                        </span>
-                     </p>
-                  </div>
-               </div>
-            </section>
+					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
 
-            <section class="pickup container-fluid">
-               <div class="pickup__inner section-offsets container">
-                  <div class="pickup__heading heading heading_reverse">
-                     <h2 class="pickup__title heading__title title overlay overlay_reverse" data-reverse="true">
-                        Где забрать?
-                     </h2>
-                     <p class="pickup__text heading__text">
-                        Укрпошта - дешевле, Нова пошта - быстрее. Мист, <br>Justin. Главное - что бы вам было удобно. Курьером прямо к вашей двери. Или прийти к нам:)
-                     </p>
-                  </div>
-               </div>
-            </section>
+					<nav id="menu" class="menu__body" data-fullscreen>
+						<ul class="menu__list list-reset">
+							<li class="menu__item">
+								<a href="kits.html" class="menu__link">набори</a>
+							</li>
+							<li class="menu__item">
+								<a href="inventory.html" class="menu__link">інвентар</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">про нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="delivery.html" class="menu__link">оплата та доставка</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-         </main>
-         <footer class="footer container-fluid">
-            <div class="footer__inner container">
-               <div class="footer__overlay overlay">
-                  <a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
-                     <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-                  </a>
-               </div>
-               <div class="footer__items">
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        НАБОРЫ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Start
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="product.html">
-                              Professional
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Fiery blow
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        ИНВЕНТАРЬ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Шейкеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Стрейнеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Джиггеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Барные ложки
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        Информация
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Контакты
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Доставка
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Оплата
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              О нас
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </footer>
+		<main class="main">
+			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
+				<ol class="breadcrumbs__list list-reset">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Головна</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Доставка та оплата</a>
+					</li>
+				</ol>
+			</nav>
+			<section class="payment container-fluid">
+				<div class="payment__inner section-offsets container">
+					<div class="payment__heading heading">
+						<h2 class="payment__title heading__title title overlay">
+							Як оплатити?
+						</h2>
+						<p class="payment__text heading__text">
+							<span>
+								Бажаєте переконатися в якості та сплатити на пошті при отриманні? - без проблем, ми лише за. У нас ще не було відмов через якість :) І жодних передоплат.
+							</span>
+							<span>
+								Бажаєте сплатити за картку? – будь ласка, реквізити нашого розрахункового рахунку доступний для усіх карт Visa та Mastercard.
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
 
-      </div>
-   </body>
+			<section class="pickup container-fluid">
+				<div class="pickup__inner section-offsets container">
+					<div class="pickup__heading heading heading_reverse">
+						<h2 class="pickup__title heading__title title overlay overlay_reverse" data-reverse="true">
+							Де забрати?
+						</h2>
+						<p class="pickup__text heading__text">
+							Укрпошта - дешевша, Нова пошта - швидше. Міст, <br>Justin. Головне - щоб вам було зручно. Кур'єром прямо до ваших дверей. Або прийти до нас :)
+						</p>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer container-fluid">
+			<div class="footer__inner container">
+				<div class="footer__overlay overlay">
+					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
+						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+					</a>
+				</div>
+				<div class="footer__items">
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							набори
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Start
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="product.html">
+									Professional
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Fiery blow
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							інвентар
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Шейкери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Стрейнери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Джигери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Ложки барні
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							Інформація
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Контакти
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Доставка
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Оплата
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Про нас
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+</body>
 
 </html>

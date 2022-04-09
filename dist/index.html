@@ -1,364 +1,365 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="description" content="Описание главной страницы магазина барного инвентаря">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-      <meta name="theme-color" content="#f3f3f3">
-      <title>Главная страница</title>
-      <link rel="stylesheet" href="css/style.min.css?_v=20220122233911">
-      <script src="js/app.min.js?_v=20220122233911" defer></script>
-   </head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Наш магазин FireBar спеціалізується на якісному і досить дешевому інвертарю">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+	<meta name="theme-color" content="#f3f3f3">
+	<title>Головна сторінка</title>
 
-   <body>
-      <div class="site-wrapper">
-         <header class="header">
-            <div class="header__inner container">
-               <a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
-                  <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-               </a>
-               <div class="header__menu menu">
-                  <button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
-                     <span></span>
-                  </button>
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220409153339">
+	<noscript>
+		<link href="styles/styles.min.css?_v=20220409153339" rel="stylesheet">
+	</noscript>
 
-                  <a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+	<script src="js/app.min.js?_v=20220409153339" defer></script>
+</head>
 
-                  <nav id="menu" class="menu__body" data-fullscreen>
-                     <ul class="menu__list list-reset">
-                        <li class="menu__item">
-                           <a href="kits.html" class="menu__link">наборы</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="inventory.html" class="menu__link">инвентарь</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="about.html" class="menu__link">о нас</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="delivery.html" class="menu__link">оплата и доставка</a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-            </div>
-         </header>
+<body>
+	<div class="site-wrapper">
+		<header class="header">
+			<div class="header__inner container">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+				</a>
+				<div class="header__menu menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+						<span></span>
+					</button>
 
-         <main class="main">
-            <section class="hero">
-               <div class="hero__inner container">
-                  <h1 class="hero__title title overlay overlay_transparency">
-                     Магазин барного инвентаря
-                     <span>всё для вашего бара</span>
-                  </h1>
-                  <p class="hero__text overlay overlay_transparency m-0">
-                     С коктейлями и хорошей компанией вы можете повеселиться гораздо больше, чем с одной только хорошей компанией.
-                  </p>
-                  <a class="hero__redirect button-style" href="kits.html">
-                     Хочу набор
-                  </a>
-               </div>
-            </section>
+					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
 
-            <section class="aspects">
-               <div class="aspects__inner section-offsets outer outer_reverse container-fluid">
-                  <div class="aspects__content outer__content">
-                     <div class="aspects__container outer__container container">
-                        <div class="aspects__body outer__body">
-                           <h2 class="aspects__title title overlay" data-reverse="true">
-                              Вы попали туда, куда нужно, если хотите:
-                           </h2>
-                           <ul class="aspects__list list list-reset">
-                              <li class="aspects__list-item">
-                                 Открыть бар
-                              </li>
-                              <li class="aspects__list-item">
-                                 Устроить коктейльную вечеринку
-                              </li>
-                              <li class="aspects__list-item">
-                                 Сделать крутой подарок — набор бармена
-                              </li>
-                              <li class="aspects__list-item">
-                                 Создать полноценный домашний бар
-                              </li>
-                           </ul>
-                           <p class="aspects__text text m-0">
-                              Ведь это будет практически невозможно без барменских инструментов для приготовления коктейлей. А о товарах для бара мы знаем всё — хотя будем рады, если у вас получится нас переубедить.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="aspects__image outer__image">
-                     <picture>
-                        <source srcset="img/aspects-img.webp" type="image/webp"><img src="img/aspects-img.jpg" alt="Прекрасный красный коктейль с ложкой с фламинго, а сзади золотые барменские штучки">
-                     </picture>
-                  </div>
-               </div>
-            </section>
+					<nav id="menu" class="menu__body" data-fullscreen>
+						<ul class="menu__list list-reset">
+							<li class="menu__item">
+								<a href="kits.html" class="menu__link">набори</a>
+							</li>
+							<li class="menu__item">
+								<a href="inventory.html" class="menu__link">інвентар</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">про нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="delivery.html" class="menu__link">оплата та доставка</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-            <section class="preview">
-               <div class="preview__inner section-offsets container">
-                  <div class="preview__items">
-                     <a class="preview__item preview__item_kits" href="kits.html">
-                        <h2 class="preview__item-title title">
-                           наборы
-                        </h2>
-                     </a>
-                     <a class="preview__item preview__item_inventory" href="inventory.html">
-                        <h2 class="preview__item-title title">
-                           инвентарь
-                        </h2>
-                     </a>
-                  </div>
-               </div>
-            </section>
+		<main class="main">
+			<section class="hero">
+				<div class="hero__inner container">
+					<h1 class="hero__title title overlay overlay_transparency">
+						Магазин барного інвентарю
+						<span>все для вашого бару</span>
+					</h1>
+					<p class="hero__text overlay overlay_transparency m-0">
+						З коктейлями та гарною компанією ви можете повеселитися набагато краще, ніж з однією тільки гарною компанією.
+					</p>
+					<a class="hero__redirect button-style" href="kits.html">
+						Хочу набір
+					</a>
+				</div>
+			</section>
 
-            <section class="adventages">
-               <div class="adventages__inner section-offsets outer container-fluid">
-                  <div class="adventages__content outer__content">
-                     <div class="adventages__container outer__container container">
-                        <div class="adventages__body outer__body">
-                           <h2 class="adventages__title title overlay" data-reverse="false">
-                              стиль, качество, удобство
-                           </h2>
-                           <ul class="adventages__list list-reset">
-                              <li class="adventages__item adventages__item_time">
-                                 <h3 class="adventages__item-title title">
-                                    Экономьте время и силы
-                                 </h3>
-                                 <p class="adventages__item-text m-0">
-                                    Вы не тратите время на подбор лучшего по цене и качеству или не заказываете всё из разных магазинов. Всё заранее проверено, отобрано, ещё раз проверено и упаковано. На почте тоже всё перепроверяем.
-                                 </p>
-                              </li>
-                              <li class="adventages__item adventages__item_delivery">
-                                 <h3 class="adventages__item-title title">
-                                    Доставка 1 день
-                                 </h3>
-                                 <p class="adventages__item-text m-0">
-                                    В Киев, как и любой крупный город в пределах Украины — доставка за один день. Наши партнеры — все крупные логистические компании Украины.
-                                 </p>
-                              </li>
-                              <li class="adventages__item adventages__item_quality">
-                                 <h3 class="adventages__item-title title">
-                                    Суперовое качество
-                                 </h3>
-                                 <p class="adventages__item-text m-0">
-                                    Изначально весь набор инвентаря мы собирали для своего бара и качество инструмента проверили на практике. Мы напрямую сотрудничаем с производством, где заказывают свой инвентарь известные бренды.
-                                 </p>
-                              </li>
-                              <li class="adventages__item adventages__item_bonus">
-                                 <h3 class="adventages__item-title title">
-                                    подарочная упаковка
-                                 </h3>
-                                 <p class="adventages__item-text m-0">
-                                    В отличие от других магазинов, мы заботимся о том, как вы будете хранить ваш инвентарь. Каждый набор мы отправляем&nbsp;в фирменной упаковке, в котором весь инвентарь удобно расположен и надежно зафиксирован
-                                 </p>
-                              </li>
-                              <li class="adventages__item adventages__item_cashback">
-                                 <h3 class="adventages__item-title title">
-                                    Гарантия полного возврата
-                                 </h3>
-                                 <p class="adventages__item-text m-0">
-                                    Закон о защите прав потребителей гарантирует возврат товара в течение 14 дней. Мы доверяем вам и своей продукции, увеличиваем стандартный срок в 3 раза. В течение 42 дней вы вернете все средства в полном объеме.
-                                 </p>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="adventages__image outer__image">
-                     <picture>
-                        <source srcset="img/adventage-img.webp" type="image/webp"><img src="img/adventage-img.jpg" alt="Медный шекель и медная сетка, через которую наливают зелёный коктейль(вероятно мохито) с лёдом">
-                     </picture>
-                  </div>
-               </div>
-            </section>
+			<section class="aspects">
+				<div class="aspects__inner section-offsets outer outer_reverse container-fluid">
+					<div class="aspects__content outer__content">
+						<div class="aspects__container outer__container container">
+							<div class="aspects__body outer__body">
+								<h2 class="aspects__title title overlay" data-reverse="true">
+									Ви попали туди, куди треба, якщо хочете:
+								</h2>
+								<ul class="aspects__list list list-reset">
+									<li class="aspects__list-item">
+										Відкрити бар
+									</li>
+									<li class="aspects__list-item">
+										Влаштувати коктейльну вечірку
+									</li>
+									<li class="aspects__list-item">
+										Зробити крутий подарунок — набір бармена
+									</li>
+									<li class="aspects__list-item">
+										Створити повноцінний домашній бар
+									</li>
+								</ul>
+								<p class="aspects__text text m-0">
+									Адже це практично неможливо без барменських інструментів для приготування коктейлів. А про товари для бару ми знаємо все — хоч будемо раді, якщо вам вдасться нас переконати.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="aspects__image outer__image">
+						<picture><source srcset="img/aspects-img.webp"type="image/webp"><img src="img/aspects-img.jpg" alt="Прекрасний червоний коктейль з ложкою з фламінго, а позаду золоті барменські штучки"></picture>
+					</div>
+				</div>
+			</section>
 
-            <section class="kits container-fluid">
-               <div class="kits__inner preview section-offsets container">
-                  <h2 class="kits__title title title_center overlay overlay_center">
-                     <span>Только необходимое</span>готовые наборы Барного инвентаря
-                  </h2>
+			<section class="preview">
+				<div class="preview__inner section-offsets container">
+					<div class="preview__items">
+						<a class="preview__item preview__item_kits" href="kits.html">
+							<h2 class="preview__item-title title">
+								набори
+							</h2>
+						</a>
+						<a class="preview__item preview__item_inventory" href="inventory.html">
+							<h2 class="preview__item-title title">
+								інвентар
+							</h2>
+						</a>
+					</div>
+				</div>
+			</section>
 
-                  <div class="kits__items preview__items">
-                     <a class="kits__item preview__item kits__item_start" href="#">
-                        <h2 class="preview__item-title title">
-                           start
-                        </h2>
-                     </a>
-                     <a class="kits__item preview__item kits__item_professional" href="product.html">
-                        <h2 class="preview__item-title title">
-                           professional
-                        </h2>
-                     </a>
-                     <a class="kits__item preview__item kits__item_fiery" href="#">
-                        <h2 class="preview__item-title title">
-                           fiery blow
-                        </h2>
-                     </a>
-                  </div>
-               </div>
-            </section>
+			<section class="adventages">
+				<div class="adventages__inner section-offsets outer container-fluid">
+					<div class="adventages__content outer__content">
+						<div class="adventages__container outer__container container">
+							<div class="adventages__body outer__body">
+								<h2 class="adventages__title title overlay" data-reverse="false">
+									стиль, якість, зручність
+								</h2>
+								<ul class="adventages__list list-reset">
+									<li class="adventages__item adventages__item_time">
+										<h3 class="adventages__item-title title">
+											Економте час і сили
+										</h3>
+										<p class="adventages__item-text m-0">
+											Ви не витрачаєте час на підбір кращого за ціною і якістю або не замовлюєте все з різних магазинів. Все заздалегідь перевірено, відібрано, ще раз перевірено та запаковано. На пошті теж все перевіряємо ще раз.
+										</p>
+									</li>
+									<li class="adventages__item adventages__item_delivery">
+										<h3 class="adventages__item-title title">
+											Доставка 1 день
+										</h3>
+										<p class="adventages__item-text m-0">
+											До Києва, як і в будь-яке велике місто в межах України, — доставка за один день. Наші партнери — всі великі логістичні компанії України.
+										</p>
+									</li>
+									<li class="adventages__item adventages__item_quality">
+										<h3 class="adventages__item-title title">
+											Суперова якість
+										</h3>
+										<p class="adventages__item-text m-0">
+											Спочатку весь набір інвентарю ми збирали для свого бару і якість інструменту перевірили на практиці. Ми безпосередньо співпрацюємо з виробництвом, де замовляють свій інвентар відомі бренди.
+										</p>
+									</li>
+									<li class="adventages__item adventages__item_bonus">
+										<h3 class="adventages__item-title title">
+											Подарункова упаковка
+										</h3>
+										<p class="adventages__item-text m-0">
+											На відміну від інших магазинів, ми дбаємо про те, як ви зберігатимете ваш інвентар. Кожен набір ми відправляємо в фірмовій упаковці, в якому весь інвентар зручно розташований і надійно зафіксований.
+										</p>
+									</li>
+									<li class="adventages__item adventages__item_cashback">
+										<h3 class="adventages__item-title title">
+											Гарантія повернення
+										</h3>
+										<p class="adventages__item-text m-0">
+											Закон про захист прав споживачів гарантує повернення товару протягом 14 днів. Ми довіряємо вам і своїй продукції, тому збільшуємо стандартний термін у 3 рази. Протягом 42 днів вам повернуть всі кошти в повному обсязі.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="adventages__image outer__image">
+						<picture><source srcset="img/adventage-img.webp"type="image/webp"><img src="img/adventage-img.jpg" alt="Мідний шекель і мідна сітка, через яку наливають зелений коктейль (ймовірно мохіто) з льодом"></picture>
+					</div>
+				</div>
+			</section>
 
-            <section class="audience container-fluid">
-               <div class="audience__inner section-offsets container">
-                  <div class="heading">
-                     <h2 class="audience__title heading__title title overlay">
-                        Кому подойдет наш набор?
-                     </h2>
-                     <p class="audience__text heading__text m-0">
-                        Мы подобрали идеальный набор инвентаря для бара, который станет крутым подарком и хорошим дополнением как к домашней вечеринке, так и к барной стойке любого&nbsp;ресторана!
-                     </p>
-                  </div>
-                  <ul class="audience__list list-reset">
-                     <li class="audience__item audience__item_choise">
-                        <h3 class="audience__item-title">
-                           Бар дома - это круто!
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Вы можете приготовить любой коктейль, как в самом дорогом баре, теперь у вас дома. Угостить себя коктейлем вечером после работы или на выходных устроить коктейльную вечеринку с друзьями? Теперь это вопрос лишь вашего желания.
-                        </p>
-                     </li>
-                     <li class="audience__item audience__item_time">
-                        <h3 class="audience__item-title">
-                           Экономия времени и сил
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Мы выбрали всё, что необходимо для бара и создали идеальный набор для вас. Не теряйте время на подбор лучшего по цене или качеству, и не заказывайте всё по частям из разных магазинов. Всё уже отобрано, проверено и упаковано!
-                        </p>
-                     </li>
-                     <li class="audience__item audience__item_transport">
-                        <h3 class="audience__item-title">
-                           Доставка 1 день
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Доставим ваш барменский набор в Харькове, Одессе, Львове, Днепре или любом другом городе Украины за один день. Наши партнеры — все крупные логистические компании Украины.
-                        </p>
-                     </li>
-                     <li class="audience__item audience__item_sale">
-                        <h3 class="audience__item-title">
-                           Хорошие цены и подарки
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Цены ниже чем у любых конкурентов на рынке Украины и СНГ. Наша цель — доступность и распространение культуры барного дела!
-                        </p>
-                     </li>
-                     <li class="audience__item audience__item_surprise">
-                        <h3 class="audience__item-title">
-                           Это отличный подарок
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Подарочный набор бармена — это отличный способ порадовать любителя коктейлей. Стильный и по-настоящему универсальный подарок!
-                        </p>
-                     </li>
-                     <li class="audience__item audience__item_guarantee">
-                        <h3 class="audience__item-title">
-                           Суперовое качество
-                        </h3>
-                        <p class="audience__item-text m-0">
-                           Изначально этот комплект мы собирали для себя и качество каждого инструмента мы проверяли на практике.
-                        </p>
-                     </li>
-                  </ul>
-               </div>
-            </section>
+			<section class="kits container-fluid">
+				<div class="kits__inner preview section-offsets container">
+					<h2 class="kits__title title title_center overlay overlay_center">
+						<span>Тільки необхідне</span>готові набори Барного інвентарю
+					</h2>
 
-         </main>
-         <footer class="footer container-fluid">
-            <div class="footer__inner container">
-               <div class="footer__overlay overlay">
-                  <a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
-                     <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-                  </a>
-               </div>
-               <div class="footer__items">
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        НАБОРЫ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Start
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="product.html">
-                              Professional
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Fiery blow
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        ИНВЕНТАРЬ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Шейкеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Стрейнеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Джиггеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Барные ложки
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        Информация
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Контакты
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Доставка
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Оплата
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              О нас
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </footer>
+					<div class="kits__items preview__items">
+						<a class="kits__item preview__item kits__item_start" href="#">
+							<h2 class="preview__item-title title">
+								start
+							</h2>
+						</a>
+						<a class="kits__item preview__item kits__item_professional" href="product.html">
+							<h2 class="preview__item-title title">
+								professional
+							</h2>
+						</a>
+						<a class="kits__item preview__item kits__item_fiery" href="#">
+							<h2 class="preview__item-title title">
+								fiery blow
+							</h2>
+						</a>
+					</div>
+				</div>
+			</section>
 
-      </div>
-   </body>
+			<section class="audience container-fluid">
+				<div class="audience__inner section-offsets container">
+					<div class="heading">
+						<h2 class="audience__title heading__title title overlay">
+							Кому підійде наш набір?
+						</h2>
+						<p class="audience__text heading__text m-0">
+							Ми підібрали ідеальний набір інвентарю для бару, який стане крутим подарунком і гарним доповненням як до домашньої вечірки, так і до барної стійки будь-якого ресторану!
+						</p>
+					</div>
+					<ul class="audience__list list-reset">
+						<li class="audience__item audience__item_choise">
+							<h3 class="audience__item-title">
+								Бар вдома - це круто!
+							</h3>
+							<p class="audience__item-text m-0">
+								Ви можете приготувати будь-який коктейль, як у найдорожчому барі тепер у вас вдома. Пригостити себе коктейлем увечері після роботи чи у вихідні влаштувати коктейльну вечірку з друзями? Тепер це питання лише вашого бажання.
+							</p>
+						</li>
+						<li class="audience__item audience__item_time">
+							<h3 class="audience__item-title">
+								Економія часу та сил
+							</h3>
+							<p class="audience__item-text m-0">
+								Ми вибрали все, що потрібно для бару і створили ідеальний набір для вас. Не витрачайте час на підбір кращого за ціною або якістю, і не замовляйте все частинами з різних магазинів. Все вже відібрано, перевірено та упаковано!
+							</p>
+						</li>
+						<li class="audience__item audience__item_transport">
+							<h3 class="audience__item-title">
+								Доставка 1 день
+							</h3>
+							<p class="audience__item-text m-0">
+								Доставимо ваш барменський набір в Київ, Тернопіль, Львів, Вінницю чи в будь-яке інше місті України за один день. Наші партнери – всі великі логістичні компанії України.
+							</p>
+						</li>
+						<li class="audience__item audience__item_sale">
+							<h3 class="audience__item-title">
+								Гарні ціни та подарунки
+							</h3>
+							<p class="audience__item-text m-0">
+								Ціни нижчі ніж у будь-яких конкурентів на ринку України. Наша мета – доступність та поширення культури барної справи!
+							</p>
+						</li>
+						<li class="audience__item audience__item_surprise">
+							<h3 class="audience__item-title">
+								Це чудовий подарунок
+							</h3>
+							<p class="audience__item-text m-0">
+								Подарунковий набір бармена - це чудовий спосіб порадувати любителя коктейлів. Стильний та по-справжньому універсальний подарунок!
+							</p>
+						</li>
+						<li class="audience__item audience__item_guarantee">
+							<h3 class="audience__item-title">
+								Суперова якість
+							</h3>
+							<p class="audience__item-text m-0">
+								Спочатку цей комплект ми збирали для себе, і якість кожного інструменту ми перевіряли на практиці.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer container-fluid">
+			<div class="footer__inner container">
+				<div class="footer__overlay overlay">
+					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
+						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+					</a>
+				</div>
+				<div class="footer__items">
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							набори
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Start
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="product.html">
+									Professional
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Fiery blow
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							інвентар
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Шейкери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Стрейнери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Джигери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Ложки барні
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							Інформація
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Контакти
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Доставка
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Оплата
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Про нас
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+</body>
 
 </html>

@@ -1,285 +1,290 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="description" content="Описание страницы корзины магазина барного инвентаря">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-      <meta name="theme-color" content="#f3f3f3">
-      <title>Корзина</title>
-      <link rel="stylesheet" href="css/style.min.css?_v=20220122233911">
-      <script src="js/app.min.js?_v=20220122233911" defer></script>
-   </head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+	<meta name="theme-color" content="#f3f3f3">
+	<title>Корзина</title>
 
-   <body>
-      <div class="site-wrapper">
-         <header class="header">
-            <div class="header__inner container">
-               <a href="index.html" class="header__logo logo" title="Главная страница Fire-Bar ">
-                  <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-               </a>
-               <div class="header__menu menu">
-                  <button class="menu__icon icon-menu btn-reset" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
-                     <span></span>
-                  </button>
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220409153339">
+	<noscript>
+		<link href="styles/styles.min.css?_v=20220409153339" rel="stylesheet">
+	</noscript>
 
-                  <a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+	<script src="js/app.min.js?_v=20220409153339" defer></script>
+</head>
 
-                  <nav id="menu" class="menu__body" data-fullscreen>
-                     <ul class="menu__list list-reset">
-                        <li class="menu__item">
-                           <a href="kits.html" class="menu__link">наборы</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="inventory.html" class="menu__link">инвентарь</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="about.html" class="menu__link">о нас</a>
-                        </li>
-                        <li class="menu__item">
-                           <a href="delivery.html" class="menu__link">оплата и доставка</a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-            </div>
-         </header>
+<body>
+	<div class="site-wrapper">
+		<header class="header">
+			<div class="header__inner container">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+				</a>
+				<div class="header__menu menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+						<span></span>
+					</button>
 
-         <main class="main">
-            <nav aria-label="Breadcrumbs" class="breadcrumbs container">
-               <ol class="breadcrumbs__list list-reset">
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="index.html">Главная</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="cart.html">Корзина</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                     <a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Оформление заказа</a>
-                  </li>
-               </ol>
-            </nav>
-            <section class="order container-fluid">
-               <div class="order__inner section-offsets container">
-                  <h1 class="order__title title visually-hidden">
-                     Оформление заказа
-                  </h1>
+					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
 
-                  <div class="order__details-wrapper">
-                     <h2 class="order__details-title form__title title">
-                        Детали заказа
-                     </h2>
+					<nav id="menu" class="menu__body" data-fullscreen>
+						<ul class="menu__list list-reset">
+							<li class="menu__item">
+								<a href="kits.html" class="menu__link">набори</a>
+							</li>
+							<li class="menu__item">
+								<a href="inventory.html" class="menu__link">інвентар</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">про нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="delivery.html" class="menu__link">оплата та доставка</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-                     <form class="order__details form" action="#" data-dev data-goto-error data-popup-message=".order__form-popup">
-                        <fieldset class="order__personal form__fieldset">
-                           <legend class="order__personal-title form__legend">
-                              Личная информация
-                           </legend>
+		<main class="main">
+			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
+				<ol class="breadcrumbs__list list-reset">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Головна</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="cart.html">Корзина</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#" aria-current="page" tabindex="-1">Оформлення замовлення</a>
+					</li>
+				</ol>
+			</nav>
+			<section class="order container-fluid">
+				<div class="order__inner section-offsets container">
+					<h1 class="order__title title visually-hidden">
+						Оформлення замовлення
+					</h1>
 
-                           <label class="visually-hidden" for="order-name">Введите своё имя</label>
-                           <input id="order-name" class="order__personal-input input-style input-reset" name="name" type="text" placeholder="Имя*" data-required="name" data-validate="true">
+					<div class="order__details-wrapper">
+						<h2 class="order__details-title form__title title">
+							Деталі замовлення
+						</h2>
 
-                           <label class="visually-hidden" for="order-phone">Введите свой номер телефона</label>
-                           <input id="order-phone" class="order__personal-input input-style input-reset" name="phone" type="tel" placeholder="Телефон*" data-required="tel" data-validate="true">
-                        </fieldset>
+						<form class="order__details form" action="#" data-dev data-goto-error data-popup-message=".order__form-popup">
+							<fieldset class="order__personal form__fieldset">
+								<legend class="order__personal-title form__legend">
+									Особиста інформація
+								</legend>
 
-                        <fieldset class="order__delivery form__fieldset">
-                           <legend class="order__delivery-title form__legend">
-                              Доставка
-                           </legend>
+								<label class="visually-hidden" for="order-name">Введіть своє ім'я</label>
+								<input id="order-name" class="order__personal-input input-style input-reset" name="name" type="text" placeholder="Ім'я*" data-required="name" data-validate="true">
 
-                           <div class="form__options options">
-                              <div class="options__item">
-                                 <input id="order-mail" class="options__input input-reset" name="order__delivery-ratio" type="radio" checked>
-                                 <label class="options__label" for="order-mail">Службой доставки «НОВАЯ ПОЧТА»</label>
-                              </div>
-                              <div class="options__item">
-                                 <input id="order-courier" class="options__input input-reset" name="order__delivery-ratio" type="radio">
-                                 <label class="options__label" for="order-courier">Курьерская доставка по Харькову 80.00 грн</label>
-                              </div>
-                              <div class="options__item">
-                                 <input id="order-pickup" class="options__input input-reset" name="order__delivery-ratio" type="radio">
-                                 <label class="options__label" for="order-pickup">Самовывоз из магазина (Бесплатно)</label>
-                              </div>
-                           </div>
+								<label class="visually-hidden" for="order-phone">Введіть свій номер телефону</label>
+								<input id="order-phone" class="order__personal-input input-style input-reset" name="phone" type="tel" placeholder="Телефон*" data-required="tel" data-validate="true">
+							</fieldset>
 
-                           <label class="visually-hidden" for="order-delivery">Введите данные доставки</label>
-                           <input id="order-delivery" class="order__input input-style input-reset" name="delivery" type="text" placeholder="Адрес или отделение НОВОЙ ПОЧТЫ*" data-required="text" data-validate="true">
-                        </fieldset>
+							<fieldset class="order__delivery form__fieldset">
+								<legend class="order__delivery-title form__legend">
+									Доставка
+								</legend>
 
-                        <fieldset class="order__payment form__fieldset">
-                           <legend class="order__payment-title form__legend">
-                              Оплата
-                           </legend>
+								<div class="form__options options">
+									<div class="options__item">
+										<input id="order-mail" class="options__input input-reset" name="order__delivery-ratio" type="radio" checked>
+										<label class="options__label" for="order-mail">Службою доставки «НОВА ПОШТА»</label>
+									</div>
+									<div class="options__item">
+										<input id="order-courier" class="options__input input-reset" name="order__delivery-ratio" type="radio">
+										<label class="options__label" for="order-courier">Кур'єрська доставка по Львову 80.00 грн</label>
+									</div>
+									<div class="options__item">
+										<input id="order-pickup" class="options__input input-reset" name="order__delivery-ratio" type="radio">
+										<label class="options__label" for="order-pickup">Самовивіз з магазину (Безкоштовно)</label>
+									</div>
+								</div>
 
-                           <div class="form__options options">
-                              <div class="options__item">
-                                 <input id="order-cod" class="options__input input-reset" name="order__payment-ratio" type="radio" checked>
-                                 <label class="options__label" for="order-cod">Наложенный платеж</label>
-                              </div>
-                              <div class="options__item">
-                                 <input id="order-moneycourier" class="options__input input-reset" name="order__payment-ratio" type="radio">
-                                 <label class="options__label" for="order-moneycourier">Наличными курьеру (г. Харьков)</label>
-                              </div>
-                              <div class="options__item">
-                                 <input id="order-money" class="options__input input-reset" name="order__payment-ratio" type="radio">
-                                 <label class="options__label" for="order-money">Оплата наличными при самовывозе</label>
-                              </div>
-                              <div class="options__item">
-                                 <input id="order-card" class="options__input input-reset" name="order__payment-ratio" type="radio">
-                                 <label class="options__label" for="order-card">Банковская карта</label>
-                              </div>
-                           </div>
+								<label class="visually-hidden" for="order-delivery">Введіть дані доставки</label>
+								<input id="order-delivery" class="order__input input-style input-reset" name="delivery" type="text" placeholder="Адреса чи відділення НОВОЇ ПОШТИ*" data-required="text" data-validate="true">
+							</fieldset>
 
-                           <textarea class="order__input input-style input-message input-reset" name="payment" placeholder="Примечание к заказу" data-validate="false"></textarea>
-                        </fieldset>
+							<fieldset class="order__payment form__fieldset">
+								<legend class="order__payment-title form__legend">
+									Оплата
+								</legend>
 
-                        <button class="order__button form-button button-style" type="submit">Подтвердить</button>
-                     </form>
-                  </div>
+								<div class="form__options options">
+									<div class="options__item">
+										<input id="order-cod" class="options__input input-reset" name="order__payment-ratio" type="radio" checked>
+										<label class="options__label" for="order-cod">Накладений платіж</label>
+									</div>
+									<div class="options__item">
+										<input id="order-moneycourier" class="options__input input-reset" name="order__payment-ratio" type="radio">
+										<label class="options__label" for="order-moneycourier">Готівкою кур'єру (м. Львів)</label>
+									</div>
+									<div class="options__item">
+										<input id="order-money" class="options__input input-reset" name="order__payment-ratio" type="radio">
+										<label class="options__label" for="order-money">Оплата готівкою при самовивозенні</label>
+									</div>
+									<div class="options__item">
+										<input id="order-card" class="options__input input-reset" name="order__payment-ratio" type="radio">
+										<label class="options__label" for="order-card">Банківська карта</label>
+									</div>
+								</div>
 
-                  <div class="order__cart cart__products cart-products">
-                     <h2 class="order__cart-title title">
-                        Ваш заказ
-                     </h2>
+								<textarea class="order__input input-style input-message input-reset" name="payment" placeholder="Примітка до замовлення" data-validate="false"></textarea>
+							</fieldset>
 
-                     <div class="cart__products-head cart-products__template">
-                        <span class="cart-products__head-item cart-products__template-item">
-                           Товар
-                        </span>
-                        <span class="cart-products__head-item cart-products__template-item">
-                           Количество
-                        </span>
-                        <span class="cart-products__head-item cart-products__template-item">
-                           Всего
-                        </span>
-                     </div>
-                     <ul class="cart__items list-reset">
-                     </ul>
-                     <div class="cart__products-fullprice">
-                        <span class="cart__products-fullprice-text">Итого:</span>
-                        <strong class="cart__products-fullprice-current price">
-                           2137.00 грн.
-                        </strong>
-                     </div>
-                  </div>
+							<button class="order__button form-button button-style" type="submit">Підтвердити</button>
+						</form>
+					</div>
 
-                  <div aria-hidden="true" class="order__form-popup popup">
-                     <div class="popup__wrapper">
-                        <div class="popup__content">
-                           <button data-close type="button" class="btn-reset popup__close">
-                              <img class="popup__close-icon" src="img/icons/cross.svg" alt="Закрыть модальное окно">
-                           </button>
-                           <div class="popup__content-wrapper">
-                              <h2 class="popup__title m-0">
-                                 <strong class="popup__title-greeting">Поздравляем!</strong>
-                                 Вы успешно оформили заказ
-                              </h2>
-                              <p class="popup__text m-0">
-                                 В ближайшее время вам позвонит наш менеджер, для уточнения деталей.
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+					<div class="order__cart cart__products cart-products">
+						<h2 class="order__cart-title title">
+							Ваше замовлення
+						</h2>
 
-         </main>
-         <footer class="footer container-fluid">
-            <div class="footer__inner container">
-               <div class="footer__overlay overlay">
-                  <a href="index.html" class="footer__logo logo" title="Главная страница Fire-Bar ">
-                     <img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
-                  </a>
-               </div>
-               <div class="footer__items">
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        НАБОРЫ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Start
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="product.html">
-                              Professional
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Fiery blow
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        ИНВЕНТАРЬ
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Шейкеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Стрейнеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Джиггеры
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Барные ложки
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="footer__item">
-                     <h3 class="footer__item-title title">
-                        Информация
-                     </h3>
-                     <ul class="footer__list list-reset">
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Контакты
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Доставка
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              Оплата
-                           </a>
-                        </li>
-                        <li class="footer__list-item">
-                           <a class="footer__list-link" href="#">
-                              О нас
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </footer>
+						<div class="cart__products-head cart-products__template">
+							<span class="cart-products__head-item cart-products__template-item">
+								Товар
+							</span>
+							<span class="cart-products__head-item cart-products__template-item">
+								Кількість
+							</span>
+							<span class="cart-products__head-item cart-products__template-item">
+								Усього
+							</span>
+						</div>
+						<ul class="cart__items list-reset">
+						</ul>
+						<div class="cart__products-fullprice">
+							<span class="cart__products-fullprice-text">Всього:</span>
+							<strong class="cart__products-fullprice-current price">
+								2137.00 грн.
+							</strong>
+						</div>
+					</div>
 
-      </div>
-   </body>
+					<div aria-hidden="true" class="order__form-popup popup">
+						<div class="popup__wrapper">
+							<div class="popup__content">
+								<button data-close type="button" class="btn-reset popup__close">
+									<img class="popup__close-icon" src="img/icons/cross.svg" alt="Закрити модальне вікно">
+								</button>
+								<div class="popup__content-wrapper">
+									<h2 class="popup__title m-0">
+										<strong class="popup__title-greeting">Вітаємо!</strong>
+										Ви успішно оформили замовлення
+									</h2>
+									<p class="popup__text m-0">
+										Найближчим часом вам подзвонить наш менеджер, для уточнення деталей.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer container-fluid">
+			<div class="footer__inner container">
+				<div class="footer__overlay overlay">
+					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
+						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
+					</a>
+				</div>
+				<div class="footer__items">
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							набори
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Start
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="product.html">
+									Professional
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Fiery blow
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							інвентар
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Шейкери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Стрейнери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Джигери
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="#">
+									Ложки барні
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h3 class="footer__item-title title">
+							Інформація
+						</h3>
+						<ul class="footer__list list-reset">
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Контакти
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Доставка
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="delivery.html">
+									Оплата
+								</a>
+							</li>
+							<li class="footer__list-item">
+								<a class="footer__list-link" href="about.html">
+									Про нас
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+</body>
 
 </html>
