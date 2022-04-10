@@ -13,40 +13,40 @@
 	<meta name="theme-color" content="#f3f3f3">
 	<title>Корзина</title>
 
-	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220409224859">
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220410233845">
 	<noscript>
-		<link href="styles/styles.min.css?_v=20220409224859" rel="stylesheet">
+		<link href="styles/styles.min.css?_v=20220410233845" rel="stylesheet">
 	</noscript>
 
-	<script src="js/app.min.js?_v=20220409224859" defer></script>
+	<script src="js/app.min.js?_v=20220410233845" defer></script>
 </head>
 
 <body>
 	<div class="site-wrapper">
 		<header class="header">
 			<div class="header__inner container">
-				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar" data-fade-in-left data-delay="100">
 					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 				</a>
 				<div class="header__menu menu">
-					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu" data-fade-in-right data-delay="100">
 						<span></span>
 					</button>
 
-					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+					<a class="header__phone" href="tel:88000070204" data-fade-in-right data-delay="100">8 800 007 02 04</a>
 
 					<nav id="menu" class="menu__body" data-fullscreen>
 						<ul class="menu__list list-reset">
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="400">
 								<a href="kits.html" class="menu__link">набори</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="300">
 								<a href="inventory.html" class="menu__link">інвентар</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="200">
 								<a href="about.html" class="menu__link">про нас</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="100">
 								<a href="delivery.html" class="menu__link">оплата та доставка</a>
 							</li>
 						</ul>
@@ -56,7 +56,7 @@
 		</header>
 
 		<main class="main">
-			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
+			<nav aria-label="Breadcrumbs" class="breadcrumbs container" data-fade-in-left>
 				<ol class="breadcrumbs__list list-reset">
 					<li class="breadcrumbs__item">
 						<a class="breadcrumbs__link" href="index.html">Головна</a>
@@ -198,13 +198,13 @@
 		</main>
 		<footer class="footer container-fluid">
 			<div class="footer__inner container">
-				<div class="footer__overlay overlay">
+				<div class="footer__overlay overlay" data-fade-in data-delay="100">
 					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
 						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 					</a>
 				</div>
 				<div class="footer__items">
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="200">
 						<h3 class="footer__item-title title">
 							набори
 						</h3>
@@ -226,7 +226,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="300">
 						<h3 class="footer__item-title title">
 							інвентар
 						</h3>
@@ -253,7 +253,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="400">
 						<h3 class="footer__item-title title">
 							Інформація
 						</h3>
