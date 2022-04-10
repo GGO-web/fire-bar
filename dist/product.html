@@ -13,40 +13,40 @@
 	<meta name="theme-color" content="#f3f3f3">
 	<title>Карточка набору</title>
 
-	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220410203757">
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220410233845">
 	<noscript>
-		<link href="styles/styles.min.css?_v=20220410203757" rel="stylesheet">
+		<link href="styles/styles.min.css?_v=20220410233845" rel="stylesheet">
 	</noscript>
 
-	<script src="js/app.min.js?_v=20220410203757" defer></script>
+	<script src="js/app.min.js?_v=20220410233845" defer></script>
 </head>
 
 <body>
 	<div class="site-wrapper">
 		<header class="header">
 			<div class="header__inner container">
-				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar" data-fade-in-left data-delay="100">
 					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 				</a>
 				<div class="header__menu menu">
-					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu" data-fade-in-right data-delay="100">
 						<span></span>
 					</button>
 
-					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+					<a class="header__phone" href="tel:88000070204" data-fade-in-right data-delay="100">8 800 007 02 04</a>
 
 					<nav id="menu" class="menu__body" data-fullscreen>
 						<ul class="menu__list list-reset">
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="400">
 								<a href="kits.html" class="menu__link">набори</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="300">
 								<a href="inventory.html" class="menu__link">інвентар</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="200">
 								<a href="about.html" class="menu__link">про нас</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="100">
 								<a href="delivery.html" class="menu__link">оплата та доставка</a>
 							</li>
 						</ul>
@@ -56,7 +56,7 @@
 		</header>
 
 		<main class="main">
-			<nav aria-label="Breadcrumbs" class="breadcrumbs container">
+			<nav aria-label="Breadcrumbs" class="breadcrumbs container" data-fade-in-left>
 				<ol class="breadcrumbs__list list-reset">
 					<li class="breadcrumbs__item">
 						<a class="breadcrumbs__link" href="index.html">Головна</a>
@@ -72,7 +72,7 @@
 			<section class="product container-fluid">
 				<div class="product__inner section-offsets container">
 					<div class="product__top">
-						<div class="product__gallery product-gallery">
+						<div class="product__gallery product-gallery" data-fade-in data-delay="300">
 							<div class="swiper product-gallery__preview">
 								<div class="swiper-wrapper product-gallery__preview-wrapper">
 									<div class="swiper-slide product-gallery__preview-slide">
@@ -107,7 +107,7 @@
 								<div class="swiper-pagination product-gallery__thumbs-pagination"></div>
 							</div>
 						</div>
-						<div class="product__content">
+						<div class="product__content" data-fade-in data-delay="400">
 							<div data-da=".product__gallery,768,0" class="product__heading">
 								<h1 class="product__title title">
 									Набір PROFESSIONAL
@@ -152,7 +152,7 @@
 					</div>
 					<div class="product__description">
 						<dl class="product__description-features">
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="100">
 								<dt class="product__description-term">
 									Шейкер
 								</dt>
@@ -160,7 +160,7 @@
 									— змішує і охолоджує.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="150">
 								<dt class="product__description-term">
 									Джигер 50/25
 								</dt>
@@ -168,7 +168,7 @@
 									— вимірює кількість рідини, зберігає правильну пропорцію інгредієнтів.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="200">
 								<dt class="product__description-term">
 									Змішувальна склянка
 								</dt>
@@ -176,7 +176,7 @@
 									— у ньому змішується, охолоджується вміст перед подачею в келих.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="250">
 								<dt class="product__description-term">
 									Стрейнер
 								</dt>
@@ -184,7 +184,7 @@
 									— відфільтровує лід.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="300">
 								<dt class="product__description-term">
 									Файн стрейнер
 								</dt>
@@ -192,7 +192,7 @@
 									— маленьке ситечко.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="350">
 								<dt class="product__description-term">
 									Гейзер 4 шт.
 								</dt>
@@ -200,7 +200,7 @@
 									— робить потік рідини із пляшки керованим.
 								</dd>
 							</div>
-							<div class="product__description-feature">
+							<div class="product__description-feature" data-fade-in-left data-delay="400">
 								<dt class="product__description-term">
 									Барна ложка
 								</dt>
@@ -210,7 +210,7 @@
 							</div>
 						</dl>
 
-						<ul class="product__description-list list list-reset list_type-plus">
+						<ul class="product__description-list list list-reset list_type-plus" data-fade-in-left data-delay="600">
 							<li class="product__description-item">
 								2 великі листи з меню на 40 коктейлів для домашнього бару
 							</li>
@@ -223,7 +223,7 @@
 						</ul>
 					</div>
 
-					<div class="popup-cart">
+					<div class="popup-cart" data-fade-in data-delay="400">
 						<div class="popup-cart__wrapper">
 							<a class="popup-cart__link" href="cart.html">
 								<img class="popup-cart__img" src="img/icons/cart.svg" alt="Перейти в корзину">
@@ -237,13 +237,13 @@
 		</main>
 		<footer class="footer container-fluid">
 			<div class="footer__inner container">
-				<div class="footer__overlay overlay">
+				<div class="footer__overlay overlay" data-fade-in data-delay="100">
 					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
 						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 					</a>
 				</div>
 				<div class="footer__items">
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="200">
 						<h3 class="footer__item-title title">
 							набори
 						</h3>
@@ -265,7 +265,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="300">
 						<h3 class="footer__item-title title">
 							інвентар
 						</h3>
@@ -292,7 +292,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="400">
 						<h3 class="footer__item-title title">
 							Інформація
 						</h3>

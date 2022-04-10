@@ -13,40 +13,40 @@
 	<meta name="theme-color" content="#f3f3f3">
 	<title>Головна сторінка</title>
 
-	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220410203757">
+	<link onload="this.rel='stylesheet'" as="style" rel="preload" href="css/style.min.css?_v=20220410233845">
 	<noscript>
-		<link href="styles/styles.min.css?_v=20220410203757" rel="stylesheet">
+		<link href="styles/styles.min.css?_v=20220410233845" rel="stylesheet">
 	</noscript>
 
-	<script src="js/app.min.js?_v=20220410203757" defer></script>
+	<script src="js/app.min.js?_v=20220410233845" defer></script>
 </head>
 
 <body>
 	<div class="site-wrapper">
 		<header class="header">
 			<div class="header__inner container">
-				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar">
+				<a href="index.html" class="header__logo logo" title="Головна сторінка Fire-Bar" data-fade-in-left data-delay="100">
 					<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 				</a>
 				<div class="header__menu menu">
-					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu">
+					<button class="menu__icon icon-menu btn-reset" aria-label="Відкрити головне меню" aria-expanded="false" aria-controls="menu" data-fade-in-right data-delay="100">
 						<span></span>
 					</button>
 
-					<a class="header__phone" href="tel:88000070204">8 800 007 02 04</a>
+					<a class="header__phone" href="tel:88000070204" data-fade-in-right data-delay="100">8 800 007 02 04</a>
 
 					<nav id="menu" class="menu__body" data-fullscreen>
 						<ul class="menu__list list-reset">
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="400">
 								<a href="kits.html" class="menu__link">набори</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="300">
 								<a href="inventory.html" class="menu__link">інвентар</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="200">
 								<a href="about.html" class="menu__link">про нас</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item" data-fade-in-down data-delay="100">
 								<a href="delivery.html" class="menu__link">оплата та доставка</a>
 							</li>
 						</ul>
@@ -58,14 +58,14 @@
 		<main class="main">
 			<section class="hero">
 				<div class="hero__inner container">
-					<h1 class="hero__title title overlay overlay_transparency">
+					<h1 class="hero__title title overlay overlay_transparency" data-fade-in-left>
 						Магазин барного інвентарю
 						<span>все для вашого бару</span>
 					</h1>
-					<p class="hero__text overlay overlay_transparency m-0">
+					<p class="hero__text overlay overlay_transparency m-0" data-fade-in-left>
 						З коктейлями та гарною компанією ви можете повеселитися набагато краще, ніж з однією тільки гарною компанією.
 					</p>
-					<a class="hero__redirect button-style" href="kits.html">
+					<a class="hero__redirect button-style" href="kits.html" data-fade-in-left>
 						Хочу набір
 					</a>
 				</div>
@@ -76,30 +76,30 @@
 					<div class="aspects__content outer__content">
 						<div class="aspects__container outer__container container">
 							<div class="aspects__body outer__body">
-								<h2 class="aspects__title title overlay" data-reverse="true">
+								<h2 class="aspects__title title overlay" data-reverse="true" data-fade-in-right>
 									Ви попали туди, куди треба, якщо хочете:
 								</h2>
 								<ul class="aspects__list list list-reset">
-									<li class="aspects__list-item">
+									<li class="aspects__list-item" data-fade-in-right data-delay="100">
 										Відкрити бар
 									</li>
-									<li class="aspects__list-item">
+									<li class="aspects__list-item" data-fade-in-right data-delay="200">
 										Влаштувати коктейльну вечірку
 									</li>
-									<li class="aspects__list-item">
+									<li class="aspects__list-item" data-fade-in-right data-delay="300">
 										Зробити крутий подарунок — набір бармена
 									</li>
-									<li class="aspects__list-item">
+									<li class="aspects__list-item" data-fade-in-right data-delay="400">
 										Створити повноцінний домашній бар
 									</li>
 								</ul>
-								<p class="aspects__text text m-0">
+								<p class="aspects__text text m-0" data-fade-in-right data-delay="600">
 									Адже це практично неможливо без барменських інструментів для приготування коктейлів. А про товари для бару ми знаємо все — хоч будемо раді, якщо вам вдасться нас переконати.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="aspects__image outer__image">
+					<div class="aspects__image outer__image" data-fade-in-left>
 						<picture><source srcset="img/aspects-img.webp"type="image/webp"><img src="img/aspects-img.jpg" alt="Прекрасний червоний коктейль з ложкою з фламінго, а позаду золоті барменські штучки"></picture>
 					</div>
 				</div>
@@ -108,12 +108,12 @@
 			<section class="preview">
 				<div class="preview__inner section-offsets container">
 					<div class="preview__items">
-						<a class="preview__item preview__item_kits" href="kits.html">
+						<a class="preview__item preview__item_kits" href="kits.html" data-fade-in>
 							<h2 class="preview__item-title title">
 								набори
 							</h2>
 						</a>
-						<a class="preview__item preview__item_inventory" href="inventory.html">
+						<a class="preview__item preview__item_inventory" href="inventory.html" data-fade-in>
 							<h2 class="preview__item-title title">
 								інвентар
 							</h2>
@@ -127,47 +127,47 @@
 					<div class="adventages__content outer__content">
 						<div class="adventages__container outer__container container">
 							<div class="adventages__body outer__body">
-								<h2 class="adventages__title title overlay" data-reverse="false">
+								<h2 class="adventages__title title overlay" data-reverse="false" data-fade-in-left>
 									стиль, якість, зручність
 								</h2>
 								<ul class="adventages__list list-reset">
 									<li class="adventages__item adventages__item_time">
-										<h3 class="adventages__item-title title">
+										<h3 class="adventages__item-title title" data-fade-in-left data-delay="100">
 											Економте час і сили
 										</h3>
-										<p class="adventages__item-text m-0">
+										<p class="adventages__item-text m-0" data-fade-in-left data-delay="200">
 											Ви не витрачаєте час на підбір кращого за ціною і якістю або не замовлюєте все з різних магазинів. Все заздалегідь перевірено, відібрано, ще раз перевірено та запаковано. На пошті теж все перевіряємо ще раз.
 										</p>
 									</li>
 									<li class="adventages__item adventages__item_delivery">
-										<h3 class="adventages__item-title title">
+										<h3 class="adventages__item-title title" data-fade-in-left data-delay="100">
 											Доставка 1 день
 										</h3>
-										<p class="adventages__item-text m-0">
+										<p class="adventages__item-text m-0" data-fade-in-left data-delay="200">
 											До Києва, як і в будь-яке велике місто в межах України, — доставка за один день. Наші партнери — всі великі логістичні компанії України.
 										</p>
 									</li>
 									<li class="adventages__item adventages__item_quality">
-										<h3 class="adventages__item-title title">
+										<h3 class="adventages__item-title title" data-fade-in-left data-delay="100">
 											Суперова якість
 										</h3>
-										<p class="adventages__item-text m-0">
+										<p class="adventages__item-text m-0" data-fade-in-left data-delay="200">
 											Спочатку весь набір інвентарю ми збирали для свого бару і якість інструменту перевірили на практиці. Ми безпосередньо співпрацюємо з виробництвом, де замовляють свій інвентар відомі бренди.
 										</p>
 									</li>
 									<li class="adventages__item adventages__item_bonus">
-										<h3 class="adventages__item-title title">
+										<h3 class="adventages__item-title title" data-fade-in-left data-delay="100">
 											Подарункова упаковка
 										</h3>
-										<p class="adventages__item-text m-0">
+										<p class="adventages__item-text m-0" data-fade-in-left data-delay="200">
 											На відміну від інших магазинів, ми дбаємо про те, як ви зберігатимете ваш інвентар. Кожен набір ми відправляємо в фірмовій упаковці, в якому весь інвентар зручно розташований і надійно зафіксований.
 										</p>
 									</li>
 									<li class="adventages__item adventages__item_cashback">
-										<h3 class="adventages__item-title title">
+										<h3 class="adventages__item-title title" data-fade-in-left data-delay="100">
 											Гарантія повернення
 										</h3>
-										<p class="adventages__item-text m-0">
+										<p class="adventages__item-text m-0" data-fade-in-left data-delay="200">
 											Закон про захист прав споживачів гарантує повернення товару протягом 14 днів. Ми довіряємо вам і своїй продукції, тому збільшуємо стандартний термін у 3 рази. Протягом 42 днів вам повернуть всі кошти в повному обсязі.
 										</p>
 									</li>
@@ -175,7 +175,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="adventages__image outer__image">
+					<div class="adventages__image outer__image" data-fade-in-right data-delay="100">
 						<picture><source srcset="img/adventage-img.webp"type="image/webp"><img src="img/adventage-img.jpg" alt="Мідний шекель і мідна сітка, через яку наливають зелений коктейль (ймовірно мохіто) з льодом"></picture>
 					</div>
 				</div>
@@ -183,22 +183,22 @@
 
 			<section class="kits container-fluid">
 				<div class="kits__inner preview section-offsets container">
-					<h2 class="kits__title title title_center overlay overlay_center">
+					<h2 class="kits__title title title_center overlay overlay_center" data-fade-in>
 						<span>Тільки необхідне</span>готові набори Барного інвентарю
 					</h2>
 
 					<div class="kits__items preview__items">
-						<a class="kits__item preview__item kits__item_start" href="#">
+						<a class="kits__item preview__item kits__item_start" href="#" data-fade-in-down data-delay="200">
 							<h2 class="preview__item-title title">
 								start
 							</h2>
 						</a>
-						<a class="kits__item preview__item kits__item_professional" href="product.html">
+						<a class="kits__item preview__item kits__item_professional" href="product.html" data-fade-in-down data-delay="400">
 							<h2 class="preview__item-title title">
 								professional
 							</h2>
 						</a>
-						<a class="kits__item preview__item kits__item_fiery" href="#">
+						<a class="kits__item preview__item kits__item_fiery" href="#" data-fade-in-down data-delay="600">
 							<h2 class="preview__item-title title">
 								fiery blow
 							</h2>
@@ -210,15 +210,15 @@
 			<section class="audience container-fluid">
 				<div class="audience__inner section-offsets container">
 					<div class="heading">
-						<h2 class="audience__title heading__title title overlay">
+						<h2 class="audience__title heading__title title overlay" data-fade-in-left>
 							Кому підійде наш набір?
 						</h2>
-						<p class="audience__text heading__text m-0">
+						<p class="audience__text heading__text m-0" data-fade-in-right>
 							Ми підібрали ідеальний набір інвентарю для бару, який стане крутим подарунком і гарним доповненням як до домашньої вечірки, так і до барної стійки будь-якого ресторану!
 						</p>
 					</div>
 					<ul class="audience__list list-reset">
-						<li class="audience__item audience__item_choise">
+						<li class="audience__item audience__item_choise" data-fade-in-down data-delay="100">
 							<h3 class="audience__item-title">
 								Бар вдома - це круто!
 							</h3>
@@ -226,7 +226,7 @@
 								Ви можете приготувати будь-який коктейль, як у найдорожчому барі тепер у вас вдома. Пригостити себе коктейлем увечері після роботи чи у вихідні влаштувати коктейльну вечірку з друзями? Тепер це питання лише вашого бажання.
 							</p>
 						</li>
-						<li class="audience__item audience__item_time">
+						<li class="audience__item audience__item_time" data-fade-in-down data-delay="200">
 							<h3 class="audience__item-title">
 								Економія часу та сил
 							</h3>
@@ -234,7 +234,7 @@
 								Ми вибрали все, що потрібно для бару і створили ідеальний набір для вас. Не витрачайте час на підбір кращого за ціною або якістю, і не замовляйте все частинами з різних магазинів. Все вже відібрано, перевірено та упаковано!
 							</p>
 						</li>
-						<li class="audience__item audience__item_transport">
+						<li class="audience__item audience__item_transport" data-fade-in-down data-delay="300">
 							<h3 class="audience__item-title">
 								Доставка 1 день
 							</h3>
@@ -242,7 +242,7 @@
 								Доставимо ваш барменський набір в Київ, Тернопіль, Львів, Вінницю чи в будь-яке інше місті України за один день. Наші партнери – всі великі логістичні компанії України.
 							</p>
 						</li>
-						<li class="audience__item audience__item_sale">
+						<li class="audience__item audience__item_sale" data-fade-in-down data-delay="400">
 							<h3 class="audience__item-title">
 								Гарні ціни та подарунки
 							</h3>
@@ -250,7 +250,7 @@
 								Ціни нижчі ніж у будь-яких конкурентів на ринку України. Наша мета – доступність та поширення культури барної справи!
 							</p>
 						</li>
-						<li class="audience__item audience__item_surprise">
+						<li class="audience__item audience__item_surprise" data-fade-in-down data-delay="500">
 							<h3 class="audience__item-title">
 								Це чудовий подарунок
 							</h3>
@@ -258,7 +258,7 @@
 								Подарунковий набір бармена - це чудовий спосіб порадувати любителя коктейлів. Стильний та по-справжньому універсальний подарунок!
 							</p>
 						</li>
-						<li class="audience__item audience__item_guarantee">
+						<li class="audience__item audience__item_guarantee" data-fade-in-down data-delay="600">
 							<h3 class="audience__item-title">
 								Суперова якість
 							</h3>
@@ -273,13 +273,13 @@
 		</main>
 		<footer class="footer container-fluid">
 			<div class="footer__inner container">
-				<div class="footer__overlay overlay">
+				<div class="footer__overlay overlay" data-fade-in data-delay="100">
 					<a href="index.html" class="footer__logo logo" title="Головна сторінка Fire-Bar">
 						<img class="logo__img" src="img/icons/logo.svg" alt="Fire-Bar Логотип">
 					</a>
 				</div>
 				<div class="footer__items">
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="200">
 						<h3 class="footer__item-title title">
 							набори
 						</h3>
@@ -301,7 +301,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="300">
 						<h3 class="footer__item-title title">
 							інвентар
 						</h3>
@@ -328,7 +328,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item" data-fade-in data-delay="400">
 						<h3 class="footer__item-title title">
 							Інформація
 						</h3>

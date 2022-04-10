@@ -46,6 +46,10 @@
   font-style: normal;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -1361,7 +1365,7 @@ html.popup-show body::after {
 }
 
 .header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 5;
   background-color: var(--color-white);
@@ -1480,6 +1484,10 @@ html.popup-show body::after {
   max-height: 75.625rem;
 }
 
+.kits {
+  overflow: hidden;
+}
+
 .no-webp .kits__item_start::before{
   background-image: url(../img/kits/start-kit.jpg); }
 
@@ -1488,6 +1496,10 @@ html.popup-show body::after {
 
 .no-webp .kits__item_fiery::before{
   background-image: url(../img/kits/fiery-blow-kit.jpg); }
+
+.audience {
+  overflow: hidden;
+}
 
 .audience__list {
   --item-width: 290px;
@@ -1553,6 +1565,7 @@ html.popup-show body::after {
 }
 
 .footer {
+  overflow: hidden;
   background-color: var(--color-overlay);
 }
 
