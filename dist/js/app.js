@@ -2624,7 +2624,7 @@
                     error++;
                 } else this.removeError(formRequiredItem);
             } else if ("message" === formRequiredItem.dataset.required) {
-                this.fieldTipTrigger(formRequiredItem, "Напиши нам пару слов ◠ᴥ◠");
+                this.fieldTipTrigger(formRequiredItem, "Напиши нам декілька слів ◠ᴥ◠");
                 if (this.messageTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
@@ -6718,6 +6718,24 @@
     };
     const inventoryCardsWrapper = document.querySelector(".inventory__cards-wrapper");
     const productContentButton = document.querySelector(".product__form-button");
+    const showFlyingItem = cardButton => {
+        const card = cardButton.closest(".card");
+        const shoppingCart = card.querySelector(".card__shopping");
+        const cardImage = card.querySelector(".card__img");
+        const flyCardImage = cardImage.cloneNode(true);
+        const cardImageWidth = cardImage.closest(".card__link").offsetWidth;
+        const cardImageFlyTop = cardImage.getBoundingClientRect().top;
+        const cardImageFlyLeft = cardImage.getBoundingClientRect().left;
+        flyCardImage.setAttribute("class", "card__img_fly");
+        flyCardImage.style.cssText = `\n      left: ${cardImageFlyLeft}px;\n      top: ${cardImageFlyTop}px;\n      width: ${cardImageWidth}px;\n      height: ${cardImageWidth}px;\n   `;
+        document.body.append(flyCardImage);
+        const cartFlyTop = shoppingCart.getBoundingClientRect().x;
+        const cartFlyLeft = shoppingCart.getBoundingClientRect().y;
+        flyCardImage.style.cssText = `\n      left: ${cartFlyTop + 32}px;\n      top: ${cartFlyLeft + 32}px;\n      filter: blur(4px);\n      transform: rotate(10deg);\n      width: 0;\n      height: 0;\n   `;
+        flyCardImage.addEventListener("transitionend", (() => {
+            flyCardImage.remove();
+        }));
+    };
     inventoryCardsWrapper?.addEventListener("click", (event => {
         const getCardData = card => {
             const cardImg = card.querySelector(".card__img").getAttribute("src").split(".")[0];
@@ -6754,6 +6772,7 @@
                 }
             }));
             setCartItems(items);
+            showFlyingItem(target);
         }
     }));
     productContentButton?.addEventListener("click", (event => {
