@@ -6385,7 +6385,6 @@
                 observeParents: true,
                 slidesPerView: 4,
                 spaceBetween: 27,
-                speed: 800,
                 pagination: {
                     el: ".product-gallery__thumbs-pagination",
                     clickable: true
@@ -6405,13 +6404,13 @@
             });
             new core(".product-gallery__preview", {
                 modules: [ Thumb ],
+                grabCursor: true,
                 effect: "fade",
                 observer: true,
                 loop: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 30,
-                speed: 800,
                 thumbs: {
                     swiper: sliderThumbs
                 }

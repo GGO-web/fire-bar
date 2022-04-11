@@ -402,6 +402,11 @@ button {
 .select__body {
   position: relative;
   font-size: 18px;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+  transition: -webkit-box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
 }
 
 .select__title {
@@ -2770,7 +2775,7 @@ html.popup-show body::after {
   }
 
   .menu__item {
-    margin-right: 4.0625rem;
+    margin-right: 2.8125rem;
   }
 
   .menu__list {
@@ -2938,11 +2943,11 @@ html.popup-show body::after {
   }
 
   .header__inner {
-    padding-top: 2.6875rem;
+    padding-top: 1.25rem;
   }
 
   .header__inner {
-    padding-bottom: 2rem;
+    padding-bottom: 1.25rem;
   }
 
   .header__logo {
@@ -4682,11 +4687,11 @@ html.popup-show body::after {
   }
 
   .header__inner {
-    padding-top: clamp( 0.0625rem , -0.9791666667rem  +  4.4444444444vw , 2.6875rem );
+    padding-top: clamp( 0.0625rem , -0.4087301587rem  +  2.0105820106vw , 1.25rem );
   }
 
   .header__inner {
-    padding-bottom: clamp( 0.0625rem , -0.7063492063rem  +  3.2804232804vw , 2rem );
+    padding-bottom: clamp( 0.0625rem , -0.4087301587rem  +  2.0105820106vw , 1.25rem );
   }
 
   .header__logo {
@@ -5065,7 +5070,7 @@ html.popup-show body::after {
 
 @media (min-width: 62em) and (max-width: 82.5em) {
   .menu__item {
-    margin-right: clamp( 1.875rem , -4.7408536585rem  +  10.6707317073vw , 4.0625rem );
+    margin-right: clamp( 1.25rem , -3.4756097561rem  +  7.6219512195vw , 2.8125rem );
   }
 
   .menu__list {
@@ -5202,6 +5207,11 @@ html.popup-show body::after {
 }
 
 @media (any-hover: hover) {
+  .select__body:hover {
+    -webkit-box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.4);
+  }
+
   .select__option:hover {
     background: #d9d9d9;
   }
