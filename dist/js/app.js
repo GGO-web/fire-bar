@@ -6627,7 +6627,7 @@
         inventoryCards.classList = "inventory__cards container";
         inventoryCards.setAttribute("data-category", tagName);
         const addShowMoreButton = (cardsLength, cardLimit) => {
-            if (cardsLength > cardLimit) inventoryCards.insertAdjacentHTML("beforeend", `\n               <button class="inventory__load-more btn-reset" data-load="${tagName}">\n                  загрузить ещё\n               </button>\n               `);
+            if (cardsLength > cardLimit) inventoryCards.insertAdjacentHTML("beforeend", `\n               <button class="inventory__load-more btn-reset" data-load="${tagName}">\n                  Завантажити ще\n               </button>\n               `);
         };
         const loadMoreData = (cards, cardLimit, cardsLength) => {
             const loadMoreButton = inventoryCards.querySelector(".inventory__load-more");
